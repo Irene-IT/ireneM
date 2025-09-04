@@ -1,0 +1,53 @@
+backend:
+  name: github
+  repo: your-username/your-repo   # 🔹 замініть на ваш GitHub репозиторій
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/content/about.md"
+        label: "About Page"
+        name: "about"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - file: "src/content/services.md"
+        label: "Services Page"
+        name: "services"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - file: "src/content/work.md"
+        label: "Work Page"
+        name: "work"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Portfolio Items", name: "items", widget: "list", fields: [
+              { label: "Title", name: "title", widget: "string" },
+              { label: "Description", name: "description", widget: "text" },
+              { label: "Link", name: "link", widget: "string" }
+            ] }
+
+      - file: "src/content/faq.md"
+        label: "FAQ Page"
+        name: "faq"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Questions", name: "questions", widget: "list", fields: [
+              { label: "Question", name: "q", widget: "string" },
+              { label: "Answer", name: "a", widget: "text" }
+            ] }
+
+      - file: "src/content/contact.md"
+        label: "Contact Page"
+        name: "contact"
+        fields:
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "LinkedIn", name: "linkedin", widget: "string" }
