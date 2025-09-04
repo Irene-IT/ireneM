@@ -1,7 +1,8 @@
 backend:
-  name: github
+  name: git-gateway
   repo: Irene-IT/ireneM  # 🔹 замініть на ваш GitHub репозиторій
   branch: main
+  publish_mode: editorial_workflow 
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
