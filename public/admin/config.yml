@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: your-username/your-repo   # 🔹 замініть на ваш GitHub репозиторій
+  repo: Irene-IT/ireneM.git   # 🔹 замініть на ваш GitHub репозиторій
   branch: main
 
 media_folder: "public/uploads"
