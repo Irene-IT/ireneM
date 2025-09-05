@@ -5,6 +5,7 @@ backend:
   branch: main
   identity_url: https://auth.decapbridge.com/sites/da1c70a0-93c0-4c63-ae9c-6327d07f4d34
   gateway_url: https://gateway.decapbridge.com
+  publish_hook: https://api.netlify.com/build_hooks/68bae1b69f578c4a72db9b20
 
   # Quickly see who did what (optional)
   commit_messages:
