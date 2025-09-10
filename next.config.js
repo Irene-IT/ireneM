@@ -9,7 +9,7 @@ const { withContentlayer } = require('next-contentlayer2');
 const nextconfig = {
   reactStrictMode: true,
   trailingSlash: true,
-  output: "standalone",
+  output: "export",
   images: {
     loader: "custom",
     imageSizes: [16, 32, 48, 128, 256],
