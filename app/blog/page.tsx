@@ -42,10 +42,10 @@ export default async function BlogPage({
   params,
 }: {
   // у Next 15 params — Promise
-  params: Promise<Promise<{ page: string }>>
+  params: Promise<{ page: string }>
 }) {
   const paramsResolved = await params;
-  const { page } = await params
+  const { page } = paramsResolved
   const currentPage = parseInt(page ?? '1', 10) || 1
 
   // Pick relevant fields from blogs and sort by date

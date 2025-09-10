@@ -9,10 +9,10 @@ export async function generateMetadata({
   params,
 }: {
   // params тепер Promise (Next.js 15)
-  params: Promise<Promise<{ slug: string }>>
+  params: Promise<{ slug: string }>
 }): Promise<Metadata> {
   const paramsResolved = await params;
-  const { slug } = await params
+  const { slug } = paramsResolved
   const blog = allBlogs.find((blog) => blog.slug === slug) as Blog | undefined
 
   if (!blog) {
@@ -48,10 +48,10 @@ export default async function BlogPostPage({
   params,
 }: {
   // теж саме тут — params як Promise
-  params: Promise<Promise<{ slug: string }>>
+  params: Promise<{ slug: string }>
 }) {
   const paramsResolved = await params;
-  const { slug } = await params
+  const { slug } = paramsResolved
   const blog = allBlogs.find((blog) => blog.slug === slug)
 
   if (!blog) {
