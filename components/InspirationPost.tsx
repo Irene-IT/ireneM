@@ -5,7 +5,7 @@ import { Inspiration } from '../.contentlayer/generated'
 import { useMDXComponent } from 'next-contentlayer2/hooks'
 import PostHeader from './PostHeader'
 import PostFooter from './PostFooter'
-import Video from './/Video'
+import Video from './Video'
 import type { MDXComponents } from 'mdx/types'
 
 export default function InspirationPost({
