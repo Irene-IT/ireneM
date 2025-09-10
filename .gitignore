@@ -4,7 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
-/package-lock.json
+
 
 # testing
 /coverage
@@ -15,16 +15,31 @@
 
 # production
 /build
+dist
+dist-ssr
 
-# misc
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
 .DS_Store
+.env
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 *.pem
 
 README.md
+
 # debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
 # local env files
 .env.local
@@ -42,3 +57,5 @@ yarn-error.log*
 
 # Next Image Export Optimizer
 **/nextImageExportOptimizer/
+
+
