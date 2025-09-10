@@ -1,4 +1,3 @@
-// app/blog/page.tsx
 import { Metadata } from 'next'
 import { allBlogs, Blog } from '../../.contentlayer/generated'
 import { pick } from '@contentlayer2/client'
@@ -11,9 +10,9 @@ import { SITE_NAME, SITE_URL } from '../../config'
 
 export function generateMetadata(): Metadata {
   const SEO = {
-    title: 'Code Blog by Irene Myronova | B2B & SaaS',
+    title: 'Code Blog by Nuno Marques | Design & Development Tips',
     description:
-      'Discover the latest blogs on B2B and SaaS. Stay up to date with the latest trends and technologies in cloud computing and software solutions effectively.',
+      'Discover the latest blogs on code, web design and development. Stay up to date with the latest trends and technologies, with code examples.',
     image: `${SITE_URL}/og-card.png`,
   }
 
@@ -38,15 +37,8 @@ export function generateMetadata(): Metadata {
   }
 }
 
-export default async function BlogPage({
-  params,
-}: {
-  // у Next 15 params — Promise
-  params: Promise<{ page: string }>
-}) {
-  const paramsResolved = await params;
-  const { page } = paramsResolved
-  const currentPage = parseInt(page ?? '1', 10) || 1
+export default function BlogPage({ params }: { params: { page: string } }) {
+  const currentPage = parseInt(params.page || '1', 10)
 
   // Pick relevant fields from blogs and sort by date
   let blogs = allBlogs.map((blog) =>
@@ -67,11 +59,7 @@ export default async function BlogPage({
   return (
     <Layout>
       <section className="md:max-w-[87%] m-auto flex flex-col gap-6 px-4 sm:px-12 mb-32">
-        {/* якщо blogs порожній — передаємо дефолтний templateKey щоб уникнути runtime error */}
-        <CategoryHeader
-          title="Code Blog"
-          templateKey={blogs[0]?.templateKey ?? 'post'}
-        />
+        <CategoryHeader title="Code Blog" templateKey={blogs[0].templateKey!} />
 
         <div className="flex gap-8 items-start">
           <div className="flex flex-wrap gap-4 w-full">

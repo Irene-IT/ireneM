@@ -9,9 +9,9 @@ import { AUTHOR_NAME, SITE_NAME, SITE_URL } from '../../config'
 // Metadata function for SEO
 export function generateMetadata(): Metadata {
   const SEO = {
-    title: `B2B SaaS Content Writer ${AUTHOR_NAME} | ${SITE_NAME}`,
+    title: `A Selection of Tools by ${AUTHOR_NAME} | ${SITE_NAME}`,
     description:
-      'Professional B2B content writer specializing in B2B SaaS, IT, and tech. I help businesses drive growth by creating compelling content, showcasing your cloud computing and software solutions effectively.',
+      'Explore a curated collection of essential tools for developers and designers, handpicked to enhance productivity and creativity.',
   }
 
   return {

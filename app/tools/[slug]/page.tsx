@@ -10,10 +10,9 @@ import { AUTHOR_NAME, SITE_NAME, SITE_URL } from '../../../config'
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>
+  params: { slug: string }
 }): Promise<Metadata> {
-  const paramsResolved = await params;
-  const tool = allTools.find((tool) => tool.slug === paramsResolved.slug) as Tools
+  const tool = allTools.find((tool) => tool.slug === params.slug) as Tools
 
   if (!tool) {
     return notFound()
@@ -44,9 +43,8 @@ export async function generateMetadata({
   }
 }
 
-export default async function ToolPage({ params }: { params: Promise<{ slug: string }> }) {
-  const paramsResolved = await params;
-  const tool = allTools.find((tool) => tool.slug === paramsResolved.slug)
+export default function ToolPage({ params }: { params: { slug: string } }) {
+  const tool = allTools.find((tool) => tool.slug === params.slug)
 
   if (!tool) {
     return notFound()

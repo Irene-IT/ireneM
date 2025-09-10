@@ -17,7 +17,7 @@ export function generateMetadata(): Metadata {
   const SEO = {
     title: `Explore all #Tags available at ${SITE_NAME}`,
     description:
-      'Explore a comprehensive list of tags and categories, from B2B and SaaS to cloud computing and software solutions. Click on any tag to discover new insights.',
+      'Explore a comprehensive list of tags and categories, from design and development to tools and podcasts. Click on any tag to discover new insights.',
     image: `${SITE_URL}/og-card.png`,
   }
 
