@@ -5,20 +5,15 @@ import Layout from '../../../components/Layout'
 import BlogPost from '../../../components/BlogPost'
 import { AUTHOR_NAME, SITE_NAME, SITE_URL } from '../../../config'
 
-// Правильний спосіб типізувати пропси
-interface BlogPageProps {
-  params: {
-    slug: string
-  }
-}
-
 export async function generateMetadata({
   params,
-}: BlogPageProps): Promise<Metadata | null> {
-  const blog = allBlogs.find((blog) => blog.slug === params.slug)
+}: {
+  params: { slug: string }
+}): Promise<Metadata> {
+  const blog = allBlogs.find((blog) => blog.slug === params.slug) as Blog
 
   if (!blog) {
-    return null
+    return notFound()
   }
 
   return {
@@ -30,26 +25,27 @@ export async function generateMetadata({
       title: blog.title,
       description: blog.description,
       publishedTime: blog.date,
-      authors: [AUTHOR_NAME],
+      authors: `${AUTHOR_NAME}`,
       tags: blog.tags,
       images: [
         {
           url: `${SITE_URL}/og-card.png`,
           width: 1600,
           height: 800,
-          alt: SITE_NAME,
+          alt: `${SITE_NAME}`,
+          type: 'image/jpeg',
         },
       ],
-      siteName: SITE_NAME,
+      siteName: `${SITE_NAME}`,
     },
   }
 }
 
-export default function BlogPostPage({ params }: BlogPageProps) {
+export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const blog = allBlogs.find((blog) => blog.slug === params.slug)
 
   if (!blog) {
-    notFound()
+    return notFound()
   }
 
   return (

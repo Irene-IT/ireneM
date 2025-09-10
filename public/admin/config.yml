@@ -14,9 +14,8 @@ backend:
 # publish_mode: editorial_workflow
 
 editor:
-  preview: true
   # ##### original have false
-  # preview: false
+  preview: false
 
 # Better Decap + Bridge logo (optional)
 logo_url: https://decapbridge.com/decapcms-with-bridge.svg
