@@ -1,20 +1,24 @@
-// app/blog/[slug]/page.tsx
-
-import { Metadata } from 'next' // Імпортуємо тільки Metadata
+import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { allBlogs } from '../../../.contentlayer/generated'
+import { allBlogs, Blog } from '../../../.contentlayer/generated'
 import Layout from '../../../components/Layout'
 import BlogPost from '../../../components/BlogPost'
 import { AUTHOR_NAME, SITE_NAME, SITE_URL } from '../../../config'
 
-// Тепер використовуємо PageProps
+// Правильний спосіб типізувати пропси
+interface BlogPageProps {
+  params: {
+    slug: string
+  }
+}
+
 export async function generateMetadata({
   params,
-}: { params: { slug: string } }): Promise<Metadata | null> {
+}: BlogPageProps): Promise<Metadata | null> {
   const blog = allBlogs.find((blog) => blog.slug === params.slug)
 
   if (!blog) {
-    return null // Return null if blog not found
+    return null
   }
 
   return {
@@ -41,10 +45,7 @@ export async function generateMetadata({
   }
 }
 
-// Тепер використовуємо PageProps
-export default function BlogPostPage({
-  params,
-}: { params: { slug: string } }) {
+export default function BlogPostPage({ params }: BlogPageProps) {
   const blog = allBlogs.find((blog) => blog.slug === params.slug)
 
   if (!blog) {
