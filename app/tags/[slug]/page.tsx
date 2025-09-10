@@ -22,11 +22,12 @@ import { AUTHOR_NAME, SITE_NAME, SITE_URL } from '../../../config'
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }): Promise<Metadata> {
+  const paramsResolved = await params;
   const SEO = {
-    title: `Tag: #${params.slug}`,
-    description: `Browse all posts tagged with #${params.slug}. Discover related articles, inspiration, podcasts, tools and resources.`,
+    title: `Tag: #${paramsResolved.slug}`,
+    description: `Browse all posts tagged with #${paramsResolved.slug}. Discover related articles, inspiration, podcasts, tools and resources.`,
   }
 
   return {
@@ -34,7 +35,7 @@ export async function generateMetadata({
     description: SEO.description,
     openGraph: {
       type: 'article',
-      url: `${SITE_URL}/tags/${params.slug}/`,
+      url: `${SITE_URL}/tags/${paramsResolved.slug}/`,
       title: SEO.title,
       description: SEO.description,
       authors: `${AUTHOR_NAME}`,
@@ -49,10 +50,11 @@ export async function generateMetadata({
       ],
       siteName: `${SITE_NAME}`,
     },
-  }
+  };
 }
 
-export default function TagPage({ params }: { params: { slug: string } }) {
+export default async function TagPage({ params }: { params: Promise<{ slug: string }> }) {
+  const paramsResolved = await params;
   const allPosts = [
     ...allBlogs,
     ...allInspirations,
@@ -64,14 +66,14 @@ export default function TagPage({ params }: { params: { slug: string } }) {
   // const posts = extractUniqueTags(allPosts)
 
   // get all the posts from this tag
-  const posts = allPosts.filter((post) => post.tags?.includes(params.slug))
+  const posts = allPosts.filter((post) => post.tags?.includes(paramsResolved.slug))
 
   return (
     <>
       <Layout>
         <section className="max-w-3xl m-auto flex flex-col gap-6 px-4 sm:px-12 mb-32">
           <header className="mb-4">
-            <h1 className="text-3xl font-bold">#{params.slug}</h1>
+            <h1 className="text-3xl font-bold">#{paramsResolved.slug}</h1>
             <p>All content tagged with this tag.</p>
           </header>
 
@@ -132,5 +134,5 @@ export default function TagPage({ params }: { params: { slug: string } }) {
         </section>
       </Layout>
     </>
-  )
+  );
 }

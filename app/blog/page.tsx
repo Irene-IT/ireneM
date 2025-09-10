@@ -42,8 +42,9 @@ export default async function BlogPage({
   params,
 }: {
   // у Next 15 params — Promise
-  params: Promise<{ page: string }>
+  params: Promise<Promise<{ page: string }>>
 }) {
+  const paramsResolved = await params;
   const { page } = await params
   const currentPage = parseInt(page ?? '1', 10) || 1
 

@@ -10,10 +10,11 @@ import { SITE_URL, SITE_NAME, AUTHOR_NAME } from '../../../config'
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }): Promise<Metadata> {
+  const paramsResolved = await params;
   const resource = allResources.find(
-    (resource) => resource.slug === params.slug
+    (resource) => resource.slug === paramsResolved.slug
   ) as Resources
 
   if (!resource) {
@@ -45,9 +46,10 @@ export async function generateMetadata({
   }
 }
 
-export default function ResourcePage({ params }: { params: { slug: string } }) {
+export default async function ResourcePage({ params }: { params: Promise<{ slug: string }> }) {
+  const paramsResolved = await params;
   const resource = allResources.find(
-    (resource) => resource.slug === params.slug
+    (resource) => resource.slug === paramsResolved.slug
   )
 
   if (!resource) {
