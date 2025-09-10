@@ -37,8 +37,13 @@ export function generateMetadata(): Metadata {
   }
 }
 
-export default function BlogPage({ params }: { params: { page: string } }) {
-  const currentPage = parseInt(params.page || '1', 10)
+export default async function BlogPage({
+  params,
+}: {
+  params: Promise<{ page?: string }>
+}) {
+  const { page } = await params
+  const currentPage = parseInt(page || '1', 10)
 
   // Pick relevant fields from blogs and sort by date
   let blogs = allBlogs.map((blog) =>

@@ -10,11 +10,12 @@ import { AUTHOR_NAME, SITE_NAME, SITE_URL } from '../../../config'
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }): Promise<Metadata> {
+  const { slug } = await params
   const inspiration = allInspirations.find(
-    (inspiration) => inspiration.slug === params.slug
-  ) as Inspiration
+    (inspiration) => inspiration.slug === slug
+  ) as Inspiration | undefined
 
   if (!inspiration) {
     return notFound()
@@ -45,18 +46,23 @@ export async function generateMetadata({
   }
 }
 
-export default function InspirationPage({
+export default async function InspirationPage({
   params,
 }: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }) {
+  const { slug } = await params
   const inspiration = allInspirations.find(
-    (inspiration) => inspiration.slug === params.slug
-  )
+    (inspiration) => inspiration.slug === slug
+  ) as Inspiration | undefined
+
+  if (!inspiration) {
+    return notFound()
+  }
 
   return (
     <Layout>
-      <InspirationPost inspiration={inspiration as Inspiration} />
+      <InspirationPost inspiration={inspiration} />
     </Layout>
   )
 }

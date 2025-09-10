@@ -10,11 +10,12 @@ import { SITE_URL, SITE_NAME, AUTHOR_NAME } from '../../../config'
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }): Promise<Metadata> {
+  const { slug } = await params
   const resource = allResources.find(
-    (resource) => resource.slug === params.slug
-  ) as Resources
+    (resource) => resource.slug === slug
+  ) as Resources | undefined
 
   if (!resource) {
     return notFound()
@@ -45,10 +46,15 @@ export async function generateMetadata({
   }
 }
 
-export default function ResourcePage({ params }: { params: { slug: string } }) {
+export default async function ResourcePage({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) {
+  const { slug } = await params
   const resource = allResources.find(
-    (resource) => resource.slug === params.slug
-  )
+    (resource) => resource.slug === slug
+  ) as Resources | undefined
 
   if (!resource) {
     return notFound()
@@ -57,11 +63,12 @@ export default function ResourcePage({ params }: { params: { slug: string } }) {
   return (
     <Layout>
       <article className="max-w-4xl p-4 sm:p-12 sm:pt-0 m-auto">
-        <PostHeader data={resource as Resources} />
+        <PostHeader data={resource} />
         <figure className="flex flex-col gap-2 mt-12 bg-slate-200 dark:bg-slate-700 rounded-lg overflow-hidden">
           <a
             href={resource.link}
             target="_blank"
+            rel="noreferrer"
             title={`Open resource on a new tab`}
           >
             <img

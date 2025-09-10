@@ -12,9 +12,10 @@ import Link from 'next/link'
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }): Promise<Metadata> {
-  const podcast = allPodcasts.find((podcast) => podcast.slug === params.slug) as Podcasts
+  const { slug } = await params
+  const podcast = allPodcasts.find((p) => p.slug === slug) as Podcasts | undefined
 
   if (!podcast) {
     return notFound()
@@ -45,10 +46,15 @@ export async function generateMetadata({
   }
 }
 
-export default function PodcastPage({ params }: { params: { slug: string } }) {
+export default async function PodcastPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) {
+  const { slug } = await params
   const podcast = allPodcasts.find(
-    (podcast: Podcasts) => podcast.slug === params.slug
-  )
+    (p: Podcasts) => p.slug === slug
+  ) as Podcasts | undefined
 
   if (!podcast) {
     return notFound()
