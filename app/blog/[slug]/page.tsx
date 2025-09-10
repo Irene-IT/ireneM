@@ -8,9 +8,11 @@ import { AUTHOR_NAME, SITE_NAME, SITE_URL } from '../../../config'
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string }
+  // params тепер Promise (Next.js 15)
+  params: Promise<{ slug: string }>
 }): Promise<Metadata> {
-  const blog = allBlogs.find((blog) => blog.slug === params.slug) as Blog
+  const { slug } = await params
+  const blog = allBlogs.find((blog) => blog.slug === slug) as Blog | undefined
 
   if (!blog) {
     return notFound()
@@ -41,8 +43,14 @@ export async function generateMetadata({
   }
 }
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const blog = allBlogs.find((blog) => blog.slug === params.slug)
+export default async function BlogPostPage({
+  params,
+}: {
+  // теж саме тут — params як Promise
+  params: Promise<{ slug: string }>
+}) {
+  const { slug } = await params
+  const blog = allBlogs.find((blog) => blog.slug === slug)
 
   if (!blog) {
     return notFound()

@@ -1,3 +1,4 @@
+// app/blog/page.tsx
 import { Metadata } from 'next'
 import { allBlogs, Blog } from '../../.contentlayer/generated'
 import { pick } from '@contentlayer2/client'
@@ -37,8 +38,14 @@ export function generateMetadata(): Metadata {
   }
 }
 
-export default function BlogPage({ params }: { params: { page: string } }) {
-  const currentPage = parseInt(params.page || '1', 10)
+export default async function BlogPage({
+  params,
+}: {
+  // у Next 15 params — Promise
+  params: Promise<{ page: string }>
+}) {
+  const { page } = await params
+  const currentPage = parseInt(page ?? '1', 10) || 1
 
   // Pick relevant fields from blogs and sort by date
   let blogs = allBlogs.map((blog) =>
@@ -59,7 +66,11 @@ export default function BlogPage({ params }: { params: { page: string } }) {
   return (
     <Layout>
       <section className="md:max-w-[87%] m-auto flex flex-col gap-6 px-4 sm:px-12 mb-32">
-        <CategoryHeader title="Code Blog" templateKey={blogs[0].templateKey!} />
+        {/* якщо blogs порожній — передаємо дефолтний templateKey щоб уникнути runtime error */}
+        <CategoryHeader
+          title="Code Blog"
+          templateKey={blogs[0]?.templateKey ?? 'post'}
+        />
 
         <div className="flex gap-8 items-start">
           <div className="flex flex-wrap gap-4 w-full">
