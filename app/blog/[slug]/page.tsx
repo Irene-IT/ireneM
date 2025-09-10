@@ -1,15 +1,16 @@
-import { Metadata } from 'next'
+// app/blog/[slug]/page.tsx
+
+import { Metadata } from 'next' // Імпортуємо тільки Metadata
 import { notFound } from 'next/navigation'
-import { allBlogs, Blog } from '../../../.contentlayer/generated'
+import { allBlogs } from '../../../.contentlayer/generated'
 import Layout from '../../../components/Layout'
 import BlogPost from '../../../components/BlogPost'
 import { AUTHOR_NAME, SITE_NAME, SITE_URL } from '../../../config'
 
+// Тепер використовуємо PageProps
 export async function generateMetadata({
   params,
-}: {
-  params: { slug: string }
-}): Promise<Metadata | null> {
+}: { params: { slug: string } }): Promise<Metadata | null> {
   const blog = allBlogs.find((blog) => blog.slug === params.slug)
 
   if (!blog) {
@@ -40,16 +41,19 @@ export async function generateMetadata({
   }
 }
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
+// Тепер використовуємо PageProps
+export default function BlogPostPage({
+  params,
+}: { params: { slug: string } }) {
   const blog = allBlogs.find((blog) => blog.slug === params.slug)
 
   if (!blog) {
-    notFound() 
+    notFound()
   }
 
   return (
     <Layout>
-      <BlogPost blog={blog} /> 
+      <BlogPost blog={blog} />
     </Layout>
   )
 }
