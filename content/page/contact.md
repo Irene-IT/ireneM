@@ -1,6 +1,5 @@
 ---
 slug: contact
 title: Contact
-description: >-
-  Placeholder contact page.
+description: irenemyronova@gmail.com
 ---
