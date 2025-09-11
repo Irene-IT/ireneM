@@ -22,7 +22,7 @@ export default function Header() {
   if (!mounted) return null // Avoid hydration mismatch
 
   return (
-    <header className="flex p-4 sm:p-6 fixed w-full z-10 pointer-events-none">
+    <header className="flex p-4 sm:p-6 fixed w-full z-10 pointer-events-none bg-slate-200 dark:bg-slate-800">
       <nav className="flex w-full justify-between items-center">
         <Link
           href="/"
