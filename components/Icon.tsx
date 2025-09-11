@@ -11,6 +11,7 @@ import {
   TagIcon,
   WrenchScrewdriverIcon,
   XMarkIcon,
+  EnvelopeOpenIcon,
 } from '@heroicons/react/24/outline'
 
 export const Icon = ({
@@ -33,6 +34,7 @@ export const Icon = ({
     tag: TagIcon,
     tools: WrenchScrewdriverIcon,
     up: ArrowUpCircleIcon,
+    contact: EnvelopeOpenIcon,
   }
 
   const IconComponent = icons[name]
