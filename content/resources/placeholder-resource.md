@@ -2,7 +2,7 @@
 templateKey: resources
 title: Contact
 featured: false
-image: /media/resource__placeholder-post-1200x1200.png
+image: /media/Insta.png
 link: https://www.linkedin.com/
 tags:
   - community
