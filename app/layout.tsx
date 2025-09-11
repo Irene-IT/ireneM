@@ -36,11 +36,11 @@ export default function RootLayout({
   <meta property="og:description" content="Professional B2B content writer specializing in B2B SaaS, IT, and tech. I help businesses drive growth by creating compelling content, showcasing your cloud computing and software solutions effectively" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://irenemyronova.netlify.app" />
-  <meta property="og:image" content="https://irenem-portfolio.com/og-image.jpg" />
+  <meta property="og:image" content="https://irenemyronova.netlify.app/og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Irene Myronova | B2B SaaS Content Writer" />
   <meta name="twitter:description" content="Professional B2B content writer specializing in B2B SaaS, IT, and tech. I help businesses drive growth by creating compelling content, showcasing your cloud computing and software solutions effectively" />
-  <meta name="twitter:image" content="https://irenem-portfolio.com/twitter-image.jpg" />
+  <meta name="twitter:image" content="https://irenemyronova.netlify.app/twitter-image.jpg" />
   <meta name="copyright" content="© 2025 Irene Myronova | B2B SaaS Content Writer app. All Rights Reserved" />
   <meta name="robots" content="index" />    
         

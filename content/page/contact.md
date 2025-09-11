@@ -1,5 +1,5 @@
 ---
 slug: contact
-title: Contact
-description: irenemyronova@gmail.com
+title: linkedin
+description: https://www.linkedin.com/in/myronovairene
 ---

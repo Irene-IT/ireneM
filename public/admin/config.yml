@@ -15,7 +15,7 @@ backend:
 
 editor:
   # ##### original have false
-  preview: false
+  preview: true
 
 # Better Decap + Bridge logo (optional)
 logo_url: https://decapbridge.com/decapcms-with-bridge.svg
