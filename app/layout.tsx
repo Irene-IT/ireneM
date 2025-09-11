@@ -22,7 +22,7 @@ export default function RootLayout({
 
 
 
-  <meta name="description" content="Professional B2B content writer specializing in B2B SaaS, IT, and tech. I help businesses drive growth by creating compelling content, showcasing your cloud computing and software solutions effectively" />
+  {/* <meta name="description" content="Professional B2B content writer specializing in B2B SaaS, IT, and tech. I help businesses drive growth by creating compelling content, showcasing your cloud computing and software solutions effectively" /> */}
   <meta name="keywords" content="B2B content writer, B2B SaaS content writer, saas content writer, content writer for IT, content writer for tech, writing expertise for cloud computing" />
   <meta name="author" content="Irene Myronova" />
 
