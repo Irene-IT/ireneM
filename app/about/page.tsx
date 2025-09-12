@@ -34,13 +34,47 @@ export function generateMetadata(): Metadata {
 export default function About() {
   return (
     <Layout>
-      <section className="flex flex-col gap-12 my-24 mx-auto max-w-5xl text-center">
+      {/* <section className="flex flex-col gap-12 my-24 mx-auto max-w-5xl text-center">
         <h1 className="text-3xl font-bold">{about?.title}</h1>
-        <div className="flex flex-col gap-8">
-          <ReactMarkdown remarkPlugins={[gfm]} children={about?.description} />
+        <div className="flex flex-col gap-8"> */}
+          {/* <ReactMarkdown remarkPlugins={[gfm]} children={about?.description} /> */}
+          {/* <p className="text-lg">{about?.description}</p>
         </div>
-        <div className="flex flex-wrap justify-center gap-2"></div>
+        <div className="flex flex-wrap justify-center gap-2"> */}
+          
+          {/* add button coll to action */}
+        {/* </div>
+      </section> */}
+
+
+       <section className="flex flex-col gap-12 my-24 mx-auto max-w-5xl text-center">
+        <h1 className="text-3xl font-bold">{about?.title}</h1>
+
+        {/* Короткий опис із frontmatter */}
+        <p className="text-lg text-gray-600">{about?.description}</p>
+
+        {/* Довгий контент із самого Markdown-файлу */}
+        <div className="prose prose-lg mx-auto text-left">
+          <ReactMarkdown remarkPlugins={[gfm]}>
+            {about?.body.raw}
+          </ReactMarkdown>
+        </div>
       </section>
     </Layout>
+
+
+
+
+      
+      
+
+
+
+
   )
 }
+
+        // <div className="flex flex-wrap justify-center gap-2">
+          
+        //   {/* add button coll to action */}
+        // </div>

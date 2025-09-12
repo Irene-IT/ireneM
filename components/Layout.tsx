@@ -1,30 +1,7 @@
 'use client'
 
-// import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { usePathname } from 'next/navigation'
-
-// function useTheme() {
-//   const [theme, setTheme] = useState<'light' | 'dark'>('light')
-
-//   useEffect(() => {
-//     const saved = localStorage.getItem('theme') as 'light' | 'dark' | null
-//     if (saved) {
-//       setTheme(saved)
-//     } else {
-//       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-//       setTheme(prefersDark ? 'dark' : 'light')
-//     }
-//   }, [])
-
-//   const toggleTheme = () => {
-//     const newTheme = theme === 'light' ? 'dark' : 'light'
-//     setTheme(newTheme)
-//     localStorage.setItem('theme', newTheme)
-//   }
-
-//   return { theme, toggleTheme }
-// }
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname()
@@ -32,14 +9,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Кнопка перемикання теми */}
-      {/* <button
-        onClick={toggleTheme}
-        className="fixed top-4 right-4 px-3 py-2 rounded-lg bg-slate-700 text-slate-100 dark:bg-slate-200 dark:text-slate-900 z-50"
-      >
-        {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
-      </button> */}
-
+    
       <motion.main
         key={pathname}
         initial={{ opacity: 0 }}
