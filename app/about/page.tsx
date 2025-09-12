@@ -32,51 +32,52 @@ export function generateMetadata(): Metadata {
 }
 
 export default function About() {
-  console.log('About page data:', about)
   return (
     <Layout>
       {/* <section className="flex flex-col gap-12 my-24 mx-auto max-w-5xl text-center">
         <h1 className="text-3xl font-bold">{about?.title}</h1>
         <div className="flex flex-col gap-8"> */}
-          {/* <ReactMarkdown remarkPlugins={[gfm]} children={about?.description} /> */}
-          {/* <p className="text-lg">{about?.description}</p>
+      {/* <ReactMarkdown remarkPlugins={[gfm]} children={about?.description} /> */}
+      {/* <p className="text-lg">{about?.description}</p>
         </div>
         <div className="flex flex-wrap justify-center gap-2"> */}
-          
-          {/* add button coll to action */}
-        {/* </div>
+
+      {/* add button coll to action */}
+      {/* </div>
       </section> */}
 
+      <section className="flex flex-col gap-12 my-24 mx-auto max-w-5xl text-center">
+        <div className="flex flex-col sm:gap-6 max-w-3xl text-center">
+          <h1 className="text-3xl sm:text-5xl font-bold my-12 sm:mt-0 text-center">
+            {about?.title}
+          </h1>
+          {/* short description */}
+          <p className="text-center text-balance text-lg text-gray-600">
+            {about?.description}
+          </p>
+          <ReactMarkdown remarkPlugins={[gfm]}>{about?.body.raw}</ReactMarkdown>
+        </div>
 
-       <section className="flex flex-col gap-12 my-24 mx-auto max-w-5xl text-center">
-        <h1 className="text-3xl font-bold">{about?.title}</h1>
-
-        {/* Короткий опис із frontmatter */}
-        <p className="text-lg text-gray-600">{about?.description}</p>
-
-        {/* Довгий контент із самого Markdown-файлу */}
-        <div className="prose prose-lg mx-auto text-left">
-          <ReactMarkdown remarkPlugins={[gfm]}>
-            {about?.body.raw}
-          </ReactMarkdown>
-
+        {/* add button coll to action */}
+        <div className="flex flex-col sm:flex-row sm:justify-center sm:items-center flex-wrap gap-2">
+          <a
+            href="mailto:irenemyronova@gmail.com"
+            className="px-12 sm:px-6 py-3 text-xs font-bold shadow-md hover:shadow-lg border rounded-md border-gray-300 dark:border-gray-600 hover:bg-blue-700 bg-blue-600 text-white transition-colors"
+            aria-label="Toggle email"
+            type="button"
+          >
+            Get in touch →
+          </a>
+          <a
+            href="#work"
+            className="px-12 sm:px-6 py-3 text-xs font-bold shadow-md hover:shadow-lg border rounded-md border-blue-300 dark:border-blue-600 hover:border-blue-600 dark:hover:border-blue-300  text-blue-600 dark:text-white transition-colors"
+            aria-label="Toggle look at my work"
+            type="button"
+          >
+            View my work
+          </a>
         </div>
       </section>
     </Layout>
-
-
-
-
-      
-      
-
-
-
-
   )
 }
-
-        // <div className="flex flex-wrap justify-center gap-2">
-          
-        //   {/* add button coll to action */}
-        // </div>
