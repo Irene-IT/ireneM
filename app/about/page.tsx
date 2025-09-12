@@ -32,6 +32,7 @@ export function generateMetadata(): Metadata {
 }
 
 export default function About() {
+  console.log('About page data:', about)
   return (
     <Layout>
       {/* <section className="flex flex-col gap-12 my-24 mx-auto max-w-5xl text-center">
@@ -58,6 +59,7 @@ export default function About() {
           <ReactMarkdown remarkPlugins={[gfm]}>
             {about?.body.raw}
           </ReactMarkdown>
+
         </div>
       </section>
     </Layout>
