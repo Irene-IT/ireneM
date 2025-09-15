@@ -139,6 +139,36 @@ export default function Home() {
           <div className="flex justify-between items-end mb-4">
             <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
               <Icon name="blog" className="size-6 sm:size-8 opacity-60" />
+              <span>Services</span>
+            </h2>
+            <Link href="/services">View all &rarr;</Link>
+          </div>
+          <p className="text-center text-balance text-lg text-gray-600">
+            Here are some of my work samples. Some of my clients, as well as my
+            partners’ clients, require me to sign a non-disclosure agreement
+            (NDA) before starting a new project. The following samples are not
+            subject to any legal restrictions on public sharing.
+          </p>
+          <div className="grid xl:grid-cols-2 gap-4 flex-wrap">
+            {blogs.map((post) => (
+              <BlogCardPost key={post.slug} post={post as Blog} />
+            ))}
+          </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+        <section className="flex flex-col gap-4">
+          <div className="flex justify-between items-end mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
+              <Icon name="blog" className="size-6 sm:size-8 opacity-60" />
               <span>Code Blog</span>
             </h2>
             <Link href="/blog">View all &rarr;</Link>

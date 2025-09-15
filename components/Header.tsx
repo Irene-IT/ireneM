@@ -73,6 +73,16 @@ export default function Header() {
               <li>
                 <Link
                   onClick={() => setNavbar(!navbar)}
+                  href="/services"
+                  className={menuItemClasses}
+                >
+                  <Icon name="blog" className={iconClasses} />
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  onClick={() => setNavbar(!navbar)}
                   href="/blog"
                   className={menuItemClasses}
                 >
