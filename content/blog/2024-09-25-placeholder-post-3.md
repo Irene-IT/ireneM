@@ -13,7 +13,7 @@ tags:
 ---
 ## **Head of the Polish Government's Industry 4.0 Project: “Our Goal is to Replace the System of Disparate Strategies with an Ecosystem Approach”**
 
-Read original text: <https://mind.ua/publications/20206237-kerivnik-proektu-uryadu-polshchi-z-vprovadzhennya-industry-4-0-nasha-meta-zminiti-sistemu-rozriznenih>
+[Read original text ](https://mind.ua/publications/20206237-kerivnik-proektu-uryadu-polshchi-z-vprovadzhennya-industry-4-0-nasha-meta-zminiti-sistemu-rozriznenih)→[](https://mind.ua/publications/20206237-kerivnik-proektu-uryadu-polshchi-z-vprovadzhennya-industry-4-0-nasha-meta-zminiti-sistemu-rozriznenih)
 
 ![Head of the Polish Government's Industry 4.0 Project: “Our Goal is to Replace the System of Disparate Strategies with an Ecosystem Approach”](/media/services__landing-pages.jpg "Анджей Солдати – про те, чому бізнес у Східній Європі не поспішає виходити із зони комфорту, чи варто боятися нашестя роботів і коли людський мозок іде на пенсію")
 
@@ -172,6 +172,6 @@ Based on my experience participating in various forums, I can say that here we a
 
 \- Production does occur, but it’s part of a broader purpose. The main message is: a consortium of companies decided to establish new standards to foster market development. We need to change the approach from fragmented strategies. If Eastern Europe can do it, others can too. It’s our future opportunity.
 
-### \- What does Ukraine need to implement the Fourth Industrial Revolution?
+\- What does Ukraine need to implement the Fourth Industrial Revolution?
 
 \- Your country already has well-established bottom-up initiatives. However, synergistic government support is crucial to scale these initiatives nationwide and influence the market. Professional associations could play a role but require governmental backing.
