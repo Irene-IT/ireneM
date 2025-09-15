@@ -165,7 +165,7 @@ export default function Home() {
 
 
 
-        <section className="flex flex-col gap-4">
+        {/* <section className="flex flex-col gap-4">
           <div className="flex justify-between items-end mb-4">
             <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
               <Icon name="blog" className="size-6 sm:size-8 opacity-60" />
@@ -178,7 +178,7 @@ export default function Home() {
               <BlogCardPost key={post.slug} post={post as Blog} />
             ))}
           </div>
-        </section>
+        </section> */}
 
         <section className="flex flex-col gap-4">
           <div className="flex justify-between items-end mb-4">

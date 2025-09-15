@@ -1,7 +1,7 @@
 ---
 templateKey: blog
 title: >
-  Placeholder Post 3
+  Landing pages (SEO/AEO)
 date: 2024-09-25T19:28:37.629Z
 featured: false
 description: >
