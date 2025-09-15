@@ -2,10 +2,10 @@
 templateKey: blog
 title: |
   Landing pages (SEO/AEO)
-featured: false
+featured: true
 date: 2024-09-25T19:28:37.629Z
 description: |
-  A brief description of the placeholder post in code blog.
+  Head of the Polish Government's Industry 4.0 Project: “Our Goal is to Replace the System of Disparate Strategies with an Ecosystem Approach."
 tags:
   - open-source
   - example
