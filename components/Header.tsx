@@ -74,11 +74,11 @@ export default function Header() {
               <li>
                 <Link
                   onClick={() => setNavbar(!navbar)}
-                  href="/services"
+                  href="/blog"
                   className={menuItemClasses}
                 >
                   <Icon name="blog" className={iconClasses} />
-                  Services
+                  My works
                 </Link>
               </li>
               <li>

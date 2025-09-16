@@ -45,7 +45,7 @@ export function generateMetadata(): Metadata {
     title: SEO.title,
     description: SEO.description,
     openGraph: {
-      url: `${SITE_URL}/`,
+      url: `${SITE_URL}/og-card.png`,
       title: SEO.title,
       description: SEO.description,
       authors: `${AUTHOR_NAME}`,
@@ -125,7 +125,7 @@ export default function Home() {
               Get in touch →
             </a>
             <a
-              href="#work"
+              href="#works"
               className="px-12 sm:px-6 py-3 text-xs font-bold shadow-md hover:shadow-lg border rounded-md border-blue-300 dark:border-blue-600 hover:border-blue-600 dark:hover:border-blue-300  text-blue-600 dark:text-white transition-colors"
               aria-label="Toggle look at my work"
               type="button"
@@ -139,9 +139,9 @@ export default function Home() {
           <div className="flex justify-between items-end mb-4">
             <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
               <Icon name="blog" className="size-6 sm:size-8 opacity-60" />
-              <span>Services</span>
+              <span>My works</span>
             </h2>
-            <Link href="/services">View all &rarr;</Link>
+            <Link href="/blog">View all &rarr;</Link>
           </div>
           <p className="text-center text-balance text-lg text-gray-600">
             Here are some of my work samples. Some of my clients, as well as my
