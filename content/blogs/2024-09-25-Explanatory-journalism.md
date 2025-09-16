@@ -1,11 +1,11 @@
 ---
 templateKey: blog
 title: >
-  Blog Post
+ Explanatory journalism
 date: 2024-09-25T19:28:37.629Z
 featured: true
 description: >
-  A brief description of the placeholder post in code blog.
+  A brief description of the placeholder post in Explanatory journalism blog.
 tags:
   - example
   - placeholder

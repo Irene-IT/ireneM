@@ -106,7 +106,7 @@ export default function Home() {
               {about?.title}
             </h1>
             {/* short description */}
-            <p className="text-center text-balance text-lg text-gray-600">
+            <p className="text-center text-balance text-lg text-slate-600 dark:text-[#a0b6dc]">
               {about?.description}
             </p>
             <ReactMarkdown remarkPlugins={[gfm]}>
@@ -165,9 +165,9 @@ export default function Home() {
           </div>
         </section> */}
 
-        <section className="flex flex-col gap-4">
+        <section id='works' className="flex flex-col gap-4" aria-labelledby="works-title">
           <div className="flex justify-between items-end mb-4">
-            <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
+            <h2 id="works-title" className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
               <Icon
                 name="inspiration"
                 className="size-6 sm:size-8 opacity-60"
@@ -176,7 +176,8 @@ export default function Home() {
             </h2>
             <Link href="/inspiration">View all &rarr;</Link>
           </div>
-           <p className="text-center text-balance text-lg text-gray-600">
+           <p className="text-center text-balance text-lg text-slate-600 dark:text-[#a0b6dc]">
+           
             Here are some of my work samples. Some of my clients, as well as my
             partners’ clients, require me to sign a non-disclosure agreement
             (NDA) before starting a new project. The following samples are not

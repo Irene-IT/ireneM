@@ -1,17 +1,15 @@
 ---
 templateKey: blog
 title: >
- Interviews
-date: 2024-09-25T19:28:37.629Z
+  Landing pages (SEO/AEO)
 featured: true
+date: 2024-09-25T19:28:37.629Z
 description: >
-  A brief description of the placeholder post in code blog.
+  A brief description of the placeholder post
 tags:
   - open-source
   - example
   - placeholder
 ---
-
-## This is a Placeholder Post
 
 Feel free to replace this content with your own!

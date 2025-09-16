@@ -17,7 +17,7 @@ export default function BlogPostCard({ post }: { post: Blog }) {
           {post.description}
         </p>
       )}
-      <span className="mt-auto text-slate-500 text-sm font-bold">
+      <span className="mt-auto text-slate-600 dark:text-[#9fb6db] text-sm font-bold">
         Read more &rarr;
       </span>
     </Link>

@@ -62,7 +62,7 @@ collections:
           - { label: 'Description', name: 'description', widget: 'text' }
 
   - name: 'blogs' # Used in routes, e.g., /admin/collections/blog
-    label: 'My works' # Used in the UI
+    label: 'Services' # Used in the UI
     folder: 'content/blogs' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{year}}-{{month}}-{{day}}-{{title}}' # Filename template, e.g., 2024-090-25-name-of-doc.md
@@ -92,12 +92,12 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
 
   - name: 'inspiration'
-    label: 'Inspiration'
+    label: 'My works'
     folder: 'content/inspiration'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{title}}'
-    extension: mdx
-    format: frontmatter
+    # extension: mdx
+    # format: frontmatter
     view_groups:
       - label: Year
         field: date
