@@ -67,9 +67,9 @@ const  Blog = defineDocumentType(() => ({
   },
 }))
 
-const Inspiration = defineDocumentType(() => ({
-  name: 'Inspiration',
-  filePathPattern: `inspiration/*.md`,
+const Work = defineDocumentType(() => ({
+  name: 'Work',
+  filePathPattern: `work/*.md`,
   contentType: 'markdown',
   fields: {
     title: {
@@ -249,6 +249,6 @@ const Resources = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: 'content',
-  documentTypes: [Page,  Blog, Inspiration, Podcasts, Tools, Resources],
+  documentTypes: [Page,  Blog, Work, Podcasts, Tools, Resources],
   disableImportAliasWarning: true,
 })

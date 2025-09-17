@@ -1,16 +1,16 @@
 import Link from 'next/link'
-import { Inspiration } from '../../.contentlayer/generated'
+import { Work } from '../../.contentlayer/generated'
 import ExportedImage from 'next-image-export-optimizer'
 
-const InspirationCardClasses =
+const WorkCardClasses =
   'w-full flex flex-col gap-2 bg-white dark:bg-slate-800 rounded-xl shadow-md hover:shadow-xl dark:hover:shadow-2xl hover:dark:bg-slate-700 transition-shadow dark:transition-colors'
 
-export default function InspirationPostCard({ post }: { post: Inspiration }) {
+export default function WorkPostCard({ post }: { post: Work }) {
   return (
     <Link
       key={post.slug}
-      href={`/inspiration/${post.slug}/`}
-      className={InspirationCardClasses + ' p-0 group overflow-hidden'}
+      href={`/work/${post.slug}/`}
+      className={WorkCardClasses + ' p-0 group overflow-hidden'}
     >
       <figure className="overflow-hidden bg-slate-200 dark:bg-slate-700">
         <ExportedImage

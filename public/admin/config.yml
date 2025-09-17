@@ -91,9 +91,9 @@ collections:
       - { label: 'Tags', name: 'tags', widget: 'list' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
 
-  - name: 'inspiration'
+  - name: 'work'
     label: 'My works'
-    folder: 'content/inspiration'
+    folder: 'content/work'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{title}}'
     extension: md
@@ -107,7 +107,7 @@ collections:
           label: 'Template Key',
           name: 'templateKey',
           widget: 'hidden',
-          default: 'inspiration',
+          default: 'work',
         }
       - { label: 'Title', name: 'title', widget: string }
       - { label: 'Featured', name: 'featured', widget: boolean, default: false }

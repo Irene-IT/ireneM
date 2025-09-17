@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import {
   Blog,
-  Inspiration,
+  Work,
   Podcasts,
   Resources,
   Tools,
@@ -18,7 +18,7 @@ import { AUTHOR_NAME } from '../config'
 export default function PostHeader({
   data,
 }: {
-  data: Blog | Inspiration | Podcasts | Resources | Tools
+  data: Blog | Work | Podcasts | Resources | Tools
 }) {
 
     const [formattedDate, setFormattedDate] = useState('')

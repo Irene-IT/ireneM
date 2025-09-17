@@ -1,12 +1,12 @@
 import Link from 'next/link'
 import {
   allBlogs,
-  allInspirations,
+  allWorks,
   allPodcasts,
   allResources,
   allTools,
   Blog,
-  Inspiration,
+  Work,
   Podcasts,
   Resources,
   Tools,
@@ -17,16 +17,16 @@ import { Icon } from './Icon'
 export default function PostFooter({
   data,
 }: {
-  data: Blog | Inspiration | Podcasts | Resources | Tools
+  data: Blog | Work | Podcasts | Resources | Tools
 }) {
-  let navPosts: (Blog | Inspiration | Podcasts | Resources | Tools)[] = []
+  let navPosts: (Blog | Work | Podcasts | Resources | Tools)[] = []
 
   switch (data.templateKey) {
     case 'blog':
       navPosts = allBlogs as Blog[]
       break
-    case 'inspiration':
-      navPosts = allInspirations as Inspiration[]
+    case 'work':
+      navPosts = allWorks as Work[]
       break
     case 'podcasts':
       navPosts = allPodcasts as Podcasts[]

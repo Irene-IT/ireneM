@@ -2,12 +2,12 @@ import { pick } from 'contentlayer2/client'
 import Layout from '../components/Layout'
 import {
   Blog,
-  Inspiration,
+  Work,
   Podcasts,
   Resources,
   Tools,
   allBlogs,
-  allInspirations,
+  allWorks,
   allPages,
   allPodcasts,
   allResources,
@@ -15,7 +15,7 @@ import {
 } from '../.contentlayer/generated'
 import Link from 'next/link'
 import BlogCardPost from '../components/cards/BlogPostCard'
-import InspirationPostCard from '../components/cards/InspirationPostCard'
+import WorkPostCard from '../components/cards/WorkPostCard'
 import PodcastPostCard from '../components/cards/PodcastPostCard'
 import ToolsPostCard from '../components/cards/ToolsPostCard'
 import { Metadata } from 'next'
@@ -75,10 +75,10 @@ export default function Home() {
         new Date(b.date ?? '').getTime() - new Date(a.date ?? '').getTime()
     )
 
-  let inspirations = allInspirations.map((post: Inspiration) =>
+  let works = allWorks.map((post: Work) =>
     pick(post, ['featured', 'image', 'title', 'date', 'slug'])
   )
-  inspirations = inspirations
+  works = works
     .filter((post) => post.featured === true)
     .slice(0, 6)
 
@@ -138,7 +138,7 @@ export default function Home() {
         <section className="flex flex-col gap-4">
           <div className="flex justify-between items-end mb-4">
             <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
-              <Icon name="blog" className="size-6 sm:size-8 opacity-60" />
+              <Icon name="doc" className="size-6 sm:size-8 opacity-60 text-slate-600 dark:text-[#a0b6dc]" />
               <span>Services</span>
             </h2>
             <Link href="/blog">View all &rarr;</Link>
@@ -150,31 +150,18 @@ export default function Home() {
           </div>
         </section>
 
-        {/* <section className="flex flex-col gap-4">
-          <div className="flex justify-between items-end mb-4">
-            <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
-              <Icon name="blog" className="size-6 sm:size-8 opacity-60" />
-              <span>Code Blog</span>
-            </h2>
-            <Link href="/blog">View all &rarr;</Link>
-          </div>
-          <div className="grid xl:grid-cols-2 gap-4 flex-wrap">
-            {blogs.map((post) => (
-              <BlogCardPost key={post.slug} post={post as Blog} />
-            ))}
-          </div>
-        </section> */}
+       
 
         <section id='works' className="flex flex-col gap-4" aria-labelledby="works-title">
           <div className="flex justify-between items-end mb-4">
             <h2 id="works-title" className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
               <Icon
-                name="inspiration"
-                className="size-6 sm:size-8 opacity-60"
+                name="pencil"
+                className="size-6 sm:size-8 opacity-60  text-slate-600 dark:text-[#a0b6dc]"
               />
               <span>My works</span>
             </h2>
-            <Link href="/inspiration">View all &rarr;</Link>
+            <Link href="/work">View all &rarr;</Link>
           </div>
            <p className="text-center text-balance text-lg text-slate-600 dark:text-[#a0b6dc]">
            
@@ -184,8 +171,8 @@ export default function Home() {
             subject to any legal restrictions on public sharing.
           </p>
           <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-4 flex-wrap">
-            {inspirations.map((post) => (
-              <InspirationPostCard key={post.slug} post={post as Inspiration} />
+            {works.map((post) => (
+              <WorkPostCard key={post.slug} post={post as Work} />
             ))}
           </div>
         </section>

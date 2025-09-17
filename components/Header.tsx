@@ -77,7 +77,7 @@ export default function Header() {
                   href="/blog"
                   className={menuItemClasses}
                 >
-                  <Icon name="blog" className={iconClasses} />
+                  <Icon name="doc" className={iconClasses} />
                   Services
                 </Link>
               </li>
@@ -94,10 +94,10 @@ export default function Header() {
               <li>
                 <Link
                   onClick={() => setNavbar(!navbar)}
-                  href="/inspiration"
+                  href="/work"
                   className={menuItemClasses}
                 >
-                  <Icon name="inspiration" className={iconClasses} />
+                  <Icon name="pencil" className={iconClasses} />
                   My works
                 </Link>
               </li>

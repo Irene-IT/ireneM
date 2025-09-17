@@ -1,17 +1,17 @@
 import { Metadata } from 'next'
-import { Inspiration, allInspirations } from '../../.contentlayer/generated'
+import { Work, allWorks } from '../../.contentlayer/generated'
 import { pick } from '@contentlayer2/client'
 import Layout from '../../components/Layout'
-import InspirationPostCard from '../../components/cards/InspirationPostCard'
+import WorkPostCard from '../../components/cards/WorkPostCard'
 import CategoryHeader from '../../components/CategoryHeader'
 import { AUTHOR_NAME, SITE_NAME, SITE_URL } from '../../config'
 
 // Metadata function for SEO
 export function generateMetadata(): Metadata {
   const SEO = {
-    title: `A Selection of Inspiration by ${AUTHOR_NAME} | ${SITE_NAME}`,
+    title: `A Selection of Work by ${AUTHOR_NAME} | ${SITE_NAME}`,
     description:
-      'Find inspiration through web intros, show reels, and creative showcases, curated for designers and developers.',
+      'Discover examples of my work as a B2B SaaS content writer for IT and tech companies, showcasing writing expertise for cloud computing and business growth.',
   }
 
   return {
@@ -19,7 +19,7 @@ export function generateMetadata(): Metadata {
     description: SEO.description,
     openGraph: {
       type: 'article',
-      url: `${SITE_URL}/inspiration/`,
+      url: `${SITE_URL}/work/`,
       title: SEO.title,
       description: SEO.description,
       authors: `${AUTHOR_NAME}`,
@@ -37,10 +37,10 @@ export function generateMetadata(): Metadata {
   }
 }
 
-export default function InspirationPage() {
+export default function WorkPage() {
   //  help of pick get require filter value
-  const inspirations = allInspirations.map((inspirations) =>
-    pick(inspirations, [
+  const works = allWorks.map((works) =>
+    pick(works, [
       'title',
       'date',
       'slug',
@@ -54,14 +54,14 @@ export default function InspirationPage() {
     <Layout>
       <section className="md:max-w-[87%] m-auto flex flex-col gap-6 px-4 sm:px-12 mb-32">
         <CategoryHeader
-          title="Inspiration"
-          templateKey={inspirations[0].templateKey!}
+          title="Work"
+          templateKey={works[0].templateKey!}
         />
 
         <div className="grid lg:grid-cols-2 gap-4 w-full justify-center">
-          {inspirations.map((post) => {
+          {works.map((post) => {
             return (
-              <InspirationPostCard key={post.slug} post={post as Inspiration} />
+              <WorkPostCard key={post.slug} post={post as Work} />
             )
           })}
         </div>

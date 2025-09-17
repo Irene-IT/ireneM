@@ -1,35 +1,35 @@
 'use client' // Marks this as a client component
 
 import Link from 'next/link'
-import { Inspiration } from '../.contentlayer/generated'
+import { Work } from '../.contentlayer/generated'
 import PostHeader from './PostHeader'
 import PostFooter from './PostFooter'
 
-export default function InspirationPost({
-  inspiration,
+export default function WorkPost({
+  work,
 }: {
-  inspiration: Inspiration
+  work: Work
 }) {
   return (
     <article className="max-w-5xl p-4 sm:p-12 sm:pt-0 m-auto">
-      <PostHeader data={inspiration as Inspiration} />
+      <PostHeader data={work as Work} />
 
       <div className="blog-post mt-12">
-        {inspiration.image && (
+        {work.image && (
           <img
-            src={inspiration.image}
-            alt={inspiration.title}
+            src={work.image}
+            alt={work.title}
             className="mb-6 rounded-lg"
           />
         )}
 
         <div
           className="blog-post"
-          dangerouslySetInnerHTML={{ __html: inspiration.body.html }}
+          dangerouslySetInnerHTML={{ __html: work.body.html }}
         />
       </div>
 
-      <PostFooter data={inspiration as Inspiration} />
+      <PostFooter data={work as Work} />
     </article>
   )
 }
