@@ -69,8 +69,8 @@ const  Blog = defineDocumentType(() => ({
 
 const Inspiration = defineDocumentType(() => ({
   name: 'Inspiration',
-  filePathPattern: `inspiration/*.mdx`,
-  contentType: 'mdx',
+  filePathPattern: `inspiration/*.md`,
+  contentType: 'markdown',
   fields: {
     title: {
       type: 'string',
@@ -104,7 +104,7 @@ const Inspiration = defineDocumentType(() => ({
   computedFields: {
     slug: {
       type: 'string',
-      resolve: (doc) => doc._raw.sourceFileName.replace(/\.mdx/, ''),
+      resolve: (doc) => doc._raw.sourceFileName.replace(/\.md/, ''),
     },
   },
 }))

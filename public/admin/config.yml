@@ -96,8 +96,8 @@ collections:
     folder: 'content/inspiration'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{title}}'
-    # extension: mdx
-    # format: frontmatter
+    extension: md
+    format: frontmatter
     view_groups:
       - label: Year
         field: date
