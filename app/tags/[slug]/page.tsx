@@ -3,12 +3,12 @@ import Link from 'next/link'
 
 import {
   Blog,
-  Inspiration,
+  Work,
   Podcasts,
   Resources,
   Tools,
   allBlogs,
-  allInspirations,
+  allWorks,
   allPodcasts,
   allResources,
   allTools,
@@ -59,7 +59,7 @@ export default async function TagPage({ params }: { params: Promise<{ slug: stri
 
   const allPosts = [
     ...allBlogs,
-    ...allInspirations,
+    ...allWorks,
     ...allPodcasts,
     ...allResources,
     ...allTools,
@@ -81,7 +81,7 @@ export default async function TagPage({ params }: { params: Promise<{ slug: stri
             {(
               posts as
                 | Blog[]
-                | Inspiration[]
+                | Work[]
                 | Podcasts[]
                 | Resources[]
                 | Tools[]
