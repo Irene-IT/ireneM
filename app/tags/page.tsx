@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import {
   allBlogs,
-  allInspirations,
+  allWorks,
   allPodcasts,
   allResources,
   allTools,
@@ -45,7 +45,7 @@ export function generateMetadata(): Metadata {
 export default function TagsPage() {
   const allPosts = [
     ...allBlogs,
-    ...allInspirations,
+    ...allWorks,
     ...allPodcasts,
     ...allResources,
     ...allTools,
