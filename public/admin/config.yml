@@ -118,6 +118,18 @@ collections:
           choose_url: false,
         }
       - {
+        label: 'Original PDF',
+        name: 'originalPdf',
+        widget: 'file',
+        allow_multiple: false,
+        }
+      - {
+        label: 'Update PDF',
+        name: 'updatePdf',
+        widget: 'file',
+        allow_multiple: false,
+        }
+      - {
           label: 'Body',
           name: 'body',
           widget: 'markdown',

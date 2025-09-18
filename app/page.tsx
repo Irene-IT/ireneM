@@ -156,20 +156,13 @@ export default function Home() {
           <div className="flex justify-between items-end mb-4">
             <h2 id="works-title" className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
               <Icon
-                name="pencil"
+                name="folder"
                 className="size-6 sm:size-8 opacity-60  text-slate-600 dark:text-[#a0b6dc]"
               />
               <span>My works</span>
             </h2>
             <Link href="/work">View all &rarr;</Link>
           </div>
-           <p className="text-center text-balance text-lg text-slate-600 dark:text-[#a0b6dc]">
-           
-            Here are some of my work samples. Some of my clients, as well as my
-            partners’ clients, require me to sign a non-disclosure agreement
-            (NDA) before starting a new project. The following samples are not
-            subject to any legal restrictions on public sharing.
-          </p>
           <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-4 flex-wrap">
             {works.map((post) => (
               <WorkPostCard key={post.slug} post={post as Work} />

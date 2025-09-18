@@ -27,6 +27,31 @@ export default function WorkPost({
           className="blog-post"
           dangerouslySetInnerHTML={{ __html: work.body.html }}
         />
+
+
+   {/* 🔹 PDF-посилання після тексту */}
+        <div className="mt-6 flex flex-col gap-2">
+          {work.originalPdf && (
+            <Link
+              href={work.originalPdf}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 dark:text-blue-400 hover:underline"
+            >
+              Read original text →
+            </Link>
+          )}
+          {work.updatePdf && (
+            <Link
+              href={work.updatePdf}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 dark:text-blue-400 hover:underline"
+            >
+              Read my update text →
+            </Link>
+          )}
+        </div>
       </div>
 
       <PostFooter data={work as Work} />

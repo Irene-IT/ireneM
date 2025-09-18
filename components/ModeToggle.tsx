@@ -2,6 +2,9 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { useTheme } from 'next-themes'
+import { Icon } from './Icon'
+
+const iconClasses = 'size-4 opacity-80 hover:opacity-100 transition-opacity'
 
 export function ModeToggle() {
   const { theme, setTheme, systemTheme } = useTheme()
@@ -9,7 +12,7 @@ export function ModeToggle() {
   const dropdownRef = useRef<HTMLDivElement>(null)
   const currentTheme = theme === 'system' ? systemTheme : theme
 
-  // Закриття меню при кліку поза ним
+  // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -27,7 +30,7 @@ export function ModeToggle() {
     <div className="relative inline-block text-left" ref={dropdownRef}>
       <button
         onClick={() => setOpen(!open)}
-        className="relative flex items-center justify-center w-10 h-10 border rounded-md border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 transition-colors"
+        className="relative flex items-center justify-center size-6 text-gray-800 dark:text-gray-200 transition-colors cursor-pointer"
       >
         {/* Sun / Moon */}
         <span
@@ -37,20 +40,20 @@ export function ModeToggle() {
               : 'scale-100 rotate-0'
           }`}
         >
-          ☀️
+          <Icon name="sun" className={iconClasses} />
         </span>
         <span
           className={`absolute transition-all duration-300 ${
             currentTheme === 'dark' ? 'scale-100 rotate-0' : 'scale-0 rotate-90'
           }`}
         >
-          🌙
+          <Icon name="moon" className={iconClasses} />
         </span>
         <span className="sr-only">Toggle theme</span>
       </button>
 
       {open && (
-        <div className="absolute right-0 mt-2 w-36 rounded-md shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 overflow-hidden animate-fade-in">
+        <div className="absolute right-0 mt-2 w-36 rounded-md shadow-lg bg-white dark:bg-gray-800 ring-1 ring-gray-300 dark:ring-gray-600 ring-opacity-5 overflow-hidden animate-fade-in">
           <button
             onClick={() => {
               setTheme('light')

@@ -1,7 +1,7 @@
 ---
 templateKey: work
 title: >
-  Placeholder Post 3
+  Placeholder Post 5
 date: 2024-09-25T15:04:10.000Z
 featured: true
 description: >
@@ -9,6 +9,7 @@ description: >
 tags:
   - example
   - Placeholder
+  - open-source
 image: /media/work__placeholder-post-1200x1200.png
 ---
 ## Describe Your Work

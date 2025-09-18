@@ -100,6 +100,8 @@ const Work = defineDocumentType(() => ({
       type: 'boolean',
       required: false,
     },
+    originalPdf: { type: 'string' },  
+    updatePdf: { type: 'string' },     
   },
   computedFields: {
     slug: {

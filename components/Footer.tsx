@@ -8,7 +8,7 @@ export default function Footer() {
     {
       id: 2,
       name: 'linkedin',
-      imgPath: 'Link.svg',
+      imgPath: '/Link.svg',
       linkPath: 'https://www.linkedin.com/in/myronovairene',
     },
     {

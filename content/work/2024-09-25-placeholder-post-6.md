@@ -1,7 +1,7 @@
 ---
 templateKey: work
 title: >
-  Placeholder Post 2
+  Placeholder Post 6
 date: 2024-09-25T15:04:10.000Z
 featured: true
 description: >

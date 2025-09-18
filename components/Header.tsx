@@ -52,7 +52,7 @@ export default function Header() {
             ) : (
               <span className="flex gap-2 items-center group text-xs">
                 Menu
-                <Icon name="burger" className="size-4" />
+                {/* <Icon name="burger" className="size-4" /> */}
               </span>
             )}
           </button>
@@ -97,7 +97,7 @@ export default function Header() {
                   href="/work"
                   className={menuItemClasses}
                 >
-                  <Icon name="pencil" className={iconClasses} />
+                  <Icon name="folder" className={iconClasses} />
                   My works
                 </Link>
               </li>
