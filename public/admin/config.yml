@@ -123,12 +123,14 @@ collections:
         name: 'originalPdf',
         widget: 'file',
         allow_multiple: false,
+        required: false,
         }
       - {
         label: 'Update PDF',
         name: 'updatePdf',
         widget: 'file',
         allow_multiple: false,
+        required: false,
         }
       - {
           label: 'Body',
