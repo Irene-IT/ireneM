@@ -11,8 +11,8 @@ tags:
   - example
   - Placeholder
   - open-source
-image: /media/Screan_DataVisualSoftware _ Gearheart.png
-originalPdf: /media/DataVisualSoftware_Gearheart.pdf
+image: /media/work__Data-Visual-Software_Gearheart.png
+originalPdf: /media/Data-Visual-Software_Gearheart.pdf
 updatePdf: 
 ---
 ## How to build Software for Data visualiation

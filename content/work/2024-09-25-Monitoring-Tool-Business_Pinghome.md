@@ -11,8 +11,8 @@ tags:
   - example
   - Placeholder
   - open-source
-image: /media/Screen_MonitoringToolBusiness_Pinghome.png
-originalPdf: /media/MonitoringToolBusiness_Pinghome.pdf
+image: /media/work__Monitoring-Tool-Business_Pinghome.png
+originalPdf: /media/Monitoring-Tool-Business_Pinghome.pdf
 updatePdf: 
 ---
 ## Describe Your Work

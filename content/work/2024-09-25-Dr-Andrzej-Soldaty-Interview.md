@@ -11,9 +11,9 @@ tags:
   - example
   - Placeholder
   - open-source
-image: /media/Screan_mind.ua.png
+image: /media/work__mindUA.png
 originalPdf: /media/MindUA.pdf
-updatePdf: /media/SoldatyTranslation.pdf
+updatePdf: /media/Soldaty-Translation.pdf
 ---
 ## Andrzej Soldaty on why business in Eastern Europe is not in a hurry to get out of its comfort zone, whether we should be afraid of the robot invasion, and when the human brain retires.
 

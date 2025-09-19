@@ -10,7 +10,7 @@ tags:
   - example
   - Placeholder
   - open-source
-image: /media/Screen_MVP_Gearheart.png
+image: /media/work__MVP_Gearheart.png
 originalPdf: /media/MVP_Gearheart.pdf
 updatePdf: 
 ---

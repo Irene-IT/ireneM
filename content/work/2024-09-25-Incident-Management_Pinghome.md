@@ -11,8 +11,8 @@ tags:
   - example
   - Placeholder
   - open-source
-image: /media/Screen_IncidentManagement_Pinghome.png
-originalPdf: /media/IncidentManagement_Pinghome.pdf
+image: /media/work__Incident-Management_Pinghome.png
+originalPdf: /media/Incident-Management_Pinghome.pdf
 updatePdf: 
 ---
 ## Leveraging Eﬀective Incident Management: Processes And Tools To Minimize Downtime
