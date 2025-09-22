@@ -2,7 +2,7 @@
 templateKey: work
 title: >
   Research: How to Calculate the Cost of an MVP
-date: 2024-09-25T15:04:10.000Z
+date: 2025-09-19T15:04:10.000Z
 featured: true
 description: >
   Improving pricing factors, tips and best practices.
