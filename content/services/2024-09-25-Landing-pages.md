@@ -1,5 +1,5 @@
 ---
-templateKey: blog
+templateKey: service
 title: >
   Landing pages (SEO/AEO)
 featured: true

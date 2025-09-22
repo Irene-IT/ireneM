@@ -2,12 +2,12 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 import {
-  Blog,
+  Service,
   Work,
   Podcasts,
   Resources,
   Tools,
-  allBlogs,
+  allServices,
   allWorks,
   allPodcasts,
   allResources,
@@ -58,7 +58,7 @@ export default async function TagPage({ params }: { params: Promise<{ slug: stri
   const { slug } = await params
 
   const allPosts = [
-    ...allBlogs,
+    ...allServices,
     ...allWorks,
     ...allPodcasts,
     ...allResources,
@@ -80,7 +80,7 @@ export default async function TagPage({ params }: { params: Promise<{ slug: stri
           <main className="w-full flex flex-col gap-4">
             {(
               posts as
-                | Blog[]
+                | Service[]
                 | Work[]
                 | Podcasts[]
                 | Resources[]

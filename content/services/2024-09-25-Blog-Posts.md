@@ -1,11 +1,11 @@
 ---
-templateKey: blog
+templateKey: service
 title: >
- Explanatory journalism
+  Blog Post
 date: 2024-09-25T19:28:37.629Z
 featured: true
 description: >
-  A brief description of the placeholder post in Explanatory journalism blog.
+  A brief description of the placeholder post in Post blog.
 tags:
   - example
   - placeholder

@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { allBlogs, Blog } from '../../../.contentlayer/generated'
+import { allServices, Service } from '../../../.contentlayer/generated'
 import Layout from '../../../components/Layout'
-import BlogPost from '../../../components/BlogPost'
+import ServicePost from '../../../components/ServicePost'
 import { AUTHOR_NAME, SITE_NAME, SITE_URL } from '../../../config'
 
 export async function generateMetadata({
@@ -11,23 +11,23 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>
 }): Promise<Metadata> {
   const { slug } = await params
-  const blog = allBlogs.find((b) => b.slug === slug) as Blog | undefined
+  const service = allServices.find((b) => b.slug === slug) as Service | undefined
 
-  if (!blog) {
+  if (!service) {
     return notFound()
   }
 
   return {
-    title: blog.title,
-    description: blog.description,
+    title: service.title,
+    description: service.description,
     openGraph: {
       type: 'article',
-      url: `${SITE_URL}/works/${blog.slug}/`,
-      title: blog.title,
-      description: blog.description,
-      publishedTime: blog.date,
+      url: `${SITE_URL}/services/${service.slug}/`,
+      title: service.title,
+      description: service.description,
+      publishedTime: service.date,
       authors: `${AUTHOR_NAME}`,
-      tags: blog.tags,
+      tags: service.tags,
       images: [
         {
           url: `${SITE_URL}/og-card.png`,
@@ -42,21 +42,21 @@ export async function generateMetadata({
   }
 }
 
-export default async function BlogPostPage({
+export default async function ServicePostPage({
   params,
 }: {
   params: Promise<{ slug: string }>
 }) {
   const { slug } = await params
-  const blog = allBlogs.find((b) => b.slug === slug)
+  const service = allServices.find((b) => b.slug === slug)
 
-  if (!blog) {
+  if (!service) {
     return notFound()
   }
 
   return (
     <Layout>
-      <BlogPost blog={blog} />
+      <ServicePost service={service} />
     </Layout>
   )
 }

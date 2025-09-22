@@ -1,12 +1,12 @@
 import { pick } from 'contentlayer2/client'
 import Layout from '../components/Layout'
 import {
-  Blog,
+  Service,
   Work,
   Podcasts,
   Resources,
   Tools,
-  allBlogs,
+  allServices,
   allWorks,
   allPages,
   allPodcasts,
@@ -14,7 +14,7 @@ import {
   allTools,
 } from '../.contentlayer/generated'
 import Link from 'next/link'
-import BlogCardPost from '../components/cards/BlogPostCard'
+import ServiceCardPost from '../components/cards/ServicePostCard'
 import WorkPostCard from '../components/cards/WorkPostCard'
 import PodcastPostCard from '../components/cards/PodcastPostCard'
 import ToolsPostCard from '../components/cards/ToolsPostCard'
@@ -65,10 +65,10 @@ export function generateMetadata(): Metadata {
 
 // Get all posts and pick specific fields
 export default function Home() {
-  let blogs = allBlogs.map((post: Blog) =>
+  let services = allServices.map((post: Service) =>
     pick(post, ['featured', 'title', 'date', 'slug'])
   )
-  blogs = blogs
+  services = services
     .filter((post) => post.featured === true)
     .sort(
       (a, b) =>
@@ -139,14 +139,14 @@ export default function Home() {
         <section className="flex flex-col gap-4">
           <div className="flex justify-between items-end mb-4">
             <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
-              <Icon name="doc" className="size-6 sm:size-8 opacity-60 text-slate-600 dark:text-[#a0b6dc]" />
+              <Icon name="service" className="size-6 sm:size-8 opacity-60 text-slate-600 dark:text-[#a0b6dc]" />
               <span>Services</span>
             </h2>
-            <Link href="/blog">View all &rarr;</Link>
+            <Link href="/service">View all &rarr;</Link>
           </div>
           <div className="grid xl:grid-cols-2 gap-4 flex-wrap">
-            {blogs.map((post) => (
-              <BlogCardPost key={post.slug} post={post as Blog} />
+            {services.map((post) => (
+              <ServiceCardPost key={post.slug} post={post as Service} />
             ))}
           </div>
         </section>
@@ -157,7 +157,7 @@ export default function Home() {
           <div className="flex justify-between items-end mb-4">
             <h2 id="works-title" className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
               <Icon
-                name="folder"
+                name="work"
                 className="size-6 sm:size-8 opacity-60  text-slate-600 dark:text-[#a0b6dc]"
               />
               <span>My works</span>

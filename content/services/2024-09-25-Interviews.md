@@ -1,15 +1,15 @@
 ---
-templateKey: blog
+templateKey: service
 title: >
-  Blog Post
+ Interviews
 date: 2024-09-25T19:28:37.629Z
 featured: true
 description: >
-  A brief description of the placeholder post in Post blog.
+  A brief description of the placeholder post in Interviews blog.
 tags:
+  - open-source
   - example
   - placeholder
-  - open-source
 ---
 
 ## This is a Placeholder Post

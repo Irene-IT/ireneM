@@ -9,23 +9,23 @@ import 'prismjs/components/prism-jsx'
 import 'prismjs/components/prism-php'
 import 'prismjs/components/prism-pug'
 import 'prismjs/components/prism-markup-templating'
-import { Blog } from '../.contentlayer/generated'
+import { Service } from '../.contentlayer/generated'
 import PostHeader from './PostHeader'
 import PostFooter from './PostFooter'
 
-export default function BlogPost({ blog }: { blog: Blog }) {
+export default function ServicePost({ service }: { service: Service }) {
   useEffect(() => {
     Prism.highlightAll()
   }, [])
 
   return (
     <article className="max-w-5xl p-4 sm:p-12 sm:pt-0 m-auto">
-      <PostHeader data={blog} />
+      <PostHeader data={service} />
       <div
         className="blog-post"
-        dangerouslySetInnerHTML={{ __html: blog.body.html }}
+        dangerouslySetInnerHTML={{ __html: service.body.html }}
       />
-      <PostFooter data={blog} />
+      <PostFooter data={service} />
     </article>
   )
 }

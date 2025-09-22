@@ -1,11 +1,11 @@
 import { Metadata } from 'next'
-import { allBlogs, Blog } from '../../.contentlayer/generated'
+import { allServices, Service } from '../../.contentlayer/generated'
 import { pick } from '@contentlayer2/client'
 import { sortByDate } from '../../utils'
 import { extractUniqueTags } from '../../utils/tags'
 import Layout from '../../components/Layout'
 import CategoryHeader from '../../components/CategoryHeader'
-import BlogPostCard from '../../components/cards/BlogPostCard'
+import ServicePostCard from '../../components/cards/ServicePostCard'
 import { SITE_NAME, SITE_URL } from '../../config'
 
 export function generateMetadata(): Metadata {
@@ -20,7 +20,7 @@ export function generateMetadata(): Metadata {
     title: SEO.title,
     description: SEO.description,
     openGraph: {
-      url: `${SITE_URL}/works/`,
+      url: `${SITE_URL}/services/`,
       title: SEO.title,
       description: SEO.description,
       images: [
@@ -37,7 +37,7 @@ export function generateMetadata(): Metadata {
   }
 }
 
-export default async function BlogPage({
+export default async function ServicePage({
   params,
 }: {
   params: Promise<{ page?: string }>
@@ -46,29 +46,29 @@ export default async function BlogPage({
   const currentPage = parseInt(page || '1', 10)
 
   // Pick relevant fields from blogs and sort by date
-  let blogs = allBlogs.map((blog) =>
-    pick(blog, ['title', 'date', 'slug', 'description', 'templateKey'])
+  let services = allServices.map((service) =>
+    pick(service, ['title', 'date', 'slug', 'description', 'templateKey'])
   )
-  blogs = blogs.sort(sortByDate)
+  services = services.sort(sortByDate)
 
   // Group blogs by year
-  const groupedBlogs = blogs.reduce((acc: Record<string, Blog[]>, blog) => {
-    const year = new Date(blog.date!).getFullYear().toString()
+  const groupedServices = services.reduce((acc: Record<string, Service[]>, service) => {
+    const year = new Date(service.date!).getFullYear().toString()
     if (!acc[year]) acc[year] = []
-    acc[year].push(blog as Blog)
+    acc[year].push(service as Service)
     return acc
   }, {})
 
-  const uniqueTags = extractUniqueTags(allBlogs)
+  const uniqueTags = extractUniqueTags(allServices)
 
   return (
     <Layout>
       <section className="md:max-w-[87%] m-auto flex flex-col gap-6 px-4 sm:px-12 mb-32">
-        <CategoryHeader title="Blog" templateKey={blogs[0].templateKey!} />
+        <CategoryHeader title="Service" templateKey={services[0].templateKey!} />
 
         <div className="flex gap-8 items-start">
           <div className="flex flex-wrap gap-4 w-full">
-            {Object.keys(groupedBlogs)
+            {Object.keys(groupedServices)
               .sort((a, b) => parseInt(b) - parseInt(a))
               .map((year) => (
                 <div key={year}>
@@ -77,13 +77,13 @@ export default async function BlogPage({
                   </h2>
                   <div
                     className={`grid ${
-                      groupedBlogs[year].length < 2
+                      groupedServices[year].length < 2
                         ? 'xl:grid-cols-2'
                         : 'xl:grid-cols-3'
                     } gap-4 mb-24`}
                   >
-                    {groupedBlogs[year].map((post) => (
-                      <BlogPostCard key={post.slug} post={post as Blog} />
+                    {groupedServices[year].map((post) => (
+                      <ServicePostCard key={post.slug} post={post as Service} />
                     ))}
                   </div>
                 </div>

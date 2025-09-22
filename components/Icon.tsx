@@ -3,7 +3,7 @@ import {
   ArrowRightIcon,
   ArrowUpCircleIcon,
   Bars2Icon,
-  CodeBracketIcon,
+  // CodeBracketIcon,
   FilmIcon,
   FolderOpenIcon,
   HomeIcon,
@@ -26,15 +26,15 @@ export const Icon = ({
   className?: string
 }) => {
   const icons: { [key: string]: any } = {
-    blog: CodeBracketIcon,
+    // blog: CodeBracketIcon,
     burger: Bars2Icon,
     close: XMarkIcon,
-    doc: ClipboardDocumentListIcon,
+    service: ClipboardDocumentListIcon,
     home: HomeIcon,
     inspiration: FilmIcon,
     next: ArrowRightIcon,
     podcasts: MicrophoneIcon,
-    folder: FolderOpenIcon,
+    work: FolderOpenIcon,
     sun: SunIcon,
     moon: MoonIcon,
     prev: ArrowLeftIcon,
