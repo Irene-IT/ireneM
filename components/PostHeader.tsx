@@ -33,8 +33,8 @@ export default function PostHeader({
   
   return (
     <>
-      <header className="flex flex-col gap-4 sm:gap-6 mt-2 mb-24">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-balance text-slate-800 dark:text-slate-200">
+      <header className="flex flex-col gap-4 sm:gap-6 mb-12 sm:mt-12">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-center sm:text-left text-balance text-slate-800 dark:text-slate-200">
           {data.title}
         </h1>
         <div className="flex gap-4 items-center text-xs sm:text-base">

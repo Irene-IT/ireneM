@@ -52,12 +52,13 @@ export default function WorkPage() {
 
   return (
     <Layout>
+      
       <section className="md:max-w-[87%] m-auto flex flex-col gap-6 px-4 sm:px-12 mb-32">
         <CategoryHeader
           title="My Works"
           templateKey={works[0].templateKey!}
         />
-          <p className="text-center text-balance text-lg text-slate-600 dark:text-[#a0b6dc]">
+          <p className="text-center text-balance text-lg text-slate-600 dark:text-[#a0b6dc] mb-12">
             Here are some of my work samples. Some of my clients, as well as my
             partners’ clients, require me to sign a non-disclosure agreement
             (NDA) before starting a new project. The following samples are not

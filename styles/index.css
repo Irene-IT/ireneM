@@ -44,9 +44,9 @@ main {
   font-weight: 300;
 }
 
-.blog-post * {
+/* .blog-post * {
   margin-block: 1.75rem;
-}
+} */
 
 .blog-post h2 {
   font-size: 1.75rem;
@@ -77,7 +77,7 @@ main {
   text-wrap: balance;
 }
 
-.blog-post a {
+/* .blog-post a {
   font-weight: 550;
   border-bottom: currentColor 0.5px solid;
 }
@@ -85,7 +85,7 @@ main {
 .blog-post a:focus {
   text-decoration: underline;
   text-underline-offset: 3px;
-}
+} */
 
 .blog-post hr {
   border: none;
@@ -109,11 +109,13 @@ main {
 .blog-post p:not(:has(video, img)),
 .blog-post ul {
   max-width: 860px;
-  text-wrap: balance;
+  /* text-wrap: balance; */
+  text-wrap: pretty;
 }
 
 .blog-post p {
   letter-spacing: 0.05ch;
+  margin-block: 1rem;
 }
 
 @media screen and (min-width: 600px) {
@@ -132,8 +134,7 @@ main {
 }
 
 .blog-post blockquote,
-.blog-post img,
-.blog-post video {
+.blog-post img {
   border-radius: 0.75rem;
   margin-inline: auto;
 }
@@ -170,7 +171,7 @@ main {
   border-left: 0.25rem solid color-mix(in srgb, currentColor 20%, transparent);
   background-color: color-mix(in srgb, currentColor 5%, transparent);
   padding: 0.25rem 1.5rem;
-  margin-block: 1rem;
+  /* margin-block: 1rem; */
   font-style: italic;
 }
 
