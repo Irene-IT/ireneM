@@ -14,5 +14,3 @@ tags:
 ## This is a Placeholder Post
 
 Feel free to replace this content with your own!
-
-![Foto Irene Myronova](/media/h.jpg "Foto Irene M.")
