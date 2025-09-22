@@ -1,18 +1,18 @@
 ---
 templateKey: service
-title: >
+title: |
   Blog Post
-date: 2025-09-22T19:28:37.629Z
 featured: true
-description: >
+date: 2025-09-22T17:16:00.000+02:00
+description: |
   A brief description of the placeholder post in Post blog.
 tags:
   - example
   - placeholder
   - open-source
 ---
-
 ## This is a Placeholder Post
 
 Feel free to replace this content with your own!
 
+![Foto Irene Myronova](/media/h.jpg "Foto Irene M.")
