@@ -33,7 +33,7 @@ export default function ServicePostCard({ post }: { post: Service }) {
       <figure className="overflow-hidden size-16 sm:size-24 shrink-0 rounded-xl shadow-lg bg-slate-200 dark:bg-slate-700">
         <ExportedImage
           src={post.image ?? '/media/services__placeholder-post.png'}
-          alt={post.title}
+          alt={post.title ?? 'Service image'}
           width={400}
           height={400}
           className="size-full object-cover group-hover:scale-110 transition-transform duration-700"

@@ -29,14 +29,58 @@ const Page = defineDocumentType(() => ({
   },
 }))
 
-const  Service = defineDocumentType(() => ({
+// const  Service = defineDocumentType(() => ({
+//   name: 'Service',
+//   filePathPattern: `services/*.md`,
+//   contentType: 'markdown',
+//   fields: {
+//     title: {
+//       type: 'string',
+//       required: true,
+//     },
+//     date: {
+//       type: 'date',
+//       required: false,
+//     },
+//     description: {
+//       type: 'string',
+//       required: false,
+//     },
+//     tags: {
+//       type: 'json',
+//       required: false,
+//     },
+//     templateKey: {
+//       type: 'string',
+//       required: true,
+//     },
+//     featured: {
+//       type: 'boolean',
+//       required: false,
+//     },
+//     image: { type: 'string', required: true },
+//   },
+//   computedFields: {
+//     slug: {
+//       type: 'string',
+//       resolve: (doc) => doc._raw.sourceFileName.replace(/\.md/, ''),
+//     },
+//   },
+// }))
+
+
+const Service = defineDocumentType(() => ({
   name: 'Service',
   filePathPattern: `services/*.md`,
   contentType: 'markdown',
   fields: {
-    title: {
+    templateKey: {
       type: 'string',
       required: true,
+    },
+    title: {
+      type: 'string',
+      required: false, // у page.md може бути без title
     },
     date: {
       type: 'date',
@@ -50,23 +94,23 @@ const  Service = defineDocumentType(() => ({
       type: 'json',
       required: false,
     },
-    templateKey: {
-      type: 'string',
-      required: true,
-    },
     featured: {
       type: 'boolean',
       required: false,
     },
-    image: { type: 'string', required: true },
+    image: { type: 'string', required: false }, // у page.md не обов'язково
+    introText: { type: 'string', required: false }, // тільки для page.md
   },
   computedFields: {
     slug: {
       type: 'string',
-      resolve: (doc) => doc._raw.sourceFileName.replace(/\.md/, ''),
+      resolve: (doc) =>
+        doc._raw.sourceFileName.replace(/\.md/, ''),
     },
   },
 }))
+
+
 
 const Work = defineDocumentType(() => ({
   name: 'Work',
