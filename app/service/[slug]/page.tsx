@@ -11,7 +11,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>
 }): Promise<Metadata> {
   const { slug } = await params
-  const service = allServices.find((b) => b.slug === slug) as Service | undefined
+  const service = allServices.find((s) => s.slug === slug) as Service | undefined
 
   if (!service) {
     return notFound()
@@ -30,7 +30,7 @@ export async function generateMetadata({
       tags: service.tags,
       images: [
         {
-          url: `${SITE_URL}/og-card.png`,
+          url: `${SITE_URL}${service.image}`,
           width: 1600,
           height: 800,
           alt: `${SITE_NAME}`,
@@ -48,7 +48,7 @@ export default async function ServicePostPage({
   params: Promise<{ slug: string }>
 }) {
   const { slug } = await params
-  const service = allServices.find((b) => b.slug === slug)
+  const service = allServices.find((s) => s.slug === slug)
 
   if (!service) {
     return notFound()

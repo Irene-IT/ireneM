@@ -79,6 +79,12 @@ collections:
         }
       - { label: 'Title', name: 'title', widget: string }
       - { label: 'Featured', name: 'featured', widget: boolean, default: false }
+       - {
+          label: 'App Icon Image',
+          name: 'image',
+          widget: 'image',
+          choose_url: false,
+        }
       - {
           label: 'Body',
           name: 'body',

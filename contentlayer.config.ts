@@ -58,6 +58,7 @@ const  Service = defineDocumentType(() => ({
       type: 'boolean',
       required: false,
     },
+    image: { type: 'string', required: true },
   },
   computedFields: {
     slug: {

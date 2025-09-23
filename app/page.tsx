@@ -66,7 +66,9 @@ export function generateMetadata(): Metadata {
 // Get all posts and pick specific fields
 export default function Home() {
   let services = allServices.map((post: Service) =>
-    pick(post, ['featured', 'title', 'date', 'slug'])
+    // pick(post, ['featured', 'title', 'date', 'slug'])
+      pick(post, ['featured', 'image', 'title', 'date', 'slug', 'description'])
+
   )
   services = services
     .filter((post) => post.featured === true)

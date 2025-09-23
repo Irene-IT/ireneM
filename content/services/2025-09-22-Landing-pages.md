@@ -1,15 +1,17 @@
 ---
 templateKey: service
 title: >
-  Landing pages (SEO/AEO)
+  Landing page | SEO
 featured: true
-date: 2025-09-22T19:28:37.629Z
-description: >
-  A brief description of the placeholder post
+image: 
+date: 2025-09-22T17:16:00.000+02:00
+description: |
+  A brief description of the placeholder post in Post blog.
 tags:
-  - open-source
   - example
   - placeholder
+  - open-source
 ---
+## This is a Placeholder Post
 
 Feel free to replace this content with your own!
