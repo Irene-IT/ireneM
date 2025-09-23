@@ -37,24 +37,9 @@ export function generateMetadata(): Metadata {
 }
 
 export default function ServicePage() {
-  // const services = allServices.map((service) =>
-  //   pick(service, [
-  //     'title',
-  //     'date',
-  //     'slug',
-  //     'description',
-  //     'image',
-  //     'templateKey',
-  //   ])
-  // )
-  // const services = allServices.map((service) =>
-  //   pick(service, ['title', 'date', 'slug', 'description', 'image', 'templateKey'])
-  // )
-
-  // знайти контент для сторінки
+  // find content for the side page
   const pageData = allServices.find((p) => p.templateKey === 'servicesIntro')
-
-  // вибрати всі сервіси (без page.md)
+  // select all services (without page.md)
   const services = allServices
     .filter((p) => p.templateKey !== 'servicesIntro')
     .map((service) =>
@@ -75,12 +60,6 @@ export default function ServicePage() {
           title="Service"
           templateKey={services[0].templateKey!}
         />
-        {/* <p className="text-center text-balance text-lg text-slate-600 dark:text-[#a0b6dc] mb-12">
-          Here are some of the services I provide. Each service may include
-          multiple categories depending on your needs — from writing and
-          interviews to SEO-focused landing pages. The following list gives an
-          overview of what I can deliver.
-        </p> */}
         {pageData?.introText && (
           <p className="text-center text-balance text-lg text-slate-600 dark:text-[#a0b6dc] mb-12">
             {pageData.introText}

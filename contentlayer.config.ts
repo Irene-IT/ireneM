@@ -98,8 +98,8 @@ const Service = defineDocumentType(() => ({
       type: 'boolean',
       required: false,
     },
-    image: { type: 'string', required: false }, // у page.md не обов'язково
-    introText: { type: 'string', required: false }, // тільки для page.md
+    image: { type: 'string', required: false }, // for page.md not required
+    introText: { type: 'string', required: false }, // only for page.md
   },
   computedFields: {
     slug: {
@@ -119,7 +119,7 @@ const Work = defineDocumentType(() => ({
   fields: {
     title: {
       type: 'string',
-      required: true,
+      required: false,
     },
     date: {
       type: 'date',
@@ -135,8 +135,9 @@ const Work = defineDocumentType(() => ({
     },
     image: {
       type: 'string',
-      required: true,
+      required: false,
     },
+    introText: { type: 'string', required: false }, // only for page.md
     templateKey: {
       type: 'string',
       required: true,

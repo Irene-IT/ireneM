@@ -100,16 +100,7 @@ collections:
       - { label: 'Tags', name: 'tags', widget: 'list' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Intro Text', name: 'introText', widget: 'markdown', required: false }
-
-  # - name: 'servicesPage'
-  #   label: 'Services Page'
-  #   files:
-  #     - file: 'content/services/page.md'
-  #       label: 'Intro'
-  #       name: 'intro'
-  #       fields:
-  #         - { label: 'Intro text', name: 'introText', widget: 'markdown' }    
-
+  
   - name: 'work'
     label: 'My works'
     folder: 'content/work'
@@ -160,6 +151,7 @@ collections:
         }
       - { label: 'Tags', name: 'tags', widget: 'list' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Intro Text', name: 'introText', widget: 'markdown', required: false }
 
   - name: 'podcasts'
     label: 'Podcasts'
