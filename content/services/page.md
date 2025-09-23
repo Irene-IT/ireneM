@@ -1,5 +1,7 @@
 ---
-templateKey: "servicesPage"
+templateKey: "servicesIntro"
+title: >
+  Intro Text for Services
 introText: >
   Here are some of the services I provide. Each service may include
   multiple categories depending on your needs — from writing and

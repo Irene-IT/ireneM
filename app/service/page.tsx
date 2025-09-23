@@ -36,7 +36,6 @@ export function generateMetadata(): Metadata {
   }
 }
 
-
 export default function ServicePage() {
   // const services = allServices.map((service) =>
   //   pick(service, [
@@ -52,16 +51,22 @@ export default function ServicePage() {
   //   pick(service, ['title', 'date', 'slug', 'description', 'image', 'templateKey'])
   // )
 
-// знайти контент для сторінки
-const pageData = allServices.find((p) => p.templateKey === 'servicesPage')
+  // знайти контент для сторінки
+  const pageData = allServices.find((p) => p.templateKey === 'servicesIntro')
 
-// вибрати всі сервіси (без page.md)
-const services = allServices
-  .filter((p) => p.templateKey !== 'servicesPage')
-  .map((service) =>
-    pick(service, ['title', 'date', 'slug', 'description', 'image', 'templateKey'])
-  )
-
+  // вибрати всі сервіси (без page.md)
+  const services = allServices
+    .filter((p) => p.templateKey !== 'servicesIntro')
+    .map((service) =>
+      pick(service, [
+        'title',
+        'date',
+        'slug',
+        'description',
+        'image',
+        'templateKey',
+      ])
+    )
 
   return (
     <Layout>
@@ -76,11 +81,11 @@ const services = allServices
           interviews to SEO-focused landing pages. The following list gives an
           overview of what I can deliver.
         </p> */}
-     {pageData?.introText && (
-  <p className="text-center text-balance text-lg text-slate-600 dark:text-[#a0b6dc] mb-12">
-    {pageData.introText}
-  </p>
-)}
+        {pageData?.introText && (
+          <p className="text-center text-balance text-lg text-slate-600 dark:text-[#a0b6dc] mb-12">
+            {pageData.introText}
+          </p>
+        )}
         <div className="grid lg:grid-cols-2 gap-4 w-full justify-center">
           {services.map((post) => {
             return <ServicePostCard key={post.slug} post={post as Service} />
