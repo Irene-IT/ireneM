@@ -138,11 +138,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="flex flex-col gap-4">
+        <section className="flex flex-col gap-4" aria-labelledby="services-title">
           <div className="flex justify-between items-end mb-4">
             <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
               <Icon name="service" className="size-6 sm:size-8 opacity-60 text-slate-600 dark:text-[#a0b6dc]" />
-              <span>Services</span>
+              <span id="services-title">Services</span>
             </h2>
             <Link href="/service">View all &rarr;</Link>
           </div>
@@ -157,12 +157,12 @@ export default function Home() {
 
         <section id='works' className="flex flex-col gap-4" aria-labelledby="works-title">
           <div className="flex justify-between items-end mb-4">
-            <h2 id="works-title" className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
+            <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
               <Icon
                 name="work"
                 className="size-6 sm:size-8 opacity-60  text-slate-600 dark:text-[#a0b6dc]"
               />
-              <span>My works</span>
+              <span id="works-title">My works</span>
             </h2>
             <Link href="/work">View all &rarr;</Link>
           </div>

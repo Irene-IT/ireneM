@@ -32,21 +32,25 @@ export default function ServicePostCard({ post }: { post: Service }) {
     >
       <figure className="overflow-hidden size-16 sm:size-24 shrink-0 rounded-xl shadow-lg bg-slate-200 dark:bg-slate-700">
         <ExportedImage
-          src={post.image ?? "/media/services__placeholder-post-1200x1200.png"}
+          src={post.image ?? '/media/services__placeholder-post.png'}
           alt={post.title}
           width={400}
           height={400}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+          className="size-full object-cover group-hover:scale-110 transition-transform duration-700"
         />
       </figure>
       <div className="p-2 sm:p-4 flex flex-col gap-2">
-        {/* <h2 className="font-bold text-balance text-sm sm:text-base">
+        <h2 className="font-bold text-balance text-sm sm:text-base">
           {post.title}
         </h2>
-        <span className="hidden sm:flex mt-auto text-slate-500 text-sm font-bold">
+        {/* <span className="hidden sm:flex mt-auto text-slate-600 dark:text-[#9fb6db] text-sm font-bold">
           Read more &rarr;
         </span> */}
-        <h3 className="font-bold text-lg text-balance">{post.title}</h3>
+        <span className="mt-auto text-slate-600 dark:text-[#9fb6db] text-sm font-bold">
+          View more &rarr;
+        </span>
+
+        {/* <h3 className="font-bold text-lg text-balance">{post.title}</h3>
        {post.description && (
         <p className="text-sm text-balance font-light tracking-wide text-ellipsis line-clamp-3 overflow-hidden">
           {post.description}
@@ -54,7 +58,7 @@ export default function ServicePostCard({ post }: { post: Service }) {
       )}
       <span className="mt-auto text-slate-600 dark:text-[#9fb6db] text-sm font-bold">
         Read more &rarr;
-      </span>
+      </span> */}
       </div>
     </Link>
   )
