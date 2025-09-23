@@ -51,7 +51,7 @@ export default function WorkPage() {
   // )
 
   const pageData = allWorks.find((p) => p.templateKey === 'worksIntro')
-  // select all services (without page.md)
+  
   const works = allWorks
     .filter((p) => p.templateKey !== 'worksIntro')
     .map((works) =>

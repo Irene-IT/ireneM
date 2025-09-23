@@ -14,8 +14,8 @@ export default function WorkPostCard({ post }: { post: Work }) {
     >
       <figure className="overflow-hidden bg-slate-200 dark:bg-slate-700">
         <ExportedImage
-          src={post.image}
-          alt={post.title}
+          src={post.image ?? '/media/work__placeholder-post-1200x1200.png'}
+          alt={post.title ?? 'Work image'}
           width={800}
           height={450}
           className="border-b border-b-slate-200 dark:border-b-slate-700 group-hover:scale-110 transition-transform duration-700 aspect-[14/9] object-cover"
