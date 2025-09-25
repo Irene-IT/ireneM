@@ -157,6 +157,27 @@ const Work = defineDocumentType(() => ({
   },
 }))
 
+const Testimonial = defineDocumentType(() => ({
+  name: 'Testimonial',
+  filePathPattern: `testimonials/*.md`,
+  contentType: 'markdown',
+  fields: {
+    title: { type: 'string', required: true },
+    role: { type: 'string', required: false },
+    avatar: { type: 'string', required: false },
+    src: { type: 'string', required: false },
+    featured: { type: 'boolean', required: false },
+  },
+  computedFields: {
+    slug: {
+      type: 'string',
+      resolve: (doc) => doc._raw.sourceFileName.replace(/\.md/, ''),
+    },
+  },
+}))
+
+
+
 const Podcasts = defineDocumentType(() => ({
   name: 'Podcasts',
   filePathPattern: `podcasts/*.md`,
@@ -297,6 +318,6 @@ const Resources = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: 'content',
-  documentTypes: [Page,  Service, Work, Podcasts, Tools, Resources],
+  documentTypes: [Page,  Service, Work, Testimonial, Podcasts, Tools, Resources],
   disableImportAliasWarning: true,
 })

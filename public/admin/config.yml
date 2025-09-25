@@ -153,6 +153,20 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Intro Text', name: 'introText', widget: 'markdown', required: false }
 
+  - name: 'testimonials'
+    label: 'Testimonials'
+    folder: 'content/testimonials'
+    create: true
+    slug: '{{title}}'
+    fields:
+    - { label: 'Title', name: 'title', widget: string }
+    - { label: 'Role', name: 'role', widget: string }
+    - { label: 'Avatar', name: 'avatar', widget: image, choose_url: false }
+    - { label: 'Background Image', name: 'src', widget: image, required: false }
+    - { label: 'Testimonial', name: 'testimonial', widget: text }
+    - { label: 'Featured', name: 'featured', widget: boolean, default: true }
+
+
   - name: 'podcasts'
     label: 'Podcasts'
     label_singular: 'Podcast'

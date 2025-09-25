@@ -16,6 +16,9 @@ import {
 import Link from 'next/link'
 import ServiceCardPost from '../components/cards/ServicePostCard'
 import WorkPostCard from '../components/cards/WorkPostCard'
+
+import TestimonialSlider from '../components/TestimonialSlider'
+
 import PodcastPostCard from '../components/cards/PodcastPostCard'
 import ToolsPostCard from '../components/cards/ToolsPostCard'
 import { Metadata } from 'next'
@@ -66,8 +69,7 @@ export function generateMetadata(): Metadata {
 // Get all posts and pick specific fields
 export default function Home() {
   let services = allServices.map((post: Service) =>
-      pick(post, ['featured', 'image', 'title', 'date', 'slug', 'description'])
-
+    pick(post, ['featured', 'image', 'title', 'date', 'slug', 'description'])
   )
   services = services
     .filter((post) => post.featured === true)
@@ -79,9 +81,10 @@ export default function Home() {
   let works = allWorks.map((post: Work) =>
     pick(post, ['featured', 'image', 'title', 'date', 'slug'])
   )
-  works = works
-    .filter((post) => post.featured === true)
-    .slice(0, 6)
+  works = works.filter((post) => post.featured === true).slice(0, 6)
+  
+ 
+
 
   let podcasts = allPodcasts.map((post: Podcasts) =>
     pick(post, ['featured', 'image', 'title', 'date', 'slug'])
@@ -137,10 +140,16 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="flex flex-col gap-4" aria-labelledby="services-title">
+        <section
+          className="flex flex-col gap-4"
+          aria-labelledby="services-title"
+        >
           <div className="flex justify-between items-end mb-4">
             <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
-              <Icon name="service" className="size-6 sm:size-8 opacity-60 text-slate-600 dark:text-[#a0b6dc]" />
+              <Icon
+                name="service"
+                className="size-6 sm:size-8 opacity-60 text-slate-600 dark:text-[#a0b6dc]"
+              />
               <span id="services-title">Services</span>
             </h2>
             <Link href="/service">View all &rarr;</Link>
@@ -152,9 +161,11 @@ export default function Home() {
           </div>
         </section>
 
-       
-
-        <section id='works' className="flex flex-col gap-4" aria-labelledby="works-title">
+        <section
+          id="works"
+          className="flex flex-col gap-4"
+          aria-labelledby="works-title"
+        >
           <div className="flex justify-between items-end mb-4">
             <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
               <Icon
@@ -172,6 +183,22 @@ export default function Home() {
           </div>
         </section>
 
+        <section
+          id="testimonials"
+          className="flex flex-col items-center justify-center gap-4"
+          aria-labelledby="testimonials-title"
+        >
+           <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
+              <Icon
+                name="testimonial"
+                className="size-6 sm:size-8 opacity-60  text-slate-600 dark:text-[#a0b6dc]"
+              />
+              <span id="testimonials-title">What my clients say</span>
+            </h2>
+          <TestimonialSlider />
+        </section>
+
+        {/* ============================= */}
         <section className="flex flex-col gap-4">
           <div className="flex justify-between items-end mb-4">
             <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
@@ -187,7 +214,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="flex flex-col gap-4">
+        {/* <section className="flex flex-col gap-4">
           <div className="flex justify-between items-end mb-4">
             <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
               <Icon name="tools" className="size-6 sm:size-8 opacity-60" />
@@ -200,7 +227,7 @@ export default function Home() {
               <ToolsPostCard key={post.slug} post={post as Tools} />
             ))}
           </div>
-        </section>
+        </section> */}
       </div>
     </Layout>
   )

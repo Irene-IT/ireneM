@@ -10,26 +10,6 @@ export function pageCount(number) {
   return Math.ceil(number / SHOW_PER_PAGE)
 }
 
-// Utility function to format a date
-// export function formatDate(date) {
-//   const options = {
-//     dateStyle: 'medium',
-//     timeZone: 'Portugal',
-//   }
-
-//   return new Intl.DateTimeFormat('en-UK', options).format(date)
-// }
-
-// export function formatDateClient(date) {
-//   if (typeof window === 'undefined') return '' // сервер нічого не рендерить
-
-//   const dt = typeof date === 'string' ? new Date(date) : date
-//   return new Intl.DateTimeFormat('en-UK', {
-//     dateStyle: 'medium',
-//     timeZone: 'Portugal',
-//   }).format(dt)
-// }
-
 export function formatDateClient(dateString) {
   const date = new Date(dateString)
   return date.toLocaleDateString('en-UK', {
@@ -37,3 +17,5 @@ export function formatDateClient(dateString) {
     timeZone: 'Portugal',
   })
 }
+
+

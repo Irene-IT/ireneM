@@ -39,7 +39,6 @@ export default function Header() {
 
           {/* Burger Menu */}
           <button
-            // className="p-2 text-xs uppercase font-bold rounded-lg bg-white dark:bg-slate-300 shadow-md hover:shadow-lg transition-shadow"
             className="p-2 text-xs uppercase font-bold shadow-md hover:shadow-lg border rounded-md border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 transition-colors"
             aria-label="Toggle menu"
             type="button"
@@ -52,7 +51,6 @@ export default function Header() {
             ) : (
               <span className="flex gap-2 items-center group text-xs">
                 Menu
-                {/* <Icon name="burger" className="size-4" /> */}
               </span>
             )}
           </button>
@@ -99,6 +97,16 @@ export default function Header() {
                 >
                   <Icon name="work" className={iconClasses} />
                   My works
+                </Link>
+              </li>
+              <li>
+                <Link
+                  onClick={() => setNavbar(!navbar)}
+                  href="/#testimonials"
+                  className={menuItemClasses}
+                >
+                  <Icon name="testimonial" className={iconClasses} />
+                  Testimonials
                 </Link>
               </li>
               <li>
