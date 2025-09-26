@@ -71,7 +71,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
     <div className="[perspective:1200px] [transform-style:preserve-3d]">
       <li
         ref={slideRef}
-        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[80vmin] h-[110vmin] md:w-[70vmin] md:h-[30vmin] mx-[2vmin] z-10"
+        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[70vmin] h-[90vmin] md:w-[70vmin] md:h-[30vmin] mx-[2vmin] z-10"
         onClick={() => handleSlideClick(index)}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
@@ -94,7 +94,8 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
           }}
         >
           <img
-            className="absolute inset-0 w-[120%] h-full object-cover opacity-100 transition-opacity duration-600 ease-in-out"
+          // h-full
+            className="absolute inset-0 w-[120%] h-[120%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
             style={{
               opacity: current === index ? 1 : 0.5,
             }}
@@ -110,7 +111,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
         </div>
 
         <article
-          className={`relative p-[2vmin] transition-opacity duration-1000 ease-in-out ${
+          className={`relative p-[3vmin]  transition-opacity duration-1000 ease-in-out ${
             current === index ? 'opacity-100 visible' : 'opacity-0 invisible'
           }`}
         >
@@ -121,17 +122,18 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
               className="size-[50px] rounded-full object-cover"
             />
 
-            <div className="text-left flex justify-center flex-col">
-              <h2 className="text-slate-900 dark:text-slate-50 font-bold text-balance text-sm sm:text-lg">
+            <div className="text-left flex justify-center flex-col text-balance">
+              <h2 className="text-slate-900 dark:text-slate-50 font-bold text-sm sm:text-lg text-balance">
                 {title}
               </h2>
-              <span className="text-slate-600 dark:text-[#9fb6db] text-sm font-bold">
+              <span className="text-slate-600 dark:text-[#9fb6db] text-sm font-bold text-balance leading-4">
                 {role}
               </span>
             </div>
           </div>
 
-          <p className="mt-4 text-left text-xs sm:text-sm md:text-base leading-snug text-slate-900 dark:text-slate-50 line-clamp-14 md:line-clamp-6 ">
+          <p className="mt-4 text-left text-xs  lg:text-base  text-slate-900 dark:text-slate-50 text-balance line-clamp-10
+          sm:line-clamp-6">
             {testimonial}
           </p>
         </article>
@@ -191,7 +193,7 @@ export function Carousel({ slides }: CarouselProps) {
 
   return (
     <div
-      className="relative w-[80vmin] h-[110vmin] md:w-[70vmin] md:h-[30vmin] mx-auto"
+      className="relative w-[70vmin] h-[90vmin] md:w-[70vmin] md:h-[30vmin] mx-auto"
       aria-labelledby={`carousel-heading-${id}`}
     >
       <ul
@@ -211,7 +213,7 @@ export function Carousel({ slides }: CarouselProps) {
         ))}
       </ul>
 
-      <div className="absolute flex justify-center w-full top-[calc(100%+1rem)]">
+      <div className="absolute flex justify-center w-full top-[calc(100%+2rem)]">
         <CarouselControl
           type="previous"
           title="Go to previous slide"

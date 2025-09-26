@@ -163,8 +163,15 @@ collections:
     - { label: 'Role', name: 'role', widget: string }
     - { label: 'Avatar', name: 'avatar', widget: image, choose_url: false }
     - { label: 'Background Image', name: 'src', widget: image, required: false }
-    - { label: 'Testimonial', name: 'testimonial', widget: text }
+    # - { label: 'Testimonial', name: 'testimonial', widget: text }
     - { label: 'Featured', name: 'featured', widget: boolean, default: true }
+    - {
+          label: 'Testimonial',
+          name: 'testimonial',
+          widget: 'markdown',
+          sanitize_preview: true,
+          minimal: true,
+        }
 
 
   - name: 'podcasts'

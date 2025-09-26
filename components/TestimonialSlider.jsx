@@ -14,7 +14,8 @@ export default function TestimonialSlider() {
     }))
 console.log(slideData)
   return (
-    <div className="w-full h-full transition-transform duration-[0.3s] ease-[ease-in-out] text-center">
+    // <div className="w-full h-full transition-transform duration-[0.3s] ease-[ease-in-out] text-center">
+    <div className="relative overflow-hidden w-full h-full pb-20">
       <Carousel slides={slideData} />
     </div>
   )
