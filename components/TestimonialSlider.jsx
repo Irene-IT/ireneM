@@ -9,7 +9,8 @@ export default function TestimonialSlider() {
       title: t.title,
       role: t.role ?? '',
       avatar: t.avatar ?? '/media/testimonial__placeholder-avatar.png',
-      testimonial: t.body.raw,
+      // testimonial: t.body.raw,
+      testimonial: t.testimonial,
       src: t.src ?? '',
     }))
 console.log(slideData)

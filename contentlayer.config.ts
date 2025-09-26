@@ -167,6 +167,7 @@ const Testimonial = defineDocumentType(() => ({
     avatar: { type: 'string', required: false },
     src: { type: 'string', required: false },
     featured: { type: 'boolean', required: false },
+    testimonial: { type: 'string', required: true },
   },
   computedFields: {
     slug: {
