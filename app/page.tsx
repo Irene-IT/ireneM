@@ -185,8 +185,7 @@ export default function Home() {
 
         <section
           id="testimonials"
-          // gap-8
-          className="flex flex-col items-center justify-center gap-8"
+          className="scroll-mt-30 flex flex-col items-center justify-center gap-8"
           aria-labelledby="testimonials-title"
         >
            <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
@@ -196,9 +195,7 @@ export default function Home() {
               />
               <span id="testimonials-title">What my clients say</span>
             </h2>
-            {/* <div className="w-full md:w-[70%] lg:w-[60%]"> */}
             <div className="preview flex min-h-[350px] w-full justify-center items-center">
-              {/* p-2 sm:p-10 */}
               <TestimonialSlider />
             </div>
         </section>
