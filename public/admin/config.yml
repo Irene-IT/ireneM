@@ -171,7 +171,7 @@ collections:
           sanitize_preview: true,
           minimal: true,
         }
-        
+
   - name: 'faq'
     label: 'FAQ'
     folder: 'content/faq'
@@ -179,10 +179,10 @@ collections:
     slug: '{{title}}'
     fields:
     - { label: 'Question', name: 'question', widget: string }
-    - { label: 'Answer', name: 'answer', widget: string }
+    # - { label: 'Answer', name: 'answer', widget: string }
     - {
-          label: 'FAQ',
-          name: 'faq',
+          label: 'Answer',
+          name: 'answer',
           widget: 'markdown',
           sanitize_preview: true,
           minimal: true,
