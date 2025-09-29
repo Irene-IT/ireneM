@@ -178,6 +178,22 @@ const Testimonial = defineDocumentType(() => ({
 }))
 
 
+export const FAQ = defineDocumentType(() => ({
+  name: 'FAQ',
+  filePathPattern: `faq/*.md`,
+  fields: {
+    templateKey: { type: 'string', required: true },
+    question: { type: 'string', required: true },
+    answer: { type: 'string', required: true },
+  },
+  computedFields: {
+    slug: {
+      type: 'string',
+      resolve: (doc) => doc._raw.sourceFileName.replace(/\.md/, ''),
+    },
+  },
+}))
+
 
 const Podcasts = defineDocumentType(() => ({
   name: 'Podcasts',
@@ -319,6 +335,6 @@ const Resources = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: 'content',
-  documentTypes: [Page,  Service, Work, Testimonial, Podcasts, Tools, Resources],
+  documentTypes: [Page,  Service, Work, Testimonial, FAQ, Podcasts, Tools, Resources],
   disableImportAliasWarning: true,
 })

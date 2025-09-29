@@ -12,7 +12,6 @@ export default function TestimonialSlider() {
       testimonial: t.testimonial,
       src: t.src ?? '',
     }))
-console.log(slideData)
   return (
     <div className="relative overflow-hidden w-full h-full pb-20">
       <Carousel slides={slideData} />

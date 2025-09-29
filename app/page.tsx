@@ -16,9 +16,8 @@ import {
 import Link from 'next/link'
 import ServiceCardPost from '../components/cards/ServicePostCard'
 import WorkPostCard from '../components/cards/WorkPostCard'
-
 import TestimonialSlider from '../components/TestimonialSlider'
-
+import FAQSection from '../components/FAQSection'
 import PodcastPostCard from '../components/cards/PodcastPostCard'
 import ToolsPostCard from '../components/cards/ToolsPostCard'
 import { Metadata } from 'next'
@@ -82,9 +81,6 @@ export default function Home() {
     pick(post, ['featured', 'image', 'title', 'date', 'slug'])
   )
   works = works.filter((post) => post.featured === true).slice(0, 6)
-  
- 
-
 
   let podcasts = allPodcasts.map((post: Podcasts) =>
     pick(post, ['featured', 'image', 'title', 'date', 'slug'])
@@ -188,20 +184,28 @@ export default function Home() {
           className="scroll-mt-30 flex flex-col items-center justify-center gap-8"
           aria-labelledby="testimonials-title"
         >
-           <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
-              <Icon
-                name="testimonial"
-                className="size-6 sm:size-8 opacity-60  text-slate-600 dark:text-[#a0b6dc]"
-              />
-              <span id="testimonials-title">What my clients say</span>
-            </h2>
-            <div className="preview flex min-h-[350px] w-full justify-center items-center">
-              <TestimonialSlider />
-            </div>
+          <h2
+            id="testimonials-title"
+            className="text-2xl sm:text-3xl font-bold flex items-center gap-3"
+          >
+            What my clients say
+          </h2>
+          <div className="flex min-h-[350px] w-full justify-center items-center">
+            <TestimonialSlider />
+          </div>
+        </section>
+        <section
+          id="faq"
+          className="scroll-mt-30 flex flex-col items-center justify-center gap-4"
+          aria-labelledby="faq-title"
+        >
+          <h2 id="faq-title" className="text-2xl sm:text-3xl font-bold mb-3">
+            FAQ
+          </h2>
+          <FAQSection />
         </section>
 
-        {/* ============================= */}
-        <section className="flex flex-col gap-4">
+        {/* <section className="flex flex-col gap-4">
           <div className="flex justify-between items-end mb-4">
             <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
               <Icon name="podcasts" className="size-6 sm:size-8 opacity-60" />
@@ -214,7 +218,7 @@ export default function Home() {
               <PodcastPostCard key={post.slug} post={post as Podcasts} />
             ))}
           </div>
-        </section>
+        </section> */}
 
         {/* <section className="flex flex-col gap-4">
           <div className="flex justify-between items-end mb-4">
