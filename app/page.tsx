@@ -3,14 +3,14 @@ import Layout from '../components/Layout'
 import {
   Service,
   Work,
-  Podcasts,
-  Contacts,
+  // Podcasts,
+  // Contacts,
   Tools,
   allServices,
   allWorks,
   allPages,
-  allPodcasts,
-  allContacts,
+  // allPodcasts,
+  // allContacts,
   allTools,
 } from '../.contentlayer/generated'
 import Link from 'next/link'
@@ -18,8 +18,8 @@ import ServiceCardPost from '../components/cards/ServicePostCard'
 import WorkPostCard from '../components/cards/WorkPostCard'
 import TestimonialSlider from '../components/TestimonialSlider'
 import FAQSection from '../components/FAQSection'
-import PodcastPostCard from '../components/cards/PodcastPostCard'
-import ToolsPostCard from '../components/cards/ToolsPostCard'
+// import PodcastPostCard from '../components/cards/PodcastPostCard'
+// import ToolsPostCard from '../components/cards/ToolsPostCard'
 import { Metadata } from 'next'
 import { Icon } from '../components/Icon'
 import { AUTHOR_NAME, SITE_NAME, SITE_URL } from '../config'
@@ -82,10 +82,10 @@ export default function Home() {
   )
   works = works.filter((post) => post.featured === true).slice(0, 6)
 
-  let podcasts = allPodcasts.map((post: Podcasts) =>
-    pick(post, ['featured', 'image', 'title', 'date', 'slug'])
-  )
-  podcasts = podcasts.filter((post) => post.featured === true).slice(0, 4)
+  // let podcasts = allPodcasts.map((post: Podcasts) =>
+  //   pick(post, ['featured', 'image', 'title', 'date', 'slug'])
+  // )
+  // podcasts = podcasts.filter((post) => post.featured === true).slice(0, 4)
 
   let tools = allTools.map((post: Tools) =>
     pick(post, ['featured', 'image', 'title', 'date', 'slug', 'description'])
