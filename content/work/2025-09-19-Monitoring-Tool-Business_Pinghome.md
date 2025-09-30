@@ -7,10 +7,6 @@ featured: true
 description: >
   A brief description of the sample work.
   This work focused on ........
-tags:
-  - example
-  - Placeholder
-  - open-source
 image: /media/work__Monitoring-Tool-Business_Pinghome.png
 originalPdf: /media/Monitoring-Tool-Business_Pinghome.pdf
 updatePdf: 

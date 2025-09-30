@@ -7,10 +7,6 @@ featured: true
 description: >
   This work focused on ........
   Result - 1000+ reads
-tags:
-  - example
-  - Placeholder
-  - open-source
 image: /media/work__Data-Visual-Software_Gearheart.png
 originalPdf: /media/Data-Visual-Software_Gearheart.pdf
 updatePdf: 

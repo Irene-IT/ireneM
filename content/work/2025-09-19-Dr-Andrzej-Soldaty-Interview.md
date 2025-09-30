@@ -7,10 +7,6 @@ featured: true
 description: >
   This work focused on ........
   Result - 1000+ reads and Andrzej's rating +300%
-tags:
-  - example
-  - Placeholder
-  - open-source
 image: /media/work__mindUA.png
 originalPdf: /media/MindUA.pdf
 updatePdf: /media/Soldaty-Translation.pdf

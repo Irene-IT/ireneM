@@ -7,10 +7,6 @@ featured: true
 description: >
   This work focused on Processes And Tools To Minimize Downtime.
   Result - 1000+ 
-tags:
-  - example
-  - Placeholder
-  - open-source
 image: /media/work__Incident-Management_Pinghome.png
 originalPdf: /media/Incident-Management_Pinghome.pdf
 updatePdf: 

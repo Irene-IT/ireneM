@@ -9,10 +9,6 @@ description: >-
   Result - 10M+ potential user downloads 
 featured: true
 image: /media/appsberry1.jpg
-tags:
-  - example
-  - Placeholder
-  - open-source
 date: 2025-09-19T15:09:00.000+02:00
 ---
 ### A comprehensive technology product for creating and managing cloud servers.
