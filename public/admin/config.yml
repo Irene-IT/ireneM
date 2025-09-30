@@ -54,12 +54,22 @@ collections:
               editor_components: [''],
             }
 
-      - file: 'content/page/contact.md'
+      - file: 'content/contacts'
         label: 'Contact'
         name: 'contact'
         fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Description', name: 'description', widget: 'text' }
+          # - { label: 'Title', name: 'title', widget: 'string' }
+          # - { label: 'Description', name: 'description', widget: 'text' }
+      - {
+          label: 'Template Key',
+          name: 'templateKey',
+          widget: 'hidden',
+          default: 'contacts',
+        }
+      - { label: 'Title', name: 'title', widget: string }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Featured', name: 'featured', widget: boolean, default: false }
+      - { label: 'Link', name: 'link', widget: string }
   
           
 
@@ -97,7 +107,7 @@ collections:
           # modes: ['rich_text'],
           # editor_components: [''],
         }
-      - { label: 'Tags', name: 'tags', widget: 'list' }
+      # - { label: 'Tags', name: 'tags', widget: 'list' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Intro Text', name: 'introText', widget: 'markdown', required: false }
   
@@ -149,7 +159,7 @@ collections:
           sanitize_preview: true,
           minimal: true,
         }
-      - { label: 'Tags', name: 'tags', widget: 'list' }
+      # - { label: 'Tags', name: 'tags', widget: 'list' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Intro Text', name: 'introText', widget: 'markdown', required: false }
 
@@ -188,88 +198,12 @@ collections:
         }
 
 
-  - name: 'podcasts'
-    label: 'Podcasts'
-    label_singular: 'Podcast'
-    folder: 'content/podcasts'
-    create: true
-    slug: '{{title}}'
-    view_groups:
-      - label: Year
-        field: date
-        pattern: \d{4}
-    fields:
-      - {
-          label: 'Template Key',
-          name: 'templateKey',
-          widget: 'hidden',
-          default: 'podcasts',
-        }
-      - { label: 'Title', name: 'title', widget: string }
-      - { label: 'Featured', name: 'featured', widget: boolean, default: false }
-      - { label: 'Link', name: 'link', widget: string }
-      - {
-          label: 'Featured Image',
-          name: 'image',
-          widget: 'image',
-          choose_url: false,
-        }
-      - {
-          label: 'Body',
-          name: 'body',
-          widget: 'markdown',
-          sanitize_preview: true,
-          minimal: true,
-        }
-      - { label: 'Tags', name: 'tags', widget: 'list' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-
-  - name: 'tools'
-    label: 'Tools'
-    label_singular: 'Tool'
-    folder: 'content/tools'
-    create: true
-    slug: '{{title}}'
-    view_groups:
-      - label: Year
-        field: date
-        pattern: \d{4}
-    fields:
-      - {
-          label: 'Template Key',
-          name: 'templateKey',
-          widget: 'hidden',
-          default: 'tools',
-        }
-      - { label: 'Title', name: 'title', widget: string }
-      - { label: 'Featured', name: 'featured', widget: boolean, default: false }
-      - {
-          label: 'App Icon Image',
-          name: 'image',
-          widget: 'image',
-          choose_url: false,
-        }
-      - { label: 'Link', name: 'link', widget: string }
-      - {
-          label: 'Body',
-          name: 'body',
-          widget: 'markdown',
-          sanitize_preview: true,
-          minimal: true,
-        }
-      - { label: 'Tags', name: 'tags', widget: 'list' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-
   - name: 'contacts'
     label: 'Contacts'
-    label_singular: 'Contact'
+    # label_singular: 'Contact'
     folder: 'content/contacts'
     create: true
     slug: '{{title}}'
-    view_groups:
-      - label: Year
-        field: date
-        pattern: \d{4}
     fields:
       - {
           label: 'Template Key',
@@ -278,18 +212,16 @@ collections:
           default: 'contacts',
         }
       - { label: 'Title', name: 'title', widget: string }
+      - { label: 'Description', name: 'description', widget: 'text' }
       - { label: 'Featured', name: 'featured', widget: boolean, default: false }
-      - { label: 'Image', name: 'image', widget: 'image', choose_url: false }
       - { label: 'Link', name: 'link', widget: string }
-      - {
-          label: 'Body',
-          name: 'body',
-          widget: 'markdown',
-          sanitize_preview: true,
-          minimal: true,
-        }
-      - { label: 'Tags', name: 'tags', widget: 'list' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      # - {
+      #     label: 'Body',
+      #     name: 'body',
+      #     widget: 'markdown',
+      #     sanitize_preview: true,
+      #     minimal: true,
+      #   }
 
   # - name: 'authors'
   #   label: 'Authors'

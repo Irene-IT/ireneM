@@ -3,23 +3,17 @@ import Layout from '../components/Layout'
 import {
   Service,
   Work,
-  // Podcasts,
-  // Contacts,
-  // Tools,
   allServices,
   allWorks,
   allPages,
-  // allPodcasts,
-  // allContacts,
-  // allTools,
+ 
 } from '../.contentlayer/generated'
 import Link from 'next/link'
 import ServiceCardPost from '../components/cards/ServicePostCard'
 import WorkPostCard from '../components/cards/WorkPostCard'
 import TestimonialSlider from '../components/TestimonialSlider'
 import FAQSection from '../components/FAQSection'
-// import PodcastPostCard from '../components/cards/PodcastPostCard'
-// import ToolsPostCard from '../components/cards/ToolsPostCard'
+
 import { Metadata } from 'next'
 import { Icon } from '../components/Icon'
 import { AUTHOR_NAME, SITE_NAME, SITE_URL } from '../config'
