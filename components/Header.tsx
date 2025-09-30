@@ -29,7 +29,7 @@ export default function Header() {
           className="flex gap-2 items-center font-bold opacity-80 hover:opacity-100 transition-opacity rounded outline-offset-8 pointer-events-auto"
         >
           {/* Logo  */}
-          <Icon name="home" className="size-4"/>
+          <Icon name="home" className="size-4" />
           Home
         </Link>
 
@@ -68,7 +68,6 @@ export default function Header() {
                   Home
                 </Link>
               </li>
-            
               <li>
                 <Link
                   onClick={() => setNavbar(!navbar)}
@@ -77,16 +76,6 @@ export default function Header() {
                 >
                   <Icon name="service" className={iconClasses} />
                   Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  onClick={() => setNavbar(!navbar)}
-                  href="/tags"
-                  className={menuItemClasses}
-                >
-                  <Icon name="tag" className={iconClasses} />
-                  All Tags
                 </Link>
               </li>
               <li>
@@ -119,30 +108,6 @@ export default function Header() {
                   FAQ
                 </Link>
               </li>
-
-
-
-              {/* <li>
-                <Link
-                  onClick={() => setNavbar(!navbar)}
-                  href="/podcasts"
-                  className={menuItemClasses}
-                >
-                  <Icon name="podcasts" className={iconClasses} />
-                  Podcasts
-                </Link>
-              </li> */}
-              <li>
-                <Link
-                  onClick={() => setNavbar(!navbar)}
-                  href="/tools"
-                  className={menuItemClasses}
-                >
-                  <Icon name="tools" className={iconClasses} />
-                  Tools
-                </Link>
-              </li>
-
               <li>
                 <Link
                   onClick={() => setNavbar(!navbar)}

@@ -5,13 +5,13 @@ import {
   Work,
   // Podcasts,
   // Contacts,
-  Tools,
+  // Tools,
   allServices,
   allWorks,
   allPages,
   // allPodcasts,
   // allContacts,
-  allTools,
+  // allTools,
 } from '../.contentlayer/generated'
 import Link from 'next/link'
 import ServiceCardPost from '../components/cards/ServicePostCard'
@@ -81,21 +81,6 @@ export default function Home() {
     pick(post, ['featured', 'image', 'title', 'date', 'slug'])
   )
   works = works.filter((post) => post.featured === true).slice(0, 6)
-
-  // let podcasts = allPodcasts.map((post: Podcasts) =>
-  //   pick(post, ['featured', 'image', 'title', 'date', 'slug'])
-  // )
-  // podcasts = podcasts.filter((post) => post.featured === true).slice(0, 4)
-
-  let tools = allTools.map((post: Tools) =>
-    pick(post, ['featured', 'image', 'title', 'date', 'slug', 'description'])
-  )
-  tools = tools.filter((post) => post.featured === true).slice(0, 6)
-
-  // let contacts = allContacts.map((post: Contacts) =>
-  //   pick(post, ['title', 'link', 'description'])
-  // )
-  // contacts = contacts.filter((post) => post.featured === true).slice(0, 4)
 
   return (
     <Layout>
@@ -204,36 +189,6 @@ export default function Home() {
           </h2>
           <FAQSection />
         </section>
-
-        {/* <section className="flex flex-col gap-4">
-          <div className="flex justify-between items-end mb-4">
-            <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
-              <Icon name="podcasts" className="size-6 sm:size-8 opacity-60" />
-              <span>Podcasts</span>
-            </h2>
-            <Link href="/podcasts">View all &rarr;</Link>
-          </div>
-          <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-4 flex-wrap">
-            {podcasts.map((post) => (
-              <PodcastPostCard key={post.slug} post={post as Podcasts} />
-            ))}
-          </div>
-        </section> */}
-
-        {/* <section className="flex flex-col gap-4">
-          <div className="flex justify-between items-end mb-4">
-            <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
-              <Icon name="tools" className="size-6 sm:size-8 opacity-60" />
-              <span>Tools</span>
-            </h2>
-            <Link href="/tools">View all &rarr;</Link>
-          </div>
-          <div className="grid xl:grid-cols-2 gap-4 flex-wrap">
-            {tools.map((post) => (
-              <ToolsPostCard key={post.slug} post={post as Tools} />
-            ))}
-          </div>
-        </section> */}
       </div>
     </Layout>
   )

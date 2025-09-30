@@ -35,7 +35,6 @@ export const Icon = ({
   className?: string
 }) => {
   const icons: { [key: string]: any } = {
-    // blog: CodeBracketIcon,
     burger: Bars2Icon,
     close: XMarkIcon,
     service: ClipboardDocumentListIcon,
@@ -50,12 +49,9 @@ export const Icon = ({
     sun: SunIcon,
     moon: MoonIcon,
     prev: ArrowLeftIcon,
-    // resources: InboxStackIcon,
-    tag: TagIcon,
     testimonial: StarIcon,
     tools: WrenchScrewdriverIcon,
     up: ArrowUpCircleIcon,
-    // contact: EnvelopeOpenIcon,
     contact: IdentificationIcon,
     Email: EnvelopeIcon,
     Phone: DevicePhoneMobileIcon,
