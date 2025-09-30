@@ -3,12 +3,10 @@ import {
   allServices,
   allWorks,
   allPodcasts,
-  allResources,
   allTools,
   Service,
   Work,
   Podcasts,
-  Resources,
   Tools,
 } from '../.contentlayer/generated'
 import Tag from './Tag'
@@ -17,9 +15,9 @@ import { Icon } from './Icon'
 export default function PostFooter({
   data,
 }: {
-  data: Service | Work | Podcasts | Resources | Tools
+  data: Service | Work | Podcasts  | Tools
 }) {
-  let navPosts: (Service | Work | Podcasts | Resources | Tools)[] = []
+  let navPosts: (Service | Work | Podcasts  | Tools)[] = []
 
   switch (data.templateKey) {
     case 'service':
@@ -30,9 +28,6 @@ export default function PostFooter({
       break
     case 'podcasts':
       navPosts = allPodcasts as Podcasts[]
-      break
-    case 'resources':
-      navPosts = allResources as Resources[]
       break
     case 'tools':
       navPosts = allTools as Tools[]

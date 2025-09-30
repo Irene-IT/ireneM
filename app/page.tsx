@@ -4,13 +4,13 @@ import {
   Service,
   Work,
   Podcasts,
-  Resources,
+  Contacts,
   Tools,
   allServices,
   allWorks,
   allPages,
   allPodcasts,
-  allResources,
+  allContacts,
   allTools,
 } from '../.contentlayer/generated'
 import Link from 'next/link'
@@ -92,10 +92,10 @@ export default function Home() {
   )
   tools = tools.filter((post) => post.featured === true).slice(0, 6)
 
-  let resources = allResources.map((post: Resources) =>
-    pick(post, ['featured', 'image', 'title', 'date', 'slug', 'description'])
-  )
-  resources = resources.filter((post) => post.featured === true).slice(0, 4)
+  // let contacts = allContacts.map((post: Contacts) =>
+  //   pick(post, ['title', 'link', 'description'])
+  // )
+  // contacts = contacts.filter((post) => post.featured === true).slice(0, 4)
 
   return (
     <Layout>

@@ -68,7 +68,6 @@ const Page = defineDocumentType(() => ({
 //   },
 // }))
 
-
 const Service = defineDocumentType(() => ({
   name: 'Service',
   filePathPattern: `services/*.md`,
@@ -104,13 +103,10 @@ const Service = defineDocumentType(() => ({
   computedFields: {
     slug: {
       type: 'string',
-      resolve: (doc) =>
-        doc._raw.sourceFileName.replace(/\.md/, ''),
+      resolve: (doc) => doc._raw.sourceFileName.replace(/\.md/, ''),
     },
   },
 }))
-
-
 
 const Work = defineDocumentType(() => ({
   name: 'Work',
@@ -146,8 +142,8 @@ const Work = defineDocumentType(() => ({
       type: 'boolean',
       required: false,
     },
-    originalPdf: { type: 'string' },  
-    updatePdf: { type: 'string' },     
+    originalPdf: { type: 'string' },
+    updatePdf: { type: 'string' },
   },
   computedFields: {
     slug: {
@@ -177,7 +173,6 @@ const Testimonial = defineDocumentType(() => ({
   },
 }))
 
-
 export const FAQ = defineDocumentType(() => ({
   name: 'FAQ',
   filePathPattern: `faq/*.md`,
@@ -193,7 +188,6 @@ export const FAQ = defineDocumentType(() => ({
     },
   },
 }))
-
 
 const Podcasts = defineDocumentType(() => ({
   name: 'Podcasts',
@@ -287,43 +281,15 @@ const Tools = defineDocumentType(() => ({
   },
 }))
 
-const Resources = defineDocumentType(() => ({
-  name: 'Resources',
-  filePathPattern: `resources/*.md`,
-  contentType: 'markdown',
+
+const Contacts = defineDocumentType(() => ({
+  name: 'Contacts',
+  filePathPattern: `contacts/*.md`,
   fields: {
-    title: {
-      type: 'string',
-      required: true,
-    },
-    date: {
-      type: 'date',
-      required: false,
-    },
-    description: {
-      type: 'string',
-      required: false,
-    },
-    tags: {
-      type: 'json',
-      required: false,
-    },
-    link: {
-      type: 'string',
-      required: false,
-    },
-    image: {
-      type: 'string',
-      required: true,
-    },
-    templateKey: {
-      type: 'string',
-      required: true,
-    },
-    featured: {
-      type: 'boolean',
-      required: false,
-    },
+    title: { type: 'string', required: true },
+    description: { type: 'string', required: false, },
+    link: { type: 'string', required: true },
+    templateKey: { type: 'string', required: true },
   },
   computedFields: {
     slug: {
@@ -335,6 +301,15 @@ const Resources = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: 'content',
-  documentTypes: [Page,  Service, Work, Testimonial, FAQ, Podcasts, Tools, Resources],
+  documentTypes: [
+    Page,
+    Service,
+    Work,
+    Testimonial,
+    FAQ,
+    Podcasts,
+    Tools,
+    Contacts,
+  ],
   disableImportAliasWarning: true,
 })

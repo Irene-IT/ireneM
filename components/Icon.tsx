@@ -9,7 +9,8 @@ import {
   HomeIcon,
   ClipboardDocumentListIcon,
   ChatBubbleLeftEllipsisIcon,
-  InboxStackIcon,
+  // InboxStackIcon,
+  IdentificationIcon,
   MicrophoneIcon,
   MinusCircleIcon,
   MoonIcon,
@@ -20,6 +21,10 @@ import {
   WrenchScrewdriverIcon,
   XMarkIcon,
   EnvelopeOpenIcon,
+  EnvelopeIcon,
+  DevicePhoneMobileIcon,
+  AtSymbolIcon,
+  PhotoIcon,
 } from '@heroicons/react/24/outline'
 
 export const Icon = ({
@@ -45,12 +50,17 @@ export const Icon = ({
     sun: SunIcon,
     moon: MoonIcon,
     prev: ArrowLeftIcon,
-    resources: InboxStackIcon,
+    // resources: InboxStackIcon,
     tag: TagIcon,
     testimonial: StarIcon,
     tools: WrenchScrewdriverIcon,
     up: ArrowUpCircleIcon,
-    contact: EnvelopeOpenIcon,
+    // contact: EnvelopeOpenIcon,
+    contact: IdentificationIcon,
+    Email: EnvelopeIcon,
+    Phone: DevicePhoneMobileIcon,
+    LinkedIn: AtSymbolIcon,
+    Instagram: PhotoIcon,
   }
 
   const IconComponent = icons[name]

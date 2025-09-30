@@ -5,7 +5,6 @@ import {
   Service,
   Work,
   Podcasts,
-  Resources,
   Tools,
 } from '../.contentlayer/generated'
 
@@ -18,7 +17,7 @@ import { AUTHOR_NAME } from '../config'
 export default function PostHeader({
   data,
 }: {
-  data: Service | Work | Podcasts | Resources | Tools
+  data: Service | Work | Podcasts | Tools
 }) {
 
     const [formattedDate, setFormattedDate] = useState('')
