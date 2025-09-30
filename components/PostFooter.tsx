@@ -2,14 +2,9 @@ import Link from 'next/link'
 import {
   allServices,
   allWorks,
-  // allPodcasts,
-  // allTools,
   Service,
   Work,
-  // Podcasts,
-  // Tools,
 } from '../.contentlayer/generated'
-// import Tag from './Tag'
 import { Icon } from './Icon'
 
 export default function PostFooter({
@@ -26,12 +21,6 @@ export default function PostFooter({
     case 'work':
       navPosts = allWorks as Work[]
       break
-    case 'podcasts':
-    //   navPosts = allPodcasts as Podcasts[]
-    //   break
-    // case 'tools':
-    //   navPosts = allTools as Tools[]
-    //   break
   }
 
   // Find the index of the current post
@@ -44,20 +33,6 @@ export default function PostFooter({
 
   return (
     <>
-      {/* {data.tags && (
-        <div className="mt-24 mb-12 flex flex-col gap-4">
-          <h2 className="font-bold">This post was tagged in:</h2>
-          <ul className="flex gap-4 flex-wrap ">
-            {data.tags.map((tag: string) => {
-              return (
-                <li key={tag}>
-                  <Tag tag={tag} />
-                </li>
-              )
-            })}
-          </ul>
-        </div>
-      )} */}
       {(prevPost || nextPost) && (
         <div className="flex flex-col lg:flex-row justify-between gap-12 xl:gap-24 mt-24 py-8 border-t border-t-slate-300 dark:border-t-slate-700">
           {prevPost && (

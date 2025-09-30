@@ -4,8 +4,6 @@ import Link from 'next/link'
 import {
   Service,
   Work,
-  Podcasts,
-  // Tools,
 } from '../.contentlayer/generated'
 
 import { useState, useEffect } from 'react'
