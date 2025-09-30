@@ -111,7 +111,7 @@ export default function Header() {
               <li>
                 <Link
                   onClick={() => setNavbar(!navbar)}
-                  href="/contacts"
+                  href="/#contacts"
                   className={menuItemClasses}
                 >
                   <Icon name="contact" className={iconClasses} />

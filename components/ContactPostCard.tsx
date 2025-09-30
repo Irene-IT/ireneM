@@ -1,5 +1,5 @@
-import { Contacts } from '../../.contentlayer/generated'
-import { Icon } from '../../components/Icon'
+import { Contacts } from '../.contentlayer/generated'
+import { Icon } from './Icon'
 
 const iconClasses =
   'size-6 sm:size-8 opacity-60 text-slate-600 dark:text-[#a0b6dc]'

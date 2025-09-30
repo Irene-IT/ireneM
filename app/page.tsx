@@ -13,6 +13,9 @@ import ServiceCardPost from '../components/cards/ServicePostCard'
 import WorkPostCard from '../components/cards/WorkPostCard'
 import TestimonialSlider from '../components/TestimonialSlider'
 import FAQSection from '../components/FAQSection'
+// import ContactsPostCard from '../../components/cards/ContactPostCard'
+import ContactsSection from '../components/ContactsSection'
+
 
 import { Metadata } from 'next'
 import { Icon } from '../components/Icon'
@@ -41,13 +44,15 @@ export function generateMetadata(): Metadata {
     title: SEO.title,
     description: SEO.description,
     openGraph: {
-      url: `${SITE_URL}/og-card.png`,
+      // url: `${SITE_URL}/og-card.png`,
+      url: `${SITE_URL}`,
       title: SEO.title,
       description: SEO.description,
       authors: `${AUTHOR_NAME}`,
       images: [
         {
-          url: SEO.image,
+          // url: SEO.image,
+          url: `${SITE_URL}/og-card.png`,
           width: 1600,
           height: 800,
           alt: `${SITE_NAME}`,
@@ -183,6 +188,37 @@ export default function Home() {
           </h2>
           <FAQSection />
         </section>
+
+        <section
+          id="contacts"
+          className="scroll-mt-30 flex flex-col items-center justify-center gap-4"
+          aria-labelledby="contacts-title"
+        >
+          <h2 id="contacts-title" className="text-2xl sm:text-3xl font-bold mb-3">
+            Contacts
+          </h2>
+          <ContactsSection />
+        </section>
+
+          {/* <section
+                  id="contacts"
+                  className="scroll-mt-30 h-fit flex flex-col gap-4 mb-6"
+                  aria-labelledby="contacts-title"
+                >
+        
+                <div className="flex justify-center items-center">
+                  <h2 id="contacts-title" className="text-3xl md:text-4xl font-bold flex items-center gap-3"> */}
+                    {/* mt-12 */}
+                    {/* <Icon name="contact" className={iconClasses} /> */}
+                    {/* <Icon name="contact" className="size-6 sm:size-8 opacity-60 text-slate-600 dark:text-[#a0b6dc]" /> */}
+                    {/* <span>Contacts</span> */}
+                  
+                  {/* </h2>
+                </div>
+        
+               <ContactsSection />
+              </section> */}
+        
       </div>
     </Layout>
   )
