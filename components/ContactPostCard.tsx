@@ -24,6 +24,7 @@ export default function ContactsPostCard({ post }: { post: Contacts }) {
       <p className="text-slate-600 dark:text-[#9fb6db] text-sm font-bold">
         {post.description}
       </p>
+      {post.link}
     </a>
   )
 }
