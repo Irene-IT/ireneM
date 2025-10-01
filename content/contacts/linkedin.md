@@ -1,6 +1,6 @@
 ---
 title: "LinkedIn"
-description: "Connect with me on LinkedIn"
-link: "www.linkedin.com/in/myronovairene"
+description: "Connect with me"
+link: "https://www.linkedin.com/in/myronovairene"
 templateKey: "contact"
 ---

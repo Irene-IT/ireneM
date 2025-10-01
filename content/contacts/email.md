@@ -1,6 +1,6 @@
 ---
 title: "Email"
 description: "Write me directly"
-link: "irenemyronova@gmail.com"
+link: "mailto:irenemyronova@gmail.com"
 templateKey: "contact"
 ---
