@@ -34,7 +34,6 @@ dist-ssr
 *.sw?
 *.pem
 
-README.md
 
 # debug
 npm-debug.log*

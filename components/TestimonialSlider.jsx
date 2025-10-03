@@ -15,6 +15,9 @@ export default function TestimonialSlider() {
   return (
     <div className="relative overflow-hidden w-full h-full pb-20">
       <Carousel slides={slideData} />
+       <div className='pointer-events-none absolute inset-y-0 left-0 w-1/9 bg-gradient-to-r from-slate-50  dark:from-slate-900'></div>
+      <div className='pointer-events-none absolute inset-y-0 right-0 w-1/9 bg-gradient-to-l from-slate-50 dark:from-slate-900'></div>
     </div>
   )
 }
+

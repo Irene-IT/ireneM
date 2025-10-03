@@ -5,7 +5,7 @@ import { useState, useRef, useId, useEffect } from 'react'
 interface SlideData {
   title: string
   button: string
-  src: string
+  // src: string
   role: string
   avatar: string
   testimonial: string
@@ -61,17 +61,13 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
     yRef.current = 0
   }
 
-  const imageLoaded = (event: React.SyntheticEvent<HTMLImageElement>) => {
-    event.currentTarget.style.opacity = '1'
-  }
-
-  const { src, role, avatar, testimonial, title } = slide
+  const { role, avatar, testimonial, title } = slide
 
   return (
     <div className="[perspective:1200px] [transform-style:preserve-3d]">
       <li
         ref={slideRef}
-        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[70vmin] h-[90vmin] md:w-[70vmin] md:h-[30vmin] mx-[2vmin] z-10"
+        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[80vmin] h-[90vmin] md:w-[70vmin] md:h-[30vmin] mx-[1vmin] z-10"
         onClick={() => handleSlideClick(index)}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
@@ -85,7 +81,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
         }}
       >
         <div
-          className="absolute top-0 left-0 w-full h-full bg-[#1D1F2F] rounded-[1%] overflow-hidden transition-all duration-150 ease-out"
+          className="absolute top-0 left-0 w-full h-full rounded-2xl overflow-hidden transition-all duration-150 ease-out"
           style={{
             transform:
               current === index
@@ -93,7 +89,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
                 : 'none',
           }}
         >
-          <img
+          {/* <img
             className="absolute inset-0 w-[120%] h-[120%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
             style={{
               opacity: current === index ? 1 : 0.5,
@@ -103,15 +99,37 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
             onLoad={imageLoaded}
             loading="eager"
             decoding="sync"
+          /> */}
+
+          <span
+            // opacity-100 transition-opacity 
+            className="absolute inset-0 w-[120%] h-[120%] object-cover  duration-600 ease-in-out bg-blue-50 dark:bg-slate-800"
+            style={{
+              opacity: current === index ? 1 : 0.5,
+            }}
           />
           {current === index && (
-            <div className="absolute inset-0 bg-black/30 transition-all duration-1000" />
+            // bg-black/30
+            // <div className="absolute inset-0 bg-blue-100/30 dark:bg-blue-950/30 transition-all duration-1000" />
+            <div className="absolute inset-0 bg-blue-100/30 dark:bg-slate-700/30 transition-all duration-1000 flex justify-end items-start p-[3vmin]">
+              {/* <img src="/Quote.svg" alt="quote" height={50} width={50} className='opacity-20'/> */}
+              <img
+                src="/Quote.svg"
+                alt="quote"
+                height={50}
+                width={50}
+                className="opacity-20"
+                loading="eager"
+                decoding="sync"
+              />
+            </div>
           )}
         </div>
 
         <article
           className={`relative p-[3vmin]  transition-opacity duration-1000 ease-in-out ${
-            current === index ? 'opacity-100 visible' : 'opacity-0 invisible'
+            current === index ? 'opacity-100 visible' : 'opacity-30 visible'
+            // 'opacity-0 invisible'
           }`}
         >
           <div className="flex justify-start items-center gap-2 flex-row">
@@ -131,8 +149,10 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
             </div>
           </div>
 
-          <p className="mt-4 text-left text-xs  lg:text-base  text-slate-900 dark:text-slate-50 text-balance line-clamp-10
-          sm:line-clamp-6">
+          <p
+            className="mt-4 text-left text-xs  lg:text-base  text-slate-900 dark:text-slate-50 text-balance line-clamp-10
+          sm:line-clamp-6"
+          >
             {testimonial}
           </p>
         </article>
@@ -192,11 +212,13 @@ export function Carousel({ slides }: CarouselProps) {
 
   return (
     <div
-      className="relative w-[70vmin] h-[90vmin] md:w-[70vmin] md:h-[30vmin] mx-auto"
+    // w-[70vmin]
+      className="relative w-[80vmin] h-[90vmin] md:w-[70vmin] md:h-[30vmin] mx-auto"
       aria-labelledby={`carousel-heading-${id}`}
     >
       <ul
-        className="absolute flex mx-[-4vmin] transition-transform duration-1000 ease-in-out"
+      // mx-[-4vmin]
+        className="absolute flex  transition-transform duration-1000 ease-in-out"
         style={{
           transform: `translateX(-${current * (100 / slides.length)}%)`,
         }}
@@ -211,6 +233,8 @@ export function Carousel({ slides }: CarouselProps) {
           />
         ))}
       </ul>
+
+      
 
       <div className="absolute flex justify-center w-full top-[calc(100%+2rem)]">
         <CarouselControl
