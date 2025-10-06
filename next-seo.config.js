@@ -8,7 +8,7 @@ export default {
     description: 'I help B2B SaaS brands grow with clear, compelling content that converts.',
     images: [
       {
-        url: 'https://irenemyronova.netlify.app/og-image.jpg',
+        url: 'https://irenemyronova.netlify.app/og-card.png',
         width: 1600,
         height: 800,
         alt: 'Irene Myronova Portfolio',
