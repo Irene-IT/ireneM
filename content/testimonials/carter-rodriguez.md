@@ -2,7 +2,6 @@
 title: Carter Rodriguez
 role: "Product Security Planner | Johnston Inc"
 avatar: /media/testimonial__placeholder-avatar.png
-src: /media/work__placeholder-post-1200x1200.png
 featured: true
 testimonial: >
   "Now that there is the Tec-9, a crappy spray gun from South Miami.

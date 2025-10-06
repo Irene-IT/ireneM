@@ -122,7 +122,6 @@ const Testimonial = defineDocumentType(() => ({
     title: { type: 'string', required: true },
     role: { type: 'string', required: false },
     avatar: { type: 'string', required: false },
-    src: { type: 'string', required: false },
     featured: { type: 'boolean', required: false },
     testimonial: { type: 'string', required: true },
   },
