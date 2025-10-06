@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "concurrently \"contentlayer2 dev\" \"next dev --turbopack\" \"next-image-export-optimizer\"",
-    "build": "contentlayer2 build && next build",
+    "build": "contentlayer2 build && next build && next-image-export-optimizer",
     "start": "next start",
     "postbuild": "next-sitemap"
   },

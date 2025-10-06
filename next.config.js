@@ -5,6 +5,9 @@ const { withContentlayer } = require('next-contentlayer2');
 const nextconfig = {
   reactStrictMode: true,
   trailingSlash: true,
+  experimental: {
+    ignoreDeprecations: "warn", 
+  },
   images: {
     loader: "custom",
     imageSizes: [16, 32, 48, 128, 256],
