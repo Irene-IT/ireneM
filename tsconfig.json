@@ -28,7 +28,7 @@
     "paths": {
       "contentlayer/generated": ["./.contentlayer/generated"]
     },
-    "ignoreDeprecations": "6.0"
+    // "ignoreDeprecations": "6.0" - WARNING: DON't ADD this because it will break the build
   },
   "include": [
     "next-env.d.ts",
