@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "concurrently \"contentlayer2 dev\" \"next dev --turbopack\" \"next-image-export-optimizer\"",
-    "build": "contentlayer2 build && next build && next-image-export-optimizer",
+    "build": "contentlayer2 build && next build",
     "start": "next start",
     "postbuild": "next-sitemap"
   },
@@ -15,7 +15,7 @@
     "@contentlayer2/utils": "^0.5.8",
     "@emotion/is-prop-valid": "^1.4.0",
     "@heroicons/react": "^2.2.0",
-    "@netlify/plugin-nextjs": "^5.13.1",
+    "@netlify/plugin-nextjs": "^5.13.4",
     "@tabler/icons-react": "^3.35.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.12",
