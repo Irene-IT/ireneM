@@ -7,4 +7,3 @@ Host: https://irenemyronova.netlify.app
 
 # Sitemaps
 Sitemap: https://irenemyronova.netlify.app/sitemap.xml
-
