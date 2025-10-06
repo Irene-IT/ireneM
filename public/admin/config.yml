@@ -7,8 +7,6 @@ backend:
   publish_hook: https://api.netlify.com/build_hooks/68bae1b69f578c4a72db9b20
 
 
-  
-
 # local_backend: true
 
 # publish_mode: editorial_workflow
@@ -54,16 +52,6 @@ collections:
               editor_components: [''],
             }
 
-      # - file: 'content/contacts'
-      #   label: 'Contact'
-      #   name: 'contact'
-      #   fields:
-          # - { label: 'Title', name: 'title', widget: 'string' }
-          # - { label: 'Description', name: 'description', widget: 'text' }
-          
-  
-          
-
   - name: 'services' # Used in routes, e.g., /admin/collections/blog
     label: 'Services' # Used in the UI
     folder: 'content/services' # The path to the folder where the documents are stored
@@ -94,11 +82,7 @@ collections:
           name: 'body',
           widget: 'markdown',
           sanitize_preview: true,
-          # buttons: ['bold', 'italic', 'link'],
-          # modes: ['rich_text'],
-          # editor_components: [''],
         }
-      # - { label: 'Tags', name: 'tags', widget: 'list' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Intro Text', name: 'introText', widget: 'markdown', required: false }
   
@@ -150,7 +134,6 @@ collections:
           sanitize_preview: true,
           minimal: true,
         }
-      # - { label: 'Tags', name: 'tags', widget: 'list' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Intro Text', name: 'introText', widget: 'markdown', required: false }
 
@@ -188,10 +171,8 @@ collections:
           minimal: true,
         }
 
-
   - name: 'contacts'
     label: 'Contacts'
-    # label_singular: 'Contact'
     folder: 'content/contacts'
     create: true
     slug: '{{title}}'
@@ -206,33 +187,4 @@ collections:
       - { label: 'Description', name: 'description', widget: 'text' }
       - { label: 'Featured', name: 'featured', widget: boolean, default: false }
       - { label: 'Link', name: 'link', widget: string }
-      # - {
-      #     label: 'Body',
-      #     name: 'body',
-      #     widget: 'markdown',
-      #     sanitize_preview: true,
-      #     minimal: true,
-      #   }
-
-  # - name: 'authors'
-  #   label: 'Authors'
-  #   folder: 'content/authors'
-  #   create: true
-  #   slug: '{{name}}'
-  #   fields:
-  #     - { label: 'Name', name: 'name', widget: 'string', required: true }
-  #     - {
-  #         label: 'About',
-  #         name: 'description',
-  #         widget: 'markdown',
-  #         sanitize_preview: true,
-  #         buttons: ['bold', 'italic', 'link', 'heading-two', 'heading-three'],
-  #         modes: ['rich_text'],
-  #         editor_components: [''],
-  #       }
-  #     - {
-  #         label: 'Featured Image',
-  #         name: 'image',
-  #         widget: 'image',
-  #         choose_url: false,
-  #       }
+     

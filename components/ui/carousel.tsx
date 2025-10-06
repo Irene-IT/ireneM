@@ -5,7 +5,6 @@ import { useState, useRef, useId, useEffect } from 'react'
 interface SlideData {
   title: string
   button: string
-  // src: string
   role: string
   avatar: string
   testimonial: string
@@ -89,30 +88,14 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
                 : 'none',
           }}
         >
-          {/* <img
-            className="absolute inset-0 w-[120%] h-[120%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
-            style={{
-              opacity: current === index ? 1 : 0.5,
-            }}
-            alt={title}
-            src={src}
-            onLoad={imageLoaded}
-            loading="eager"
-            decoding="sync"
-          /> */}
-
           <span
-            // opacity-100 transition-opacity 
             className="absolute inset-0 w-[120%] h-[120%] object-cover  duration-600 ease-in-out bg-blue-50 dark:bg-slate-800"
             style={{
               opacity: current === index ? 1 : 0.5,
             }}
           />
           {current === index && (
-            // bg-black/30
-            // <div className="absolute inset-0 bg-blue-100/30 dark:bg-blue-950/30 transition-all duration-1000" />
             <div className="absolute inset-0 bg-blue-100/30 dark:bg-slate-700/30 transition-all duration-1000 flex justify-end items-start p-[3vmin]">
-              {/* <img src="/Quote.svg" alt="quote" height={50} width={50} className='opacity-20'/> */}
               <img
                 src="/Quote.svg"
                 alt="quote"
@@ -129,7 +112,6 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
         <article
           className={`relative p-[3vmin]  transition-opacity duration-1000 ease-in-out ${
             current === index ? 'opacity-100 visible' : 'opacity-30 visible'
-            // 'opacity-0 invisible'
           }`}
         >
           <div className="flex justify-start items-center gap-2 flex-row">
@@ -212,12 +194,10 @@ export function Carousel({ slides }: CarouselProps) {
 
   return (
     <div
-    // w-[70vmin]
       className="relative w-[80vmin] h-[90vmin] md:w-[70vmin] md:h-[30vmin] mx-auto"
       aria-labelledby={`carousel-heading-${id}`}
     >
       <ul
-      // mx-[-4vmin]
         className="absolute flex  transition-transform duration-1000 ease-in-out"
         style={{
           transform: `translateX(-${current * (100 / slides.length)}%)`,
@@ -233,8 +213,6 @@ export function Carousel({ slides }: CarouselProps) {
           />
         ))}
       </ul>
-
-      
 
       <div className="absolute flex justify-center w-full top-[calc(100%+2rem)]">
         <CarouselControl

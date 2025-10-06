@@ -21,6 +21,14 @@ const nextconfig = {
     nextImageExportOptimizer_generateAndUseBlurImages: "true",
     nextImageExportOptimizer_remoteImageCacheTTL: "0",
   },
+
+   webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "contentlayer/generated": "./.contentlayer/generated",
+    };
+    return config;
+  },
 }
 
 module.exports = withContentlayer(nextconfig)

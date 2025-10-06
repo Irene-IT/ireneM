@@ -3,18 +3,16 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { Icon } from './Icon'
-// import { useTheme } from 'next-themes'
 import { ModeToggle } from './ModeToggle'
 
 const menuItemClasses =
-  'w-full flex items-center gap-3 p-3 px-6 text-sm tracking-wide text-slate-700 dark:text-slate-700 hover:text-slate-800 dark:hover:text-slate-950 hover:font-semibold transition-colors transition-all border-b border-b-slate-200 dark:border-b-slate-300 hover:bg-slate-100 dark:hover:bg-white'
+  'w-full flex items-center gap-3 p-3 px-6 text-sm tracking-wide text-slate-700 dark:text-slate-200 hover:text-slate-800 dark:hover:text-white hover:font-semibold transition-colors transition-all border-b border-b-slate-200 dark:border-b-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800'
 
 const iconClasses = 'size-4 opacity-70'
 
 export default function Header() {
   const [navbar, setNavbar] = useState(false)
 
-  // const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => setMounted(true), [])
@@ -57,7 +55,7 @@ export default function Header() {
 
           {/* Menu */}
           <div className={`${navbar ? '' : 'hidden'}`}>
-            <menu className="min-w-48 flex flex-col absolute right-4 sm:right-6 py-3 bg-white dark:bg-slate-100 rounded-xl shadow-md group-hover:shadow-lg transition-shadow">
+            <menu className="min-w-48 flex flex-col absolute right-4 sm:right-6 py-3 bg-white dark:bg-slate-700 rounded-xl shadow-md group-hover:shadow-lg transition-shadow">
               <li>
                 <Link
                   onClick={() => setNavbar(!navbar)}

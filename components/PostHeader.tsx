@@ -30,7 +30,7 @@ export default function PostHeader({
   
   return (
     <>
-      <header className="flex flex-col gap-4 sm:gap-6 mb-12 sm:mt-12">
+      <header className="flex flex-col gap-4 sm:gap-6 mb-12 mt-24 sm:mt-28">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-center sm:text-left text-balance text-slate-800 dark:text-slate-200">
           {data.title}
         </h1>

@@ -49,7 +49,6 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <main className="flex-1">
             <AnimatePresence
               mode="wait"
               initial={true}
@@ -57,7 +56,6 @@ export default function RootLayout({
             >
               {children}
             </AnimatePresence>
-          </main>
           <Footer />
           <NetlifyIdentityRedirect />
         </ThemeProvider>

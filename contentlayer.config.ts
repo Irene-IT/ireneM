@@ -40,7 +40,7 @@ const Service = defineDocumentType(() => ({
     },
     title: {
       type: 'string',
-      required: false, // у page.md може бути без title
+      required: false, 
     },
     date: {
       type: 'date',

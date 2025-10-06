@@ -22,14 +22,22 @@
         "name": "next"
       }
     ],
-    "target": "ES2017"
+    "target": "ES2017",
+
+    // 👇 ось що ми додаємо
+    "paths": {
+      "contentlayer/generated": ["./.contentlayer/generated"]
+    },
+    "ignoreDeprecations": "6.0"
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
-, "components/TestimonialSlider.jsx"  ],
+    ".next/types/**/*.ts",
+    "components/TestimonialSlider.jsx",
+    ".contentlayer/generated"
+  ],
   "exclude": [
     "node_modules"
   ]
