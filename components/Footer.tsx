@@ -37,15 +37,13 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="w-full p-4 sm:p-6 bg-slate-200 dark:bg-slate-800 flex items-center flex-col-reverse sm:flex-row gap-2 sm:gap-0 justify-between text-xs">
-      
-        <p className="text-slate-700 dark:text-slate-300 text-[8px] sm:whitespace-nowrap text-center sm:text-left">
+    <footer className="w-full p-4 sm:p-6 bg-slate-800 text-slate-300 flex items-center flex-col-reverse sm:flex-row gap-2 sm:gap-0 justify-between text-xs">
+        <p className="text-[8px] sm:whitespace-nowrap text-center sm:text-left">
           Copyright &copy; 2016–{currentYear} Nuno Marques (OSITAKA).
           <br />
           Site modifications &copy; {currentYear} Irene Myronova
           <br />— Licensed under MIT. <a href="/LICENSE">View license</a>
         </p>
-
 
         <div className="w-full flex flex-row items-center justify-between">
           {/* icons socialMedia */}
@@ -57,7 +55,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={info.name}
-                className="flex items-center justify-center size-8 text-gray-800 dark:text-gray-200 opacity-80 hover:opacity-100 transition-opacity"
+                className="flex items-center justify-center size-8 opacity-80 hover:opacity-100 transition-opacity"
               >
                 {info.icon}
               </a>

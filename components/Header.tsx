@@ -20,7 +20,7 @@ export default function Header() {
   if (!mounted) return null // Avoid hydration mismatch
 
   return (
-    <header className="w-full p-4 sm:p-6 fixed z-5000 pointer-events-none bg-slate-200 dark:bg-slate-800 flex">
+    <header className="w-full p-4 sm:p-6 fixed z-5000 pointer-events-none bg-white dark:bg-slate-800 flex">
       <nav className="flex w-full justify-between items-center">
         <Link
           href="/"

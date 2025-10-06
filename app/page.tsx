@@ -198,13 +198,109 @@ export default function Home() {
             xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="none"
           >
-            {/* інший градієнт для світлої теми */}
+            <mask
+              id="mask0_60_27"
+              style={{ maskType: 'alpha' }}
+              maskUnits="userSpaceOnUse"
+              x="0"
+              y="0"
+              width="1620"
+              height="877"
+            >
+              <rect
+                width="1620"
+                height="877"
+                fill="url(#paint0_radial_60_27)"
+              />
+            </mask>
+            <g mask="url(#mask0_60_27)">
+              <rect
+                width="1620"
+                height="877"
+                fill="url(#paint1_radial_60_27)"
+                fillOpacity="0.5"
+              />
+              <rect
+                width="1620"
+                height="877"
+                fill="url(#paint2_radial_60_27)"
+                fillOpacity="0.8"
+              />
+              <rect
+                width="1620"
+                height="877"
+                fill="url(#paint3_radial_60_27)"
+                fillOpacity="0.5"
+              />
+              <rect
+                width="1620"
+                height="877"
+                fill="url(#paint4_radial_60_27)"
+                fillOpacity="0.4"
+              />
+            </g>
+            <defs>
+              <radialGradient
+                id="paint0_radial_60_27"
+                cx="0"
+                cy="0"
+                r="1"
+                gradientUnits="userSpaceOnUse"
+                gradientTransform="translate(810) rotate(90) scale(877 1878.84)"
+              >
+                <stop stopColor="#0E172B" />
+                <stop offset="1" stopColor="#0E172B" stopOpacity="0" />
+              </radialGradient>
+              <radialGradient
+                id="paint1_radial_60_27"
+                cx="0"
+                cy="0"
+                r="1"
+                gradientTransform="matrix(50.4002 835.859 -1544 115.728 759.6 -40.1373)"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#4400FF" />
+                <stop offset="1" stopColor="#4300FF" stopOpacity="0" />
+              </radialGradient>
+              <radialGradient
+                id="paint2_radial_60_27"
+                cx="0"
+                cy="0"
+                r="1"
+                gradientTransform="matrix(776.7 -265.91 387.703 1407.7 79.2 333.14)"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#00A2FF" />
+                <stop offset="1" stopColor="#00A2FF" stopOpacity="0" />
+              </radialGradient>
+              <radialGradient
+                id="paint3_radial_60_27"
+                cx="0"
+                cy="0"
+                r="1"
+                gradientTransform="matrix(7.20005 -658.252 1215.93 16.5326 1416.6 877)"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#A200FF" />
+                <stop offset="1" stopColor="#A300FF" stopOpacity="0" />
+              </radialGradient>
+              <radialGradient
+                id="paint4_radial_60_27"
+                cx="0"
+                cy="0"
+                r="1"
+                gradientTransform="matrix(-534.6 287.985 -258.3 -596.039 1699.2 30.1031)"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#FF0900" />
+                <stop offset="1" stopColor="#FF0900" stopOpacity="0" />
+              </radialGradient>
+            </defs>
           </svg>
         </div>
 
-
         {/* content */}
-        <div className="flex flex-col gap-4 items-center justify-center">
+        <div className="flex flex-col gap-12 items-center justify-center">
           <div className="flex flex-col sm:gap-6 max-w-3xl text-center z-10">
             <h1
               id="about-title"
