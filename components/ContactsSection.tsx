@@ -6,7 +6,7 @@ import ContactsPostCard from './ContactPostCard'
 
 export default function ContactsSection() {
   return (
-    <div className="grid md:grid-cols-4 w-full gap-4 flex-wrap">
+    <div className="grid md:grid-cols-2 xl:grid-cols-4 w-full gap-4 flex-wrap">
       {allContacts.map((contactsItem) => (
         <ContactsPostCard
           key={contactsItem._id}
