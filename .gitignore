@@ -5,8 +5,6 @@
 /.pnp
 .pnp.js
 
-#templateBlogFiles
-/aboutCopyTemplate
 
 # testing
 /coverage

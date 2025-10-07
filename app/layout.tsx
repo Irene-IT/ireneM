@@ -17,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <meta name="google-site-verification" content="oghyRVSfEv6KpkEYTdppIoA-3gA00Sm-ETrChLXQ03c" />
         <meta
           name="keywords"
           content="B2B content writer, B2B SaaS content writer, saas content writer, content writer for IT, content writer for tech, writing expertise for cloud computing"
