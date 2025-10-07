@@ -1,8 +1,6 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* @import "tw-animate-css"; */
-
 @layer utilities {
   .animate-fade-in {
     animation: fadeIn 0.2s ease-out forwards;
@@ -23,7 +21,6 @@ html {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background: #fafafa; */
 }
 
 #__next {
@@ -43,10 +40,6 @@ main {
   line-height: 1.8;
   font-weight: 300;
 }
-
-/* .blog-post * {
-  margin-block: 1.75rem;
-} */
 
 .blog-post h2 {
   font-size: 1.75rem;
@@ -77,16 +70,6 @@ main {
   text-wrap: balance;
 }
 
-/* .blog-post a {
-  font-weight: 550;
-  border-bottom: currentColor 0.5px solid;
-}
-.blog-post a:hover,
-.blog-post a:focus {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-} */
-
 .blog-post hr {
   border: none;
   border-bottom: 1.5px solid currentColor;
@@ -109,7 +92,6 @@ main {
 .blog-post p:not(:has(video, img)),
 .blog-post ul {
   max-width: 860px;
-  /* text-wrap: balance; */
   text-wrap: pretty;
 }
 
@@ -171,7 +153,6 @@ main {
   border-left: 0.25rem solid color-mix(in srgb, currentColor 20%, transparent);
   background-color: color-mix(in srgb, currentColor 5%, transparent);
   padding: 0.25rem 1.5rem;
-  /* margin-block: 1rem; */
   font-style: italic;
 }
 

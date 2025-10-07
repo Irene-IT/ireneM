@@ -33,6 +33,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "global.d.ts",
     ".next/types/**/*.ts",
     "components/TestimonialSlider.jsx",
     ".contentlayer/generated"
