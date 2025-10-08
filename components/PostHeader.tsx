@@ -30,33 +30,32 @@ export default function PostHeader({
   
   return (
     <>
-      <header className="flex flex-col gap-4 sm:gap-6 mb-12 mt-24 sm:mt-28">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-center sm:text-left text-balance text-slate-800 dark:text-slate-200">
+      <header className="flex flex-col gap-8 sm:gap-10 mb-12 mt-24 sm:mt-32">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-center sm:text-left text-balance text-slate-800 dark:text-slate-200">
           {data.title}
         </h1>
-        <div className="flex gap-4 items-center text-xs sm:text-base">
+        <div className="flex gap-4 items-center text-base">
           <Link href={`/${data.templateKey}`} className="rounded-lg">
             <span className="flex gap-2 items-center px-3 py-2 rounded-lg text-slate-100 dark:text-slate-800 bg-slate-700 dark:bg-slate-200 hover:underline">
               <Icon name={data.templateKey!} className="size-4" />
-              <span className="font-semibold sm:text-sm">
+              <span className="font-semibold">
                 {data.templateKey &&
                   data.templateKey.charAt(0).toUpperCase() +
                     data.templateKey.slice(1)}
               </span>
             </span>
           </Link>
-          <p className="tracking-wide leading-4">
-            <small>
+           
+            <small className="tracking-wide text-sm">
               Posted by{' '}
-              <Link href={'/about/'} className="font-semibold hover:underline">
+              <Link href={'/about/'} className="text-sm font-semibold hover:underline">
                 {AUTHOR_NAME}
               </Link>{' '}
-              <span className="inline-flex">
+              <span className="inline-flex text-sm">
                 {' '}
                 on {formattedDate}
               </span>
             </small>
-          </p>
         </div>
       </header>
     </>

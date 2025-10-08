@@ -37,8 +37,8 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="w-full p-4 sm:p-6 bg-slate-800 text-slate-300 flex items-center flex-col-reverse sm:flex-row gap-2 sm:gap-0 justify-between text-xs">
-        <p className="text-[8px] sm:whitespace-nowrap text-center sm:text-left">
+    <footer className="w-full p-4 sm:p-6 bg-slate-800 text-slate-300 flex items-center flex-col-reverse sm:flex-row gap-2 sm:gap-0 justify-between text-base">
+        <p className="text-[10px] sm:whitespace-nowrap text-center sm:text-left">
           Copyright &copy; 2016–{currentYear} Nuno Marques (OSITAKA).
           <br />
           Site modifications &copy; {currentYear} Irene Myronova
@@ -64,7 +64,7 @@ export default function Footer() {
 
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="w-40 flex items-center justify-end gap-2 outline-offset-8 rounded"
+            className="w-64 flex items-center justify-end gap-2 outline-offset-8 rounded"
           >
             <span>Scroll to Top</span>
             <Icon name="up" className="size-4" />

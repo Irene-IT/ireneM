@@ -21,9 +21,6 @@ import { AUTHOR_NAME, SITE_NAME, SITE_URL } from '../config'
 import ReactMarkdown from 'react-markdown'
 import gfm from 'remark-gfm'
 
-// Get page data
-// const home = allPages.find((home) => home?.slug === 'home')
-
 // for SEO
 const home = allPages.find((home) => home?.slug === 'home')
 // for content on the homepage
@@ -41,14 +38,12 @@ export function generateMetadata(): Metadata {
     title: SEO.title,
     description: SEO.description,
     openGraph: {
-      // url: `${SITE_URL}/og-card.png`,
       url: `${SITE_URL}`,
       title: SEO.title,
       description: SEO.description,
       authors: `${AUTHOR_NAME}`,
       images: [
         {
-          // url: SEO.image,
           url: `${SITE_URL}/og-card.png`,
           width: 1600,
           height: 800,
@@ -82,7 +77,7 @@ export default function Home() {
     <Layout>
       <section
         className="w-full h-dvh flex flex-col items-center justify-center overflow-hidden"
-        aria-labelledby="hero-title"
+        aria-labelledby="about-title"
       >
         {/* SVG background for Hero-DARK */}
         <div className="absolute inset-0 w-dvw h-dvh overflow-hidden z-0 hidden dark:block">
@@ -301,15 +296,15 @@ export default function Home() {
 
         {/* content */}
         <div className="flex flex-col gap-12 items-center justify-center">
-          <div className="flex flex-col sm:gap-6 max-w-3xl text-center z-10">
+          <div className="flex flex-col sm:gap-6 max-w-3xl text-center text-balance z-10">
             <h1
               id="about-title"
-              className="text-3xl sm:text-5xl font-bold my-12 sm:mt-0 text-center"
+              className="text-3xl sm:text-5xl font-bold my-12 sm:mt-0"
             >
               {about?.title}
             </h1>
             {/* short description */}
-            <p className="text-center text-balance text-lg text-slate-600 dark:text-[#a0b6dc]">
+            <p className="text-lg text-slate-600 dark:text-[#a0b6dc]">
               {about?.description}
             </p>
             <ReactMarkdown remarkPlugins={[gfm]}>
@@ -321,7 +316,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row sm:justify-center sm:items-center flex-wrap gap-2 z-10">
             <a
               href="mailto:irenemyronova@gmail.com"
-              className="px-12 sm:px-6 py-3 text-xs font-bold shadow-md hover:shadow-lg border rounded-md border-gray-300 dark:border-gray-600 hover:bg-blue-700
+              className="px-12 sm:px-6 py-3 text-base font-bold shadow-md hover:shadow-lg rounded-md hover:bg-blue-700
               focus:outline-hidden focus:bg-blue-700 bg-blue-600 text-white transition-colors"
               aria-label="Toggle email"
               type="button"
@@ -330,7 +325,7 @@ export default function Home() {
             </a>
             <a
               href="#works"
-              className="px-12 sm:px-6 py-3 text-xs font-bold shadow-md hover:shadow-lg border rounded-md border-blue-300 dark:border-blue-600 hover:border-blue-600 dark:hover:border-blue-300 focus:outline-hidden focus:border-blue-600 text-blue-600 dark:text-white transition-colors"
+              className="px-12 sm:px-6 py-3 text-base font-bold shadow-md hover:shadow-lg border rounded-md border-blue-300 dark:border-blue-600 hover:border-blue-600 dark:hover:border-blue-300 focus:outline-hidden focus:border-blue-600 text-blue-600 dark:text-white transition-colors"
               aria-label="Toggle look at my work"
               type="button"
             >

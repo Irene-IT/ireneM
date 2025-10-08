@@ -1,4 +1,4 @@
-'use client' // Marks this as a client component
+'use client' 
 
 import { useEffect } from 'react'
 import Prism from 'prismjs'

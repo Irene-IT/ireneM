@@ -29,7 +29,7 @@ export function FAQItem({ question, answer }: FAQItemProps) {
       </p>
 
       <small
-        className={`text-slate-600 dark:text-[#9fb6db] text-sm font-bold block text-balance transition-opacity duration-500 ${
+        className={`text-slate-600 dark:text-[#9fb6db] text-sm block text-balance transition-opacity duration-500 ${
           open ? "opacity-100 mt-3 sm:mt-2" : "opacity-0 h-0 overflow-hidden"
         }`}
       >

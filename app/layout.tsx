@@ -30,9 +30,6 @@ export default function RootLayout({
         <meta name="robots" content="index" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-        {/* <title>Irene Myronova | B2B SaaS Content Writer</title> */}
-        {/* <script src="https://cdn.tailwindcss.com"></script> */}
-
         <script
           async
           src="https://identity.netlify.com/v1/netlify-identity-widget.js"

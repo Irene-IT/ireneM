@@ -15,7 +15,7 @@
 html {
   overflow-x: hidden;
   margin-right: calc(-1 * (100vw - 100%));
-  font-size: 20px;
+  font-size: 16px;
 }
 
 body {
@@ -42,7 +42,7 @@ main {
 }
 
 .blog-post h2 {
-  font-size: 1.75rem;
+  font-size: clamp(1.35rem, 1rem + 1vw, 1.75rem);
   font-weight: 600;
   line-height: 1.2;
   margin-block: 3rem 1rem;
@@ -55,7 +55,7 @@ main {
 }
 
 .blog-post h3 {
-  font-size: 1.3rem;
+  font-size: clamp(1.1rem, 0.9rem + 0.6vw, 1.3rem);
   font-weight: 600;
   line-height: 1.2;
   margin-block: 2rem 1rem;
@@ -63,7 +63,7 @@ main {
 }
 
 .blog-post h4 {
-  font-size: 1.125rem;
+  font-size: clamp(1rem, 0.9rem + 0.3vw, 1.125rem);
   font-weight: 600;
   line-height: 1.2;
   margin-block: 2rem 1rem;
@@ -92,18 +92,15 @@ main {
 .blog-post p:not(:has(video, img)),
 .blog-post ul {
   max-width: 860px;
-  text-wrap: pretty;
+   text-wrap: balance;
 }
 
 .blog-post p {
+  font-size: clamp(1rem, 0.9rem + 0.4vw, 1.125rem); 
+  line-height: 1.8;
   letter-spacing: 0.05ch;
-  margin-block: 1rem;
-}
-
-@media screen and (min-width: 600px) {
-  .blog-post p {
-    text-wrap: pretty;
-  }
+  margin-block: 1rem 3rem;
+   text-wrap: balance;
 }
 
 .blog-post p code,

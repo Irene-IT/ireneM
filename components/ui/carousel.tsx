@@ -132,7 +132,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
           </div>
 
           <p
-            className="mt-4 text-left text-xs  lg:text-base  text-slate-900 dark:text-slate-50 text-balance line-clamp-10
+            className="mt-4 text-left text-sm lg:text-base text-slate-900 dark:text-slate-50 text-balance line-clamp-10
           sm:line-clamp-6"
           >
             {testimonial}
