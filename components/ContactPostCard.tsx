@@ -54,7 +54,7 @@ export default function ContactsPostCard({ post }: { post: Contacts }) {
           {displayLink}
         </span>
 
-        <button
+        <span
           onClick={handleCopy}
           aria-label={`Copy ${displayLink}`}
           className="ml-auto p-1 rounded-md hover:bg-slate-100 dark:hover:bg-slate-700 cursor-pointer select-none"
@@ -67,7 +67,7 @@ export default function ContactsPostCard({ post }: { post: Contacts }) {
               className="size-6 opacity-60 text-slate-600 dark:text-[#a0b6dc]"
             />
           )}
-        </button>
+        </span>
       </div>
     </a>
   )
