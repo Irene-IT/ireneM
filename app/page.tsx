@@ -379,16 +379,15 @@ export default function Home() {
       <section
         id="testimonials"
         className="scroll-mt-30 flex flex-col items-center justify-center gap-8"
-        // aria-labelledby="testimonials-title"
       >
         <h2
-          // id="testimonials-title"
+          id="testimonials-heading"
           className="text-2xl sm:text-3xl font-bold flex items-center gap-3"
         >
           What my clients say
         </h2>
         <div className="flex min-h-[350px] w-full justify-center items-center">
-          <TestimonialSlider />
+          <TestimonialSlider ariaLabelledby="testimonials-heading"/>
         </div>
       </section>
       <section

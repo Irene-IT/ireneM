@@ -167,9 +167,10 @@ const CarouselControl = ({
 
 interface CarouselProps {
   slides: SlideData[]
+  ariaLabelledby?: string
 }
 
-export function Carousel({ slides }: CarouselProps) {
+export function Carousel({ slides, ariaLabelledby }: CarouselProps) {
   const [current, setCurrent] = useState(1)
 
   const handlePreviousClick = () => {
@@ -193,7 +194,7 @@ export function Carousel({ slides }: CarouselProps) {
   return (
     <div
       className="relative w-[80vmin] h-[90vmin] md:w-[70vmin] md:h-[30vmin] mx-auto"
-      aria-labelledby={`carousel-heading-${id}`}
+      aria-labelledby={ariaLabelledby ?? `carousel-heading-${id}`}
     >
       <ul
         className="absolute flex  transition-transform duration-1000 ease-in-out"
