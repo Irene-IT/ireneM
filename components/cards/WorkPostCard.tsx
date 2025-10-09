@@ -18,6 +18,7 @@ export default function WorkPostCard({ post }: { post: Work }) {
           alt={post.title ?? 'Work image'}
           width={800}
           height={450}
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className="border-b border-b-slate-200 dark:border-b-slate-700 group-hover:scale-110 transition-transform duration-700 aspect-[14/9] object-cover"
           loading="lazy"
         />

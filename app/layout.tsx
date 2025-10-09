@@ -29,6 +29,7 @@ export default function RootLayout({
         />
         <meta name="robots" content="index" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://irenemyronova.netlify.app" crossOrigin="" />
 
         <script
           async

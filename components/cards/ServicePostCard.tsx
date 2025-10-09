@@ -18,6 +18,7 @@ export default function ServicePostCard({ post }: { post: Service }) {
           alt={post.title ?? 'Service image'}
           width={400}
           height={400}
+          sizes="(max-width: 640px) 96px, (max-width: 1024px) 180px, 400px"
           className="size-full object-cover group-hover:scale-110 transition-transform duration-700"
         />
       </figure>
