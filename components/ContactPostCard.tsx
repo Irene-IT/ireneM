@@ -49,27 +49,29 @@ export default function ContactsPostCard({ post }: { post: Contacts }) {
         {post.description}
       </p>
 
-      <div className="mt-2 flex items-start gap-2">
+      <div className="flex items-center gap-2">
         <span className="text-sm text-slate-600 dark:text-[#9fb6db] break-all select-text">
           {displayLink}
         </span>
 
-        <span
+        <button
           onClick={handleCopy}
-          role="button"
           aria-label={`Copy ${displayLink}`}
           className="ml-auto p-1 rounded-md hover:bg-slate-100 dark:hover:bg-slate-700 cursor-pointer select-none"
         >
           {copied ? (
-            <Icon name="checkIcon" className="w-5 h-5 text-blue-600" />
+            <Icon name="checkIcon" className="size-6 text-blue-600" />
           ) : (
             <Icon
               name="clipboardDocumentIcon"
-              className="w-5 h-5 opacity-60 text-slate-600 dark:text-[#a0b6dc]"
+              className="size-6 opacity-60 text-slate-600 dark:text-[#a0b6dc]"
             />
           )}
-        </span>
+        </button>
       </div>
     </a>
   )
 }
+
+
+

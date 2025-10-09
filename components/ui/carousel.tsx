@@ -63,7 +63,6 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
   const { role, avatar, testimonial, title } = slide
 
   return (
-    // <ul className="[perspective:1200px] [transform-style:preserve-3d]">
       <li
         ref={slideRef}
         className="[perspective:1200px] [transform-style:preserve-3d] flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[80vmin] h-[90vmin] md:w-[70vmin] md:h-[30vmin] mx-[1vmin] z-10"
@@ -139,7 +138,6 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
           </p>
         </article>
       </li>
-    // </ul>
   )
 }
 

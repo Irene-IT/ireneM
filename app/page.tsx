@@ -377,12 +377,12 @@ export default function Home() {
       </section>
 
       <section
-        id="testimonials"
+        // id="testimonials"
         className="scroll-mt-30 flex flex-col items-center justify-center gap-8"
         aria-labelledby="testimonials-title"
       >
         <h2
-          id="testimonials-title"
+          // id="testimonials-title"
           className="text-2xl sm:text-3xl font-bold flex items-center gap-3"
         >
           What my clients say
