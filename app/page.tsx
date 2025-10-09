@@ -319,15 +319,16 @@ export default function Home() {
               className="px-12 sm:px-6 py-3 text-base font-bold shadow-md hover:shadow-lg rounded-md hover:bg-blue-700
               focus:outline-hidden focus:bg-blue-700 bg-blue-600 text-white transition-colors"
               aria-label="Toggle email"
-              type="button"
+              role="button"
             >
               Get in touch →
             </a>
+          
             <a
               href="#works"
               className="px-12 sm:px-6 py-3 text-base font-bold shadow-md hover:shadow-lg border rounded-md border-blue-300 dark:border-blue-600 hover:border-blue-600 dark:hover:border-blue-300 focus:outline-hidden focus:border-blue-600 text-blue-600 dark:text-white transition-colors"
               aria-label="Toggle look at my work"
-              type="button"
+              role="button"
             >
               View my work
             </a>

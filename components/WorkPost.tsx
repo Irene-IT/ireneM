@@ -28,7 +28,7 @@ export default function WorkPost({ work }: { work: Work }) {
               rel="noopener noreferrer"
               className="flex-1 sm:flex-none inline-block text-center px-4 sm:px-6 py-3 m-0 text-sm sm:text-base font-bold shadow-md hover:shadow-lg border rounded-md border-blue-300 dark:border-blue-600 hover:border-blue-600 dark:hover:border-blue-300 focus:outline-hidden focus:border-blue-600 text-blue-600 dark:text-white transition-colors"
               aria-label="Link look at original article"
-              type="button"
+              role="button"
             >
               Original text →
             </a>
@@ -40,7 +40,7 @@ export default function WorkPost({ work }: { work: Work }) {
               rel="noopener noreferrer"
               className="flex-1 sm:flex-none inline-block text-center px-4 sm:px-6 py-3 m-0 text-sm sm:text-base font-bold shadow-md hover:shadow-lg border rounded-md border-blue-300 dark:border-blue-600 hover:border-blue-600 dark:hover:border-blue-300 focus:outline-hidden focus:border-blue-600 text-blue-600 dark:text-white transition-colors"
               aria-label="Link look at updated article"
-              type="button"
+              role="button"
             >
               View article →
             </a>

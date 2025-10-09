@@ -52,7 +52,7 @@ export default function About() {
             href="mailto:irenemyronova@gmail.com"
             className="px-12 sm:px-6 py-3 text-xs font-bold shadow-md hover:shadow-lg border rounded-md border-gray-300 dark:border-gray-600 hover:bg-blue-700 bg-blue-600 text-white transition-colors"
             aria-label="Toggle email"
-            type="button"
+            role="button"
           >
             Get in touch →
           </a>
@@ -60,7 +60,7 @@ export default function About() {
             href="#work"
             className="px-12 sm:px-6 py-3 text-xs font-bold shadow-md hover:shadow-lg border rounded-md border-blue-300 dark:border-blue-600 hover:border-blue-600 dark:hover:border-blue-300  text-blue-600 dark:text-white transition-colors"
             aria-label="Toggle look at my work"
-            type="button"
+            role="button"
           >
             View my work
           </a>
