@@ -76,7 +76,7 @@ export default function Home() {
   return (
     <Layout>
       <section
-        className="w-full h-dvh flex flex-col items-center justify-center overflow-hidden"
+        className="w-full h-dvh max-sm:h-fit flex flex-col items-center justify-center overflow-hidden"
         aria-labelledby="about-title"
       >
         {/* SVG background for Hero-DARK */}
@@ -295,7 +295,7 @@ export default function Home() {
         </div>
 
         {/* content */}
-        <div className="flex flex-col gap-12 items-center justify-center">
+        <div className="max-sm:mt-16 flex flex-col gap-12 items-center justify-center">
           <div className="flex flex-col sm:gap-6 max-w-3xl text-center text-balance z-10">
             <h1
               id="about-title"
@@ -347,7 +347,7 @@ export default function Home() {
           </h2>
           <Link href="/service">View all &rarr;</Link>
         </div>
-        <div className="grid xl:grid-cols-2 gap-4 flex-wrap">
+            <div className="grid xl:grid-cols-2 gap-4 flex-wrap">
           {services.map((post) => (
             <ServiceCardPost key={post.slug} post={post as Service} />
           ))}

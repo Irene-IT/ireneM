@@ -79,7 +79,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
         }}
       >
         <div
-          className="absolute top-0 left-0 w-full h-full rounded-2xl overflow-hidden transition-all duration-150 ease-out"
+          className="absolute top-0 left-0 size-full rounded-2xl overflow-hidden transition-all duration-150 ease-out"
           style={{
             transform:
               current === index
@@ -88,7 +88,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
           }}
         >
           <span
-            className="absolute inset-0 w-[120%] h-[120%] object-cover  duration-600 ease-in-out bg-blue-50 dark:bg-slate-800"
+            className="absolute inset-0 w-[120%] h-[120%] object-cover duration-600 ease-in-out bg-blue-50 dark:bg-slate-800"
             style={{
               opacity: current === index ? 1 : 0.5,
             }}
@@ -109,7 +109,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
         </div>
 
         <article
-          className={`relative p-[3vmin]  transition-opacity duration-1000 ease-in-out ${
+          className={`relative p-[3vmin] transition-opacity duration-1000 ease-in-out ${
             current === index ? 'opacity-100 visible' : 'opacity-30 visible'
           }`}
         >
@@ -131,8 +131,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
           </div>
 
           <p
-            className="mt-4 text-left text-sm lg:text-base text-slate-900 dark:text-slate-50 text-balance line-clamp-10
-          sm:line-clamp-6"
+            className="mt-4 text-left text-sm lg:text-base text-slate-900 dark:text-slate-50 text-balance line-clamp-10 sm:line-clamp-6"
           >
             {testimonial}
           </p>
