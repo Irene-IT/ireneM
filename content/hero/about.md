@@ -1,9 +1,7 @@
 ---
-title: "Professional B2B content writer specializing in SaaS, IT and tech"
-description: "I'm Irene Myronova, help businesses drive growth by creating compelling content, showcasing your cloud computing and software solutions effectively."
+title: Professional B2B Content Writer Specializing in SaaS and Cloud
+description: Hi, I'm Irene, and I craft content that turns complex tech into clear value.
 cta_label: "Get in touch →"
 cta_link: "mailto:irenemyronova@gmail.com"
 photo: "/media/hero__Gemini_my-photo6.png"
 ---
-
-
