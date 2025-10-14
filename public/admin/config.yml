@@ -37,20 +37,27 @@ collections:
             name: 'title'
             widget: string
 
-      # - file: 'content/page/about.md'
-      #   label: 'About'
-      #   name: 'about'
-      #   fields:
-      #     - { label: 'Title', name: 'title', widget: 'string' }
-      #     - {
-      #         label: 'Description',
-      #         name: 'description',
-      #         widget: 'markdown',
-      #         sanitize_preview: true,
-      #         buttons: ['bold', 'italic', 'link'],
-      #         modes: ['rich_text'],
-      #         editor_components: [''],
-      #       }
+      - file: 'content/hero/about.md'
+        label: 'About'
+        name: 'about'
+        fields:
+          # - { label: 'Title', name: 'title', widget: 'string' }
+          # - {
+          #     label: 'Description',
+          #     name: 'description',
+          #     widget: 'markdown',
+          #     sanitize_preview: true,
+          #     buttons: ['bold', 'italic', 'link'],
+          #     modes: ['rich_text'],
+          #     editor_components: [''],
+          #   }
+          - { label: 'Title', name: 'title', widget: string }
+          - { label: 'Description', name: 'description', widget: 'text' }
+          - { label: 'Featured', name: 'featured', widget: boolean, default: false }
+          - { label: 'CTA Label', name: 'cta_label', widget: string }
+          - { label: 'CTA Link', name: 'cta_link', widget: string }
+          - { label: 'Featured Photo', name: 'photo', widget: 'image', choose_url: false }
+       
 
   - name: 'services' # Used in routes, e.g., /admin/collections/blog
     label: 'Services' # Used in the UI

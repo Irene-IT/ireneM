@@ -31,9 +31,9 @@ export function generateMetadata(): Metadata {
 }
 
 export default function About() {
-  const photo = about?.photo || '/media/hero__Gemini_my-photo6.png'
   const ctaLabel = about?.cta_label || 'Get in touch →'
   const ctaLink = about?.cta_link || 'mailto:irenemyronova@gmail.com'
+  const photo = about?.photo || '/media/hero__Gemini_my-photo6.png'
 
   return (
     <section

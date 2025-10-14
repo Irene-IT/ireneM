@@ -1,8 +1,45 @@
 import { defineDocumentType, makeSource } from 'contentlayer2/source-files'
 
+// const Hero = defineDocumentType(() => ({
+//   name: 'Hero',
+//   filePathPattern: `hero/*.md`,
+//   contentType: 'markdown',
+//   fields: {
+//     slug: {
+//       type: 'string',
+//     },
+//     title: {
+//       type: 'string',
+//       required: true,
+//     },
+//     description: {
+//       type: 'string',
+//       required: false,
+//     },
+//     gallery: {
+//       type: 'list',
+//       of: { type: 'string' },
+//     },
+
+//     cta_label: { type: 'string', required: false },
+//     cta_link: { type: 'string', required: false },
+//     photo: { type: 'string', required: false },
+
+//   },
+//   computedFields: {
+//     slug: {
+//       type: 'string',
+//       resolve: (doc) => doc._raw.sourceFileName.replace(/\.md/, ''),
+//     },
+//   },
+// }))
+
+// ... інші імпорти
+
 const Hero = defineDocumentType(() => ({
   name: 'Hero',
-  filePathPattern: `hero/*.md`,
+  // Змінюємо шаблон, щоб він містив усі файли MD у папці hero/
+  filePathPattern: `hero/**/*.md`, 
   contentType: 'markdown',
   fields: {
     slug: {
@@ -16,20 +53,18 @@ const Hero = defineDocumentType(() => ({
       type: 'string',
       required: false,
     },
-    gallery: {
-      type: 'list',
-      of: { type: 'string' },
-    },
-
+    // gallery: {
+    //   type: 'list',
+    //   of: { type: 'string' },
+    // },
     cta_label: { type: 'string', required: false },
     cta_link: { type: 'string', required: false },
     photo: { type: 'string', required: false },
-
   },
   computedFields: {
     slug: {
       type: 'string',
-      resolve: (doc) => doc._raw.sourceFileName.replace(/\.md/, ''),
+      resolve: (doc) => doc._raw.sourceFileName.replace(/\.md$/, ''),
     },
   },
 }))
