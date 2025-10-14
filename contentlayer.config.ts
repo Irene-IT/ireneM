@@ -1,8 +1,8 @@
 import { defineDocumentType, makeSource } from 'contentlayer2/source-files'
 
-const Page = defineDocumentType(() => ({
-  name: 'Page',
-  filePathPattern: `page/*.md`,
+const Hero = defineDocumentType(() => ({
+  name: 'Hero',
+  filePathPattern: `hero/*.md`,
   contentType: 'markdown',
   fields: {
     slug: {
@@ -20,6 +20,11 @@ const Page = defineDocumentType(() => ({
       type: 'list',
       of: { type: 'string' },
     },
+
+    cta_label: { type: 'string', required: false },
+    cta_link: { type: 'string', required: false },
+    photo: { type: 'string', required: false },
+
   },
   computedFields: {
     slug: {
@@ -169,7 +174,7 @@ const Contacts = defineDocumentType(() => ({
 export default makeSource({
   contentDirPath: 'content',
   documentTypes: [
-    Page,
+    Hero,
     Service,
     Work,
     Testimonial,

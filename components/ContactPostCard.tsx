@@ -6,7 +6,12 @@ import { useState } from 'react'
 const iconClasses =
   'size-6 sm:size-8 opacity-60 text-slate-600 dark:text-[#a0b6dc]'
 
-export default function ContactsPostCard({ post }: { post: Contacts }) {
+interface ContactsPostCardProps {
+  post: Contacts
+  className?: string 
+}
+
+export default function ContactsPostCard({ post, className }: ContactsPostCardProps) {
   const [copied, setCopied] = useState(false)
 
   const isMail = post.link?.startsWith('mailto:')
@@ -36,7 +41,12 @@ export default function ContactsPostCard({ post }: { post: Contacts }) {
       target="_blank"
       rel="noopener noreferrer"
       title={`Open ${post.title}`}
-      className="w-full flex flex-col gap-2 p-4 bg-white dark:bg-slate-800 rounded-xl shadow-md hover:shadow-xl dark:hover:shadow-2xl hover:dark:bg-slate-700 transition-shadow dark:transition-colors cursor-pointer group overflow-hidden"
+      className={`
+        w-full flex flex-col gap-2 p-4 bg-white dark:bg-slate-800 rounded-xl shadow-md
+        hover:shadow-xl dark:hover:shadow-2xl hover:dark:bg-slate-700
+        transition-shadow dark:transition-colors cursor-pointer group overflow-hidden
+        ${className}
+      `}
     >
       <div className="flex flex-row items-center gap-2">
         <Icon key={post.title} name={post.title} className={iconClasses} />
@@ -72,6 +82,3 @@ export default function ContactsPostCard({ post }: { post: Contacts }) {
     </a>
   )
 }
-
-
-

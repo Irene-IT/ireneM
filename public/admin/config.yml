@@ -26,10 +26,10 @@ display_url: https://irenemyronova.netlify.app # This url will display in the to
 media_folder: 'public/media' # Media files will be stored in the repo under static/media
 public_folder: '/media' # The src attribute for uploaded media will begin with /media
 collections:
-  - name: 'page'
-    label: 'Pages'
+  - name: 'hero'
+    label: 'Hero'
     files:
-      - file: 'content/page/home.md'
+      - file: 'content/hero/home.md'
         label: 'Home'
         name: 'home'
         fields:
@@ -37,20 +37,20 @@ collections:
             name: 'title'
             widget: string
 
-      - file: 'content/page/about.md'
-        label: 'About'
-        name: 'about'
-        fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - {
-              label: 'Description',
-              name: 'description',
-              widget: 'markdown',
-              sanitize_preview: true,
-              buttons: ['bold', 'italic', 'link'],
-              modes: ['rich_text'],
-              editor_components: [''],
-            }
+      # - file: 'content/page/about.md'
+      #   label: 'About'
+      #   name: 'about'
+      #   fields:
+      #     - { label: 'Title', name: 'title', widget: 'string' }
+      #     - {
+      #         label: 'Description',
+      #         name: 'description',
+      #         widget: 'markdown',
+      #         sanitize_preview: true,
+      #         buttons: ['bold', 'italic', 'link'],
+      #         modes: ['rich_text'],
+      #         editor_components: [''],
+      #       }
 
   - name: 'services' # Used in routes, e.g., /admin/collections/blog
     label: 'Services' # Used in the UI
