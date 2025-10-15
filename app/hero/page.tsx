@@ -297,7 +297,6 @@ export default function About() {
             src={photo}
             alt="about-image"
             className="w-40 h-40 mid:w-64 mid:h-64 xl:w-auto xl:h-[70%] object-cover rounded-full xl:rounded-3xl object-[center_35%] transition-[border-radius,height,width] duration-700 ease-in-out"
-            loading="lazy"
             width="450"
             height="650"
           />
