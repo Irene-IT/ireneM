@@ -36,8 +36,8 @@
     "global.d.ts",
     ".next/types/**/*.ts",
     "components/TestimonialSlider.jsx",
-    ".contentlayer/generated"
-, "components/Hero.jsx"  ],
+    ".contentlayer/generated",
+  ],
   "exclude": [
     "node_modules"
   ]

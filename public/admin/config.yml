@@ -47,11 +47,11 @@ collections:
           - { label: 'Featured Photo', name: 'photo', widget: 'image', choose_url: false }
        
 
-  - name: 'services' # Used in routes, e.g., /admin/collections/blog
+  - name: 'services' # Used in routes, e.g., /admin/services/service
     label: 'Services' # Used in the UI
     folder: 'content/services' # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: '{{year}}-{{month}}-{{day}}-{{title}}' # Filename template, e.g., 2024-090-25-name-of-doc.md
+    create: true # Allow users to create new documents in this services
+    slug: '{{year}}-{{month}}-{{day}}-{{title}}' # Filename template, e.g., 2025-090-25-name-of-doc.md
     view_groups:
       - label: Year
         field: date
