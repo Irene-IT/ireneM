@@ -295,8 +295,8 @@ export default function About() {
         <div className="relative flex items-center justify-center flex-1 xl:min-h-[400px] xl:aspect-[3/4]">
           <img
             src={photo}
-            alt="about-image"
-            className="w-40 h-40 mid:w-64 mid:h-64 xl:w-auto xl:h-[65%] object-cover rounded-full xl:rounded-3xl object-[center_35%] transition-[border-radius,height,width] duration-700 ease-in-out"
+            alt="The photo shows a girl in a business style with long hair and a slight smile, standing against a neutral background. The lighting is soft, highlighting her facial features and creating a warm atmosphere."
+            className="w-40 h-40 mid:w-64 mid:h-64 xl:w-auto xl:h-[70%] object-cover rounded-full xl:rounded-3xl object-[center_35%] transition-[border-radius,height,width] duration-700 ease-in-out"
             width="450"
             height="650"
           />
