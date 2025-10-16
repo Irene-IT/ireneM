@@ -5,14 +5,11 @@ import { useState, useEffect } from 'react'
 import { Icon } from './Icon'
 import { ModeToggle } from './ModeToggle'
 
-const menuItemClasses =
-  'w-full flex items-center gap-3 p-3 px-6 text-sm tracking-wide text-slate-700 dark:text-slate-200 hover:text-slate-800 dark:hover:text-white hover:font-semibold transition-colors transition-all border-b border-b-slate-200 dark:border-b-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800'
-
+const menuItemClasses ='w-full flex items-center gap-3 p-3 px-6 text-sm tracking-wide text-slate-700 dark:text-slate-200 hover:text-slate-800 dark:hover:text-white hover:font-semibold transition-colors transition-all border-b border-b-slate-200 dark:border-b-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800'
 const iconClasses = 'size-4 opacity-70'
 
 export default function Header() {
   const [navbar, setNavbar] = useState(false)
-
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => setMounted(true), [])

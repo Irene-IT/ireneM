@@ -276,7 +276,7 @@ export default function About() {
               <a
                 href={ctaLink}
                 className="px-12 sm:px-6 py-3 text-base font-bold shadow-md hover:shadow-lg rounded-md hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 bg-blue-600 text-white transition-colors"
-                aria-label="Call to action"
+                aria-label={`${ctaLabel}, link: ${ctaLink}`}
               >
                 {ctaLabel}
               </a>
@@ -296,7 +296,7 @@ export default function About() {
           <img
             src={photo}
             alt="about-image"
-            className="w-40 h-40 mid:w-64 mid:h-64 xl:w-auto xl:h-[70%] object-cover rounded-full xl:rounded-3xl object-[center_35%] transition-[border-radius,height,width] duration-700 ease-in-out"
+            className="w-40 h-40 mid:w-64 mid:h-64 xl:w-auto xl:h-[65%] object-cover rounded-full xl:rounded-3xl object-[center_35%] transition-[border-radius,height,width] duration-700 ease-in-out"
             width="450"
             height="650"
           />
