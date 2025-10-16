@@ -3,6 +3,7 @@ import { allHeros, Hero } from '../../.contentlayer/generated'
 import ReactMarkdown from 'react-markdown'
 import gfm from 'remark-gfm'
 import { AUTHOR_NAME, SITE_NAME, SITE_URL } from '../../config'
+import ExportedImage from 'next-image-export-optimizer'
 
 // Get page data
 const about = allHeros.find((about: Hero) => about?.slug === 'about') as Hero
@@ -33,7 +34,7 @@ export function generateMetadata(): Metadata {
 export default function About() {
   const ctaLabel = about?.cta_label || 'Get in touch →'
   const ctaLink = about?.cta_link || 'mailto:irenemyronova@gmail.com'
-  const photo = about?.photo || '/media/hero__Gemini_my-photo6.png'
+  const photo = about?.photo || '/media/hero__my-photo1.png'
 
   return (
     <section
@@ -292,15 +293,15 @@ export default function About() {
           )}
         </div>
 
-        <div className="relative flex items-center justify-center flex-1 xl:min-h-[400px] xl:aspect-[3/4]">
-          <img
+        <figure className="relative flex items-center justify-center flex-1 xl:min-h-[400px] xl:aspect-[3/4]">
+          <ExportedImage
             src={photo}
             alt="The photo shows a girl in a business style with long hair and a slight smile, standing against a neutral background. The lighting is soft, highlighting her facial features and creating a warm atmosphere."
             className="w-40 h-40 mid:w-64 mid:h-64 xl:w-auto xl:h-[70%] object-cover rounded-full xl:rounded-3xl object-[center_35%] transition-[border-radius,height,width] duration-700 ease-in-out"
             width="450"
             height="650"
           />
-        </div>
+        </figure>
       </div>
     </section>
   )
