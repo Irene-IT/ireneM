@@ -7,7 +7,7 @@
 
 # --- WWW → non-WWW redirect ---
 [[redirects]]
-  from = "https://irenemyronova-b2b.netlify.app/*"
+  from = "https://www.irenemyronova-b2b.netlify.app/*"
   to = "https://irenemyronova-b2b.netlify.app/:splat"
   status = 301
   force = true
