@@ -19,10 +19,10 @@ editor:
 logo_url: https://decapbridge.com/decapcms-with-bridge.svg
 
 # Add site links in DecapCMS (optional)
-site_url: https://irenemyronova.netlify.app
+site_url: https://irenemyronova-b2b.netlify.app
 
 
-display_url: https://irenemyronova.netlify.app # This url will display in the top-right of the CMS
+display_url: https://irenemyronova-b2b.netlify.app # This url will display in the top-right of the CMS
 media_folder: 'public/media' # Media files will be stored in the repo under static/media
 public_folder: '/media' # The src attribute for uploaded media will begin with /media
 collections:

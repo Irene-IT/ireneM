@@ -300,6 +300,14 @@ export default function About() {
             className="w-40 h-40 mid:w-64 mid:h-64 xl:w-auto xl:h-[70%] object-cover rounded-full xl:rounded-3xl object-[center_35%] transition-[border-radius,height,width] duration-700 ease-in-out"
             width="450"
             height="650"
+            // import heroImg from "@public/hero.png";
+            // <Image
+            //   className={`rounded-xl ${heroImageShadow}`}
+            //   src={heroImg}
+            //   layout="responsive" // масштабує зображення відповідно до ширини батьківського контейнера
+            //   priority={true} // щоб вимкнути відкладене завантаження
+            //   alt="hero"
+            // />;
           />
         </figure>
       </div>
