@@ -17,7 +17,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <meta name="google-site-verification" content="oghyRVSfEv6KpkEYTdppIoA-3gA00Sm-ETrChLXQ03c" />
+        <meta
+          name="google-site-verification"
+          content="oghyRVSfEv6KpkEYTdppIoA-3gA00Sm-ETrChLXQ03c"
+        />
         <meta
           name="keywords"
           content="B2B content writer, B2B SaaS content writer, saas content writer, content writer for IT, content writer for tech, writing expertise for cloud computing"
@@ -28,8 +31,30 @@ export default function RootLayout({
           content="© 2025 Irene Myronova | B2B SaaS Content Writer app. All Rights Reserved"
         />
         <meta name="robots" content="index" />
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://irenemyronova.netlify.app" crossOrigin="" />
+        {/* <link rel="icon" type="image/x-icon" href="/favicon.ico" /> */}
+
+        <link
+          rel="icon"
+          type="image/png"
+          href="/publicfavicon/favicon-96x96.png"
+          sizes="96x96"
+        />
+        <link rel="icon" type="image/svg+xml" href="/public/favicon/favicon.svg" />
+        <link rel="shortcut icon" href="/public/favicon/favicon.ico" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/public/favicon/apple-touch-icon.png"
+        />
+        <meta name="apple-mobile-web-app-title" content="b2bWriter" />
+        <link rel="manifest" href="/public/favicon/site.webmanifest" />
+
+        <link
+          rel="preconnect"
+          // href="https://irenemyronova.netlify.app"
+          href="https://irenemyronova-b2b.netlify.app"
+          crossOrigin=""
+        />
 
         <script
           async
@@ -48,13 +73,13 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-            <AnimatePresence
-              mode="wait"
-              initial={true}
-              onExitComplete={() => window.scrollTo(0, 0)}
-            >
-              {children}
-            </AnimatePresence>
+          <AnimatePresence
+            mode="wait"
+            initial={true}
+            onExitComplete={() => window.scrollTo(0, 0)}
+          >
+            {children}
+          </AnimatePresence>
           <Footer />
           <NetlifyIdentityRedirect />
         </ThemeProvider>
