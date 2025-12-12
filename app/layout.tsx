@@ -31,7 +31,6 @@ export default function RootLayout({
           content="© 2025 Irene Myronova | B2B SaaS Content Writer app. All Rights Reserved"
         />
         <meta name="robots" content="index" />
-        {/* <link rel="icon" type="image/x-icon" href="/favicon.ico" /> */}
 
         <link
           rel="icon"
@@ -51,7 +50,6 @@ export default function RootLayout({
 
         <link
           rel="preconnect"
-          // href="https://irenemyronova.netlify.app"
           href="https://irenemyronova-b2b.netlify.app"
           crossOrigin=""
         />
